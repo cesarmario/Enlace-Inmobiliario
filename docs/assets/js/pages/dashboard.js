@@ -16,16 +16,16 @@ var optionsProfileVisit = {
 	},
 	series: [{
 		name: 'sales',
-		data: [9,20,30,20,10,20,30,20,10,20,30,20]
+		data: [9,20,30,20 ]
 	}],
 	colors: '#435ebe',
 	xaxis: {
-		categories: ["Jan","Feb","Mar","Apr","May","Jun","Jul", "Aug","Sep","Oct","Nov","Dec"],
+		categories: ["Casas","Departamentos","Cocheras","Fincas"],
 	},
 }
 let optionsVisitorsProfile  = {
 	series: [70, 30],
-	labels: ['Male', 'Female'],
+	labels: ['Venta', 'Alquiler'],
 	colors: ['#435ebe','#55c6e8'],
 	chart: {
 		type: 'donut',

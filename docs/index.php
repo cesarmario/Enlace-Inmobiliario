@@ -1,10 +1,13 @@
+<?PHP
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Mazer Admin Dashboard</title>
+    <title>Gestion - EnlaceInmobiliario</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -84,6 +87,13 @@
                                     <a href="auth-forgot-password.html">Forgot Password</a>
                                 </li>
                             </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="fn/logout.php" class='sidebar-link'>
+                                <i class="bi bi-x-square"></i>
+                                <span>Cerrar Sessi&oacute;n</span>
+                            </a>
                         </li>
 
                     </ul>
@@ -196,8 +206,8 @@
                                         <img src="assets/images/faces/1.jpg" alt="Face 1">
                                     </div>
                                     <div class="ms-3 name">
-                                        <h5 class="font-bold">John Duck</h5>
-                                        <h6 class="text-muted mb-0">@johnducky</h6>
+                                        <h5 class="font-bold"><?PHP echo $_SESSION['nomUsu']; ?></h5>
+                                        <h6 class="text-muted mb-0">@<?PHP echo $_SESSION['uidUsu']; ?></h6>
                                     </div>
                                 </div>
                             </div>

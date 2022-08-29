@@ -116,10 +116,14 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
-                                    <!--div class="card-header">
+                                    
+                                        <!--div class="card-header">
                                         <h4>SubTitulo</h4>
                                     </!--div-->
                                     <div class="card-body">
+                                        <div class="buttons">
+                                            <a href="inmueble_abm.php" class="btn btn-sm btn-outline-success">Nuevo</a>
+                                        </div>
                                         <?PHP echo $listado; ?>                                     
                                     </div>
                                 </div>

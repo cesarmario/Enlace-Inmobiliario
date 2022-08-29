@@ -1,5 +1,6 @@
 <?PHP
     session_start();
+    include('fn/login_ctrl.php');
     include('fn/opciones.php');
 ?>
 <!DOCTYPE html>
@@ -132,12 +133,12 @@
                                                     <div class="form-group">
                                                         <label for="basicInput">Titulo Inmueble</label>
                                                         <input type="text" class="form-control" id='tituloInmueble'	name='tituloInmueble'
-                                                            placeholder="Titulo">
+                                                            placeholder="Titulo" require>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Tipo de Propiedad</label>
-                                                        <select class="choices form-select" id='idPropiedad' name='idPropiedad'>
+                                                        <select class="choices form-select" id='idPropiedad' name='idPropiedad' require>
                                                             <option value="">Propiedad</option>
                                                             <?PHP while($propiedad=mysqli_fetch_assoc($rtspropiedad)){?>
                                                             <option value="<?PHP echo $propiedad['idPropiedad']; ?>"> <?PHP echo $propiedad['nombrePropiedad'];?></option>
@@ -147,7 +148,7 @@
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Tipo de Operacion</label>
-                                                        <select class="choices form-select" id='idOperacion' name='idOperacion'>
+                                                        <select class="choices form-select" id='idOperacion' name='idOperacion'require>
                                                             <option value="">Operacion</option>
                                                             <?PHP while($operacion=mysqli_fetch_assoc($rtsoperacion)){?>
                                                             <option value="<?PHP echo $operacion['idOperacion']; ?>"> <?PHP echo $operacion['nombreOperacion'];?></option>
@@ -164,7 +165,7 @@
                                                     <div class="form-group">
                                                         <label for="basicInput">Calle</label>
                                                         <input type="text" class="form-control" id='domicilioCalleInmueble' name='domicilioCalleInmueble'
-                                                            placeholder="Domicilio">
+                                                            placeholder="Domicilio" require>
                                                     </div>
 
                                                     <div class="form-group">
@@ -186,7 +187,7 @@
                                                     
                                                     <div class="form-group">
                                                         <label for="basicInput">Localidad</label>
-                                                        <select class="choices form-select" id='idLocalidad' name='idLocalidad'>
+                                                        <select class="choices form-select" id='idLocalidad' name='idLocalidad' require>
                                                             <option value="">Localidad</option>
                                                             <?PHP while($localidad=mysqli_fetch_assoc($rtslocalidad)){?>
                                                             <option value="<?PHP echo $localidad['idLocalidad']; ?>"> <?PHP echo $localidad['nombreLocalidad'];?></option>
@@ -240,8 +241,8 @@
                                                 </div>
 
                                                 <div class="buttons">
-                                                <input type="hidden" id="abm" name="abm" value="a"/>
-                                                    <button class="btn btn-success btn-lg shadow-lg mt-5">Guardar</button>
+                                                    <input type="hidden" id="abm" name="abm" value="a"/>
+                                                    <button type="submit" class="btn btn-success btn-lg shadow-lg mt-5">Guardar</button>
                                                 </div> 
                                             </form>
                                         </div>

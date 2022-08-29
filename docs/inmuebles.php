@@ -1,10 +1,16 @@
+<?PHP
+    session_start();
+    include('fn/login_ctrl.php');
+    include('fn/opciones.php');
+    include('fn/inmuebles.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion - EnlaceInmobiliario</title>
+    <title>Gestion - Inmuebles</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -36,21 +42,21 @@
                     <ul class="menu">
                         <li class="sidebar-title">Menu</li>
 
-                        <li class="sidebar-item active ">
-                            <a href="index.html" class='sidebar-link'>
+                        <li class="sidebar-item">
+                            <a href="index.php" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>Inicio</span>
                             </a>
                         </li>
 
-                        <li class="sidebar-item  has-sub">
+                        <li class="sidebar-item active has-sub ">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
-                                <span>Configuracion</span>
+                                <span>Datos</span>
                             </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="inmuebles.php">Inmuebles</a>
+                            <ul class="submenu active">
+                                <li class="submenu-item active">
+                                    <a href="#">Inmuebles</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="#">Localidades</a>
@@ -60,7 +66,7 @@
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="#">Propiedades</a>
-                                </li>                                
+                                </li>                                  
                             </ul>
                         </li>                        
 
@@ -102,7 +108,7 @@
             </header>
 
             <div class="page-heading">
-                <h3>Titulo Principal</h3>
+                <h3>Inmuebles</h3>
             </div>
             <div class="page-content">
                 <section class="row">
@@ -110,18 +116,16 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
-                                    <div class="card-header">
+                                    <!--div class="card-header">
                                         <h4>SubTitulo</h4>
-                                    </div>
+                                    </!--div-->
                                     <div class="card-body">
-                                        <div></div>
+                                        <?PHP echo $listado; ?>                                     
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                    </div>
-                    
+                        </div>                        
+                    </div>                    
                 </section>
             </div>
 

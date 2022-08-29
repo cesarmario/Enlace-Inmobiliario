@@ -1,10 +1,9 @@
 <?PHP session_start();
 include('conexion.php'); 
-//error_reporting(E_ALL ^ E_NOTICE); 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL ^ E_NOTICE);
-$actual = date("Y-m-d H:i:s");
+$fecha = date("Y-m-d H:i:s");
 
 if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	$query="INSERT INTO inmueble (
@@ -24,7 +23,6 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	`valorInmueble`,
 	`monedaInmueble`,
 	`agenteInmueble`,
-	`fecha`,
 	`baja`
 	)VALUES(
 	'$_REQUEST[idPropiedad]',
@@ -42,19 +40,35 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	'$_REQUEST[informacionAdicionalInmueble]',
 	'$_REQUEST[valorInmueble]',
 	'$_REQUEST[monedaInmueble]',
-	'$_SESSION[idUsu],
-	'$actual',
+	'$_SESSION[idUsu]',
 	'0')";
 	$result = mysqli_query($conexion, $query);
     if (mysqli_affected_rows($conexion)>0){ ?>
 		<script>
         	location.replace("../inmueble_abm.php");
         </script>		
-<?PHP } else { ?>
+<?PHP } else { 
+	//	echo '<br>idPropiedad: ' . $_REQUEST['idPropiedad']; 
+	//	echo '<br>idOperacion: ' . $_REQUEST['idOperacion']; 
+	//	echo '<br>idLocalidad: ' . $_REQUEST['idLocalidad']; 
+	//	echo '<br>tituloInmueble: ' . $_REQUEST['tituloInmueble']; 
+	//	echo '<br>descripcionInmueble: ' . $_REQUEST['descripcionInmueble']; 
+	//	echo '<br>domicilioCalleInmueble: ' . $_REQUEST['domicilioCalleInmueble']; 
+	//	echo '<br>domicilioNumeroInmueble: ' . $_REQUEST['domicilioNumeroInmueble']; 
+	//	echo '<br>domicilioOrientacionInmueble: ' . $_REQUEST['domicilioOrientacionInmueble']; 
+	//	echo '<br>habitacionesInmueble: ' . $_REQUEST['habitacionesInmueble']; 
+	//	echo '<br>banosInmueble: ' . $_REQUEST['banosInmueble']; 
+	//	echo '<br>superficieCubiertaInmueble: ' . $_REQUEST['superficieCubiertaInmueble']; 
+	//	echo '<br>superficieTotalInmueble: ' . $_REQUEST['superficieTotalInmueble']; 
+	//	echo '<br>informacionAdicionalInmueble: ' . $_REQUEST['informacionAdicionalInmueble']; 
+	//	echo '<br>valorInmueble: ' . $_REQUEST['valorInmueble']; 
+	//	echo '<br>monedaInmueble: ' . $_REQUEST['monedaInmueble'];
+	//	echo '<br>agenteInmueble: ' . $_SESSION['idUsu'] .'<br>';
+		?>
 		<script>
 			alert("Ocurrio un Error a guardar en la Base de Datos!!");
 		</script>
-		<input type ='button' value = 'Volver' onClick="location.replace('../index.php');" class="button"/>
+		<input type ='button' value = 'Volver' onClick="location.replace('../inmueble_abm.php');" class="button"/>
 <?PHP } 
 } ?>
 

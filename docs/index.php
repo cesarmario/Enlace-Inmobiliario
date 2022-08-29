@@ -1,5 +1,5 @@
 <?PHP
-session_start();
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -49,17 +49,20 @@ session_start();
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
-                                <span>Configuracion</span>
+                                <span>Datos</span>
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
-                                    <a href="#">SubMenu 1</a>
+                                    <a href="#">Inmuebles</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="#">SubMenu 2</a>
+                                    <a href="#">Localidades</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="#">SubMenu 3</a>
+                                    <a href="#">Operaciones</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="#">Propiedades</a>
                                 </li>                                
                             </ul>
                         </li>                        

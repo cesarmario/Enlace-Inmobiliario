@@ -1,3 +1,7 @@
+<?PHP
+    session_start();
+    include('fn/opciones.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -36,28 +40,31 @@
                     <ul class="menu">
                         <li class="sidebar-title">Menu</li>
 
-                        <li class="sidebar-item active ">
+                        <li class="sidebar-item">
                             <a href="index.html" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>Inicio</span>
                             </a>
                         </li>
 
-                        <li class="sidebar-item  has-sub">
+                        <li class="sidebar-item active has-sub ">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
-                                <span>Configuracion</span>
+                                <span>Datos</span>
                             </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="#">SubMenu 1</a>
+                            <ul class="submenu active">
+                                <li class="submenu-item active">
+                                    <a href="#">Inmuebles</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="#">SubMenu 2</a>
+                                    <a href="#">Localidades</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="#">SubMenu 3</a>
-                                </li>                                
+                                    <a href="#">Operaciones</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="#">Propiedades</a>
+                                </li>                                  
                             </ul>
                         </li>                        
 
@@ -99,7 +106,7 @@
             </header>
 
             <div class="page-heading">
-                <h3>Titulo Principal</h3>
+                <h3>ABM Inmueble</h3>
             </div>
             <div class="page-content">
                 <section class="row">
@@ -107,11 +114,113 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
-                                    <div class="card-header">
-                                        <h4>SubTitulo</h4>
-                                    </div>
+                                    <!--div-- class="card-header">
+                                        <h4>ABM Inmueble</h4>
+                                    </!--div-->
                                     <div class="card-body">
-                                        <div></div>
+                                        <div class="row">
+                                            <form action="fn/login.php" method="GET">
+                                                <div class="col-md-8">
+                                            
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Titulo Inmueble</label>
+                                                        <input type="text" class="form-control" id='tituloInmueble'	name='tituloInmueble'
+                                                            placeholder="Titulo">
+                                                    </div>
+
+                                                    <div class="form-group mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Descripcion Inmueble</label>
+                                                        <textarea class="form-control" id='descripcionInmueble' name='descripcionInmueble'
+                                                            rows="3"></textarea>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Calle</label>
+                                                        <input type="text" class="form-control" id='domicilioCalleInmueble' name='domicilioCalleInmueble'
+                                                            placeholder="Domicilio">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">N&uacute;mero</label>
+                                                        <input type="text" class="form-control" id='domicilioNumeroInmueble' name='domicilioNumeroInmueble'
+                                                            placeholder="N&uacute;mero">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Orientacion</label>
+                                                        <select class="choices form-select">
+                                                            <option value=""></option>
+                                                            <option value="Este">Este</option>
+                                                            <option value="Oeste">Oeste</option>
+                                                            <option value="Norte">Norte</option>
+                                                            <option value="Sur">Sur</option>
+                                                        </select>                                    
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Localidad</label>
+                                                        <select class="choices form-select" id='idLocalidad' name='idLocalidad'>
+                                                            <option value="">Localidad</option>
+                                                            <?PHP while($localidad=mysqli_fetch_assoc($rtslocalidad)){?>
+                                                            <option value="<?PHP echo $localidad['idLocalidad']; ?>"> <?PHP echo $localidad['nombreLocalidad'];?></option>
+                                                            <?PHP } ?> 
+                                                        </select>                                    
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Habitaciones</label>
+                                                        <input type="text" class="form-control" id='habitacionesInmueble' name='habitacionesInmueble'
+                                                            placeholder="Habitaciones">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">banosInmueble</label>
+                                                        <input type="text" class="form-control" id='banosInmueble' name='banosInmueble'
+                                                            placeholder="banosInmueble">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Superficie Cubierta</label>
+                                                        <input type="text" class="form-control" id='superficieCubiertaInmueble' name='superficieCubiertaInmueble'
+                                                            placeholder="Superficie Cubierta">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Superficie Total</label>
+                                                        <input type="text" class="form-control" id='superficieTotalInmueble' name='superficieTotalInmueble'
+                                                            placeholder="Superficie Total">
+                                                    </div>
+
+                                                    <div class="form-group mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Informacion Adicional</label>
+                                                        <textarea class="form-control" id='InformacionAdicionalInmueble' name='InformacionAdicionalInmueble' rows="3">
+
+                                                        </textarea>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Valor Inmueble</label>
+                                                        <input type="text" class="form-control" id='valorInmueble' name='valorInmueble'
+                                                            placeholder="Valor">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Moneda</label>
+                                                        <select class="choices form-select">
+                                                            <option value=""></option>
+                                                            <option value="Este">Este</option>
+                                                            <option value="Oeste">Oeste</option>
+                                                            <option value="Norte">Norte</option>
+                                                            <option value="Sur">Sur</option>
+                                                        </select>                                    
+                                                    </div>
+                                                </div>
+
+                                                <div class="buttons">
+                                                    <button class="btn btn-success btn-lg shadow-lg mt-5">Guardar</button>
+                                                </div> 
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

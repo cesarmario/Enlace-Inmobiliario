@@ -126,7 +126,7 @@
                                     </!--div-->
                                     <div class="card-body">
                                         <div class="row">
-                                            <form action="fn/login.php" method="GET">
+                                            <form action="fn/abm_inmuebles.php" method="GET">
                                                 <div class="col-md-8">
                                             
                                                     <div class="form-group">

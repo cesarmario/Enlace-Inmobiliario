@@ -240,6 +240,7 @@
                                                 </div>
 
                                                 <div class="buttons">
+                                                <input type="hidden" id="abm" name="abm" value="a"/>
                                                     <button class="btn btn-success btn-lg shadow-lg mt-5">Guardar</button>
                                                 </div> 
                                             </form>
@@ -247,10 +248,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                    </div>
-                    
+                        </div>                        
+                    </div>                    
                 </section>
             </div>
 

@@ -20,10 +20,10 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	`banosInmueble`,
 	`superficieCubiertaInmueble`,
 	`superficieTotalInmueble`,
-	`InformacionAdicionalInmueble`,
-	`agenteInmueble`,
+	`informacionAdicionalInmueble`,	
 	`valorInmueble`,
 	`monedaInmueble`,
+	`agenteInmueble`,
 	`fecha`,
 	`baja`
 	)VALUES(
@@ -39,10 +39,10 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	'$_REQUEST[banosInmueble]',
 	'$_REQUEST[superficieCubiertaInmueble]',
 	'$_REQUEST[superficieTotalInmueble]',
-	'$_REQUEST[InformacionAdicionalInmueble]',
-	'$_SESSION['idUsu'],
+	'$_REQUEST[informacionAdicionalInmueble]',
 	'$_REQUEST[valorInmueble]',
 	'$_REQUEST[monedaInmueble]',
+	'$_SESSION[idUsu],
 	'$actual',
 	'0')";
 	$result = mysqli_query($conexion, $query);

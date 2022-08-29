@@ -135,6 +135,26 @@
                                                             placeholder="Titulo">
                                                     </div>
 
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Tipo de Propiedad</label>
+                                                        <select class="choices form-select" id='idPropiedad' name='idPropiedad'>
+                                                            <option value="">Propiedad</option>
+                                                            <?PHP while($propiedad=mysqli_fetch_assoc($rtspropiedad)){?>
+                                                            <option value="<?PHP echo $propiedad['idPropiedad']; ?>"> <?PHP echo $propiedad['nombrePropiedad'];?></option>
+                                                            <?PHP } ?> 
+                                                        </select>                                    
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Tipo de Operacion</label>
+                                                        <select class="choices form-select" id='idOperacion' name='idOperacion'>
+                                                            <option value="">Operacion</option>
+                                                            <?PHP while($operacion=mysqli_fetch_assoc($rtsoperacion)){?>
+                                                            <option value="<?PHP echo $operacion['idOperacion']; ?>"> <?PHP echo $operacion['nombreOperacion'];?></option>
+                                                            <?PHP } ?> 
+                                                        </select>                                    
+                                                    </div>                                                  
+
                                                     <div class="form-group mb-3">
                                                         <label for="exampleFormControlTextarea1" class="form-label">Descripcion Inmueble</label>
                                                         <textarea class="form-control" id='descripcionInmueble' name='descripcionInmueble'

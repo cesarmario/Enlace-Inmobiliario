@@ -29,7 +29,7 @@
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
                         <div class="logo">
-                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
+                            <a href="index.php"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
                         </div>
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
@@ -41,7 +41,7 @@
                         <li class="sidebar-title">Menu</li>
 
                         <li class="sidebar-item">
-                            <a href="index.html" class='sidebar-link'>
+                            <a href="index.php" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>Inicio</span>
                             </a>
@@ -91,6 +91,13 @@
                                     <a href="auth-forgot-password.html">Forgot Password</a>
                                 </li>
                             </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="fn/logout.php" class='sidebar-link'>
+                                <i class="bi bi-x-square"></i>
+                                <span>Cerrar Sessi&oacute;n</span>
+                            </a>
                         </li>
 
                     </ul>
@@ -174,9 +181,9 @@
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput">banosInmueble</label>
+                                                        <label for="basicInput">Baños</label>
                                                         <input type="text" class="form-control" id='banosInmueble' name='banosInmueble'
-                                                            placeholder="banosInmueble">
+                                                            placeholder="Baños">
                                                     </div>
 
                                                     <div class="form-group">
@@ -208,10 +215,8 @@
                                                         <label for="basicInput">Moneda</label>
                                                         <select class="choices form-select">
                                                             <option value=""></option>
-                                                            <option value="Este">Este</option>
-                                                            <option value="Oeste">Oeste</option>
-                                                            <option value="Norte">Norte</option>
-                                                            <option value="Sur">Sur</option>
+                                                            <option value="$">Pesos</option>
+                                                            <option value="USD">Dolares</option>
                                                         </select>                                    
                                                     </div>
                                                 </div>

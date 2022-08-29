@@ -1,5 +1,7 @@
 <?PHP
     session_start();
+	include('fn/login_ctrl.php');
+	include('fn/opciones.php');	
 ?>
 <!DOCTYPE html>
 <html lang="es">

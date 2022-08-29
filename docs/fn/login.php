@@ -9,6 +9,7 @@ $qlogin="SELECT * FROM usuario WHERE uidUsuario = '$_REQUEST[usu]' AND pswUsuari
 $result=mysqli_query($conexion,$qlogin);
 if (mysqli_num_rows($result)>0){
 	$row=mysqli_fetch_assoc($result);
+	$_SESSION['idUsu']	= $row['idUsuario'];
 	$_SESSION['uidUsu'] = $row['uidUsuario'];
 	$_SESSION['nomUsu'] = $row['nombreUsuario'];
 	$_SESSION['rolUsu'] = $row['rolUsuario'];

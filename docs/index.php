@@ -55,7 +55,7 @@
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
-                                    <a href="#">Inmuebles</a>
+                                    <a href="inmueble_abm.php">Inmuebles</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="#">Localidades</a>

@@ -4,6 +4,6 @@
 if(!isset($_SESSION['idUsu'])) { ?>
      <script>
 		//alert("Atencion\nNo ha Iniciado Sesion!");
-		location.replace("../login.html"); 
+		location.replace("./login.html"); 
 	 </script>
 <?PHP } ?>

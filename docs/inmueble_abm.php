@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -175,7 +175,7 @@
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Orientacion</label>
-                                                        <select class="choices form-select">
+                                                        <select class="choices form-select" id='domicilioOrientacionInmueble' name='domicilioOrientacionInmueble'>
                                                             <option value=""></option>
                                                             <option value="Este">Este</option>
                                                             <option value="Oeste">Oeste</option>
@@ -220,9 +220,7 @@
 
                                                     <div class="form-group mb-3">
                                                         <label for="exampleFormControlTextarea1" class="form-label">Informacion Adicional</label>
-                                                        <textarea class="form-control" id='InformacionAdicionalInmueble' name='InformacionAdicionalInmueble' rows="3">
-
-                                                        </textarea>
+                                                        <textarea class="form-control" id='InformacionAdicionalInmueble' name='InformacionAdicionalInmueble' rows="3"></textarea>
                                                     </div>
 
                                                     <div class="form-group">
@@ -233,7 +231,7 @@
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Moneda</label>
-                                                        <select class="choices form-select">
+                                                    <select class="choices form-select" id='monedaInmueble' name='monedaInmueble'>
                                                             <option value=""></option>
                                                             <option value="$">Pesos</option>
                                                             <option value="USD">Dolares</option>

@@ -8,7 +8,6 @@ $actual = date("Y-m-d H:i:s");
 
 if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	$query="INSERT INTO inmueble (
-	`idInmueble`,
 	`idPropiedad`,
 	`idOperacion`,
 	`idLocalidad`,
@@ -25,9 +24,9 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	`agenteInmueble`,
 	`valorInmueble`,
 	`monedaInmueble`,
+	`fecha`,
 	`baja`
 	)VALUES(
-	'$_REQUEST[idInmueble]',
 	'$_REQUEST[idPropiedad]',
 	'$_REQUEST[idOperacion]',
 	'$_REQUEST[idLocalidad]',
@@ -44,6 +43,7 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	'$_SESSION['idUsu'],
 	'$_REQUEST[valorInmueble]',
 	'$_REQUEST[monedaInmueble]',
+	'$actual',
 	'0')";
 	$result = mysqli_query($conexion, $query);
     if (mysqli_affected_rows($conexion)>0){ ?>

@@ -110,11 +110,11 @@
                                     <form action="fn/abm_opciones.php" method="GET">
                                         <div class="form-group">
                                             <label for="basicInput">Nuevo Tipo de Operación</label>
-                                            <input type="text" class="form-control" id='nombrePropiedad'	name='nombrePropiedad'
+                                            <input type="text" class="form-control" id='nombreOperacion'	name='nombreOperacion'
                                                     placeholder="Nombre" require>
                                         </div>
                                         <div class="buttons">
-                                            <input type="hidden" id="abm" name="abm" value="ap"/>
+                                            <input type="hidden" id="abm" name="abm" value="ao"/>
                                             <button type="submit" class="btn btn-primary me-1 mb-1">Guardar</button>
                                         </div> 
                                     </form>                                  

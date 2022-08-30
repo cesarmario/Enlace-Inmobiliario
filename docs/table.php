@@ -67,7 +67,7 @@
                         <li class="sidebar-item">
                             <a href="fn/logout.php" class='sidebar-link'>
                                 <i class="bi bi-x-square"></i>
-                                <span>Cerrar Sessi&oacute;n</span>
+                                <span>Cerrar Sesi&oacute;n</span>
                             </a>
                         </li>
 

@@ -56,7 +56,7 @@
                             </a>
                             <ul class="submenu active">
                                 <li class="submenu-item">
-                                    <a href="#"></i> Inmuebles</a>
+                                    <a href="inmuebles.php"></i> Inmuebles</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="localidades.php">Localidades</a>
@@ -73,7 +73,7 @@
                         <li class="sidebar-item">
                             <a href="fn/logout.php" class='sidebar-link'>
                                 <i class="bi bi-x-square"></i>
-                                <span>Cerrar Sessi&oacute;n</span>
+                                <span>Cerrar Sesi&oacute;n</span>
                             </a>
                         </li>
 
@@ -94,7 +94,7 @@
             </div>
             <div class="page-content">
                 <section class="row">
-                    <div class="col-12 col-lg-9">                        
+                    <div class="col-12 col-lg-12">                        
                         <div class="row">
                             <div class="col-6">
                                 <div class="card">                                    
@@ -109,7 +109,7 @@
                                     <div class="card-body">                                        
                                     <form action="fn/abm_opciones.php" method="GET">
                                         <div class="form-group">
-                                            <label for="basicInput">Nuevo Tipo de Operación</label>
+                                            <label for="basicInput">Nueva Operación</label>
                                             <input type="text" class="form-control" id='nombreOperacion'	name='nombreOperacion'
                                                     placeholder="Nombre" require>
                                         </div>

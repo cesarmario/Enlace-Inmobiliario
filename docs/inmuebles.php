@@ -57,7 +57,7 @@
                             </a>
                             <ul class="submenu active">
                                 <li class="submenu-item active">
-                                    <a href="#">Inmuebles</a>
+                                    <a href="inmuebles.php">Inmuebles</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="localidades.php">Localidades</a>
@@ -74,7 +74,7 @@
                         <li class="sidebar-item">
                             <a href="fn/logout.php" class='sidebar-link'>
                                 <i class="bi bi-x-square"></i>
-                                <span>Cerrar Sessi&oacute;n</span>
+                                <span>Cerrar Sesi&oacute;n</span>
                             </a>
                         </li>
 
@@ -95,7 +95,7 @@
             </div>
             <div class="page-content">
                 <section class="row">
-                    <div class="col-12 col-lg-9">                        
+                    <div class="col-12 col-lg-12">                        
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">                                    

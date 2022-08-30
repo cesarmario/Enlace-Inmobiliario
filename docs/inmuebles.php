@@ -57,7 +57,7 @@
                             </a>
                             <ul class="submenu active">
                                 <li class="submenu-item active">
-                                    <a href="#"><i class="bi bi-angle-right"></i> Inmuebles</a>
+                                    <a href="#">Inmuebles</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="#">Localidades</a>

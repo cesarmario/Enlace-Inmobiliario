@@ -56,16 +56,16 @@
                             </a>
                             <ul class="submenu active">
                                 <li class="submenu-item">
-                                    <a href="#"></i> Inmuebles</a>
+                                    <a href="inmuebles.php"></i> Inmuebles</a>
                                 </li>
-                                <li class="submenu-item ">
+                                <li class="submenu-item active">
                                     <a href="localidades.php">Localidades</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="operaciones.php">Operaciones</a>
                                 </li>
-                                <li class="submenu-item active">
-                                    <a href="propiedades.php"><i class="bi bi-angle-right"></i> Propiedades</a>
+                                <li class="submenu-item">
+                                    <a href="propiedades.php">Propiedades</a>
                                 </li>                                   
                             </ul>
                         </li>                        

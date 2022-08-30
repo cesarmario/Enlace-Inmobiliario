@@ -65,7 +65,7 @@
                                     <a href="operaciones.php">Operaciones</a>
                                 </li>
                                 <li class="submenu-item active">
-                                    <a href="propiedades.php"><i class="bi bi-angle-right"></i> Propiedades</a>
+                                    <a href="propiedades.php">Propiedades</a>
                                 </li>                                   
                             </ul>
                         </li>                        

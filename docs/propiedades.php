@@ -56,7 +56,7 @@
                             </a>
                             <ul class="submenu active">
                                 <li class="submenu-item">
-                                    <a href="#"></i> Inmuebles</a>
+                                    <a href="inmuebles.php">Inmuebles</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="localidades.php">Localidades</a>

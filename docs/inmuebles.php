@@ -1,7 +1,7 @@
 <?PHP
     session_start();
     include('fn/login_ctrl.php');
-    include('fn/opciones.php');
+    include('fn/list_opciones.php');
     include('fn/inmuebles.php');
 ?>
 <!DOCTYPE html>

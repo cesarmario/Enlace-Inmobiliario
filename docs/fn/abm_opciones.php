@@ -5,7 +5,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL ^ E_NOTICE);
 $fecha = date("Y-m-d H:i:s");
 
-if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
+if ($_REQUEST['abm']=='ap') { //Funcion Alta Propiedad
 	$query="INSERT INTO propiedad (
 	`nombrePropiedad`,
 	`baja`

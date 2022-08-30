@@ -1,7 +1,7 @@
 <?PHP
     session_start();
     include('fn/login_ctrl.php');
-    include('fn/list_propiedades.php');
+    include('fn/list_localidades.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -104,23 +104,23 @@
                                 </div>
                             </div>
       
-                            <div class="col-4">
+                            <!--div class="col-4">
                                 <div class="card">                                    
                                     <div class="card-body">                                        
                                     <form action="fn/abm_opciones.php" method="GET">
                                         <div class="form-group">
-                                            <label for="basicInput">Nuevo Tipo de Propiedad</label>
+                                            <label for="basicInput">Nueva Localidad</label>
                                             <input type="text" class="form-control" id='nombrePropiedad'	name='nombrePropiedad'
                                                     placeholder="Nombre" require>
                                         </div>
                                         <div class="buttons">
-                                            <input type="hidden" id="abm" name="abm" value="ap"/>
+                                            <input type="hidden" id="abm" name="abm" value="al"/>
                                             <button type="submit" class="btn btn-primary me-1 mb-1">Guardar</button>
                                         </div> 
                                     </form>                                  
                                     </div>
                                 </div>
-                            </div>
+                            </!--div-->
                         </div>            
                     </div>                    
                 </section>

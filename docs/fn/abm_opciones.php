@@ -24,6 +24,26 @@ if ($_REQUEST['abm']=='ap') { //Funcion Alta Propiedad
 		</script>
 		<input type ='button' value = 'Volver' onClick="location.replace('../propiedades.php');" class="button"/>
 <?PHP } 
-} ?>
+} 
 
+if ($_REQUEST['abm']=='ao') { //Funcion Alta Operacion
+	$query="INSERT INTO operacion (
+	`nombreOperacion`,
+	`baja`
+	)VALUES(
+	'$_REQUEST[nombreOperacion]',
+	'0')";
+	$result = mysqli_query($conexion, $query);
+    if (mysqli_affected_rows($conexion)>0){ ?>
+		<script>
+        	location.replace("../operaciones.php");
+        </script>		
+<?PHP } else { 
+		?>
+		<script>
+			alert("Ocurrio un Error a guardar en la Base de Datos!!");
+		</script>
+		<input type ='button' value = 'Volver' onClick="location.replace('../operaciones.php');" class="button"/>
+<?PHP } 
+} ?>
 

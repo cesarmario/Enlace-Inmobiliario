@@ -60,13 +60,13 @@
                                     <a href="#">Inmuebles</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="#">Localidades</a>
+                                    <a href="localidades.php">Localidades</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="#">Operaciones</a>
+                                    <a href="operaciones.php">Operaciones</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="#">Propiedades</a>
+                                    <a href="propiedades.php">Propiedades</a>
                                 </li>                                  
                             </ul>
                         </li>                        

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
 
     <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+    <link rel="stylesheet" href="assets/vendors/simple-datatables/style.css">
 
     <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
@@ -56,7 +57,7 @@
                             </a>
                             <ul class="submenu active">
                                 <li class="submenu-item active">
-                                    <a href="#">Inmuebles</a>
+                                    <a href="#"><i class="bi bi-angle-right"></i> Inmuebles</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="#">Localidades</a>
@@ -70,29 +71,11 @@
                             </ul>
                         </li>                        
 
-                        <li class="sidebar-item  ">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-cloud-arrow-up-fill"></i>
-                                <span>File Uploader</span>
+                        <li class="sidebar-item">
+                            <a href="fn/logout.php" class='sidebar-link'>
+                                <i class="bi bi-x-square"></i>
+                                <span>Cerrar Sessi&oacute;n</span>
                             </a>
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-person-badge-fill"></i>
-                                <span>Authentication</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="auth-login.html">Login</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="auth-register.html">Register</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="auth-forgot-password.html">Forgot Password</a>
-                                </li>
-                            </ul>
                         </li>
 
                     </ul>
@@ -116,12 +99,9 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">                                    
-                                    <!--div class="card-header">
-                                        <h4>SubTitulo</h4>
-                                    </!--div-->
                                     <div class="card-body">
                                         <div class="buttons">
-                                            <a href="inmueble_abm.php" class="btn btn-sm btn-outline-success">Nuevo</a>
+                                            <a href="inmueble_abm.php" class="btn btn-sm btn-outline-success">Nuevo Inmueble</a>
                                         </div>
                                         <?PHP echo $listado; ?>                                     
                                     </div>
@@ -146,6 +126,13 @@
 
     <script src="assets/vendors/apexcharts/apexcharts.js"></script>
     <script src="assets/js/pages/dashboard.js"></script>
+
+    <script src="assets/vendors/simple-datatables/simple-datatables.js"></script>
+    <script>
+        // Simple Datatable
+        let table1 = document.querySelector('#table1');
+        let dataTable = new simpleDatatables.DataTable(table1);
+    </script>
 
     <script src="assets/js/main.js"></script>
 </body>

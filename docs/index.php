@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 </head>
-
+&nbsp;
 <body>
     <div id="app">
         <div id="sidebar" class="active">

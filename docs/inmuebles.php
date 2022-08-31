@@ -2,7 +2,7 @@
     session_start();
     include('fn/login_ctrl.php');
     include('fn/list_opciones.php');
-    include('fn/inmuebles.php');
+    include('fn/list_inmuebles.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">

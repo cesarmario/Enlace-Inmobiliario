@@ -31,13 +31,15 @@ if ($_REQUEST['abm']=='a'){
 
 $query="INSERT INTO imagen (
 	`tipoImagen`,
-	`idInmueble`,	
+	`idInmueble`,
 	`detalleImagen`,
+	`ordenImagen`,
 	`baja`
 	)VALUES(
 	'$qtipo',	
 	'$_REQUEST[idInmueble]',
 	'$_REQUEST[detalleImagen]',
+	'0',
 	'0')";
 	$result = mysqli_query($conexion, $query);
 	if (mysqli_affected_rows($conexion)>0){

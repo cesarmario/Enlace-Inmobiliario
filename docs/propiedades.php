@@ -65,7 +65,7 @@
                                     <a href="operaciones.php">Operaciones</a>
                                 </li>
                                 <li class="submenu-item active">
-                                    <a href="propiedades.php">Propiedades</a>
+                                    <a href="propiedades.php"><i class="fa-solid fa-circle-chevron-right"></i>&nbsp;Propiedades</a>
                                 </li>                                   
                             </ul>
                         </li>                        
@@ -147,7 +147,7 @@
         let table1 = document.querySelector('#table1');
         let dataTable = new simpleDatatables.DataTable(table1);
     </script>
-
+    <script src="https://kit.fontawesome.com/1ffc2bde27.js" crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

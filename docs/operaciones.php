@@ -56,15 +56,15 @@
                             </a>
                             <ul class="submenu active">
                                 <li class="submenu-item">
-                                    <a href="inmuebles.php"></i> Inmuebles</a>
+                                    <a href="inmuebles.php">Inmuebles</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="localidades.php">Localidades</a>
                                 </li>
-                                <li class="submenu-item ">
-                                    <a href="operaciones.php">Operaciones</a>
-                                </li>
                                 <li class="submenu-item active">
+                                    <a href="operaciones.php"><i class="fa-solid fa-circle-chevron-right"></i>&nbsp;Operaciones</a>
+                                </li>
+                                <li class="submenu-item">
                                     <a href="propiedades.php">Propiedades</a>
                                 </li>                                   
                             </ul>
@@ -147,7 +147,7 @@
         let table1 = document.querySelector('#table1');
         let dataTable = new simpleDatatables.DataTable(table1);
     </script>
-
+    <script src="https://kit.fontawesome.com/1ffc2bde27.js" crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion - Imagenes Inmueble</title>
-
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -60,7 +60,7 @@
                             </a>
                             <ul class="submenu active">
                                 <li class="submenu-item active">
-                                    <a href="inmuebles.php">Inmuebles</a>
+                                    <a href="inmuebles.php"><i class="fa-solid fa-circle-chevron-right"></i>&nbsp;Inmuebles</a>
                                 </li>
                                 <li class="submenu-item">
                                     <a href="localidades.php">Localidades</a>
@@ -126,8 +126,10 @@
                                         </form>                                  
                                     </div>
                                                                         
-                                    <div class="card-body">                                        
-                                        <?PHP echo $listado; ?>                                     
+                                    <div class="card-body">
+                                        <div class="table-responsive">                                        
+                                            <?PHP echo $listado; ?>                                     
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -361,7 +363,7 @@
         })
     });
 </script>
-
+    <script src="https://kit.fontawesome.com/1ffc2bde27.js" crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

@@ -93,10 +93,10 @@
                 <h3>Operaciones</h3>
             </div>
             <div class="page-content">
-                <section class="row">
+                <section class="section">
                     <div class="col-12 col-lg-12">                        
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-12 col-md-6">
                                 <div class="card">                                    
                                     <div class="card-body">                                        
                                         <?PHP echo $listado; ?>                                     
@@ -104,7 +104,7 @@
                                 </div>
                             </div>
       
-                            <div class="col-4">
+                            <div class="col-12 col-md-4">
                                 <div class="card">                                    
                                     <div class="card-body">                                        
                                     <form action="fn/abm_opciones.php" method="GET">

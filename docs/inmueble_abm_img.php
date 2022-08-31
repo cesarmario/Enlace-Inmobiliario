@@ -93,25 +93,26 @@
                 </a>
             </header>
 
-            <div class="page-heading">
-                <h3>ABM Imagenes</h3>
-            </div>
+            <!--div-- class="page-heading">
+            </!--div-->
             <div class="page-content">
-                <section class="row">
+                <section class="section">
                     <div class="col-12 col-lg-12">                        
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-12 col-md-6">
                                 <div class="card">
-                                <div class="card-header">
+                                    <div class="card-header">
                                         <h4><?PHP echo $inmuebles['tituloInmueble']; ?></h4>
+                                        <span class="badge bg-success"><?PHP echo $inmuebles['nombrePropiedad']; ?></span>
+                                        <span class="badge bg-info"><?PHP echo $inmuebles['nombreOperacion']; ?></span>
                                     </div>
                                     <div class="card-body">                                        
                                         <!--form action="fn/abm_img.php" method="GET"-->
                                         <form role="form" action="fn/abm_img.php" method="POST" enctype="multipart/form-data">    
                                             <div class="form-group">
-                                                <!--label for="basicInput">Imagen</!--label-->
+                                                <label>Subir Imagen</label><br>
                                                 <!--input type="file" class="basic-filepond" name="imagen"-->
-                                                <input type="file" name="imagen" id="imagen">
+                                                <input type="file" name="imagen" id="imagen" require>
 
                                                 <!--label-- for="basicInput">Detalle</°label-->
                                                 <textarea rows="2" class="form-control" placeholder="Detalle de la Imagen"

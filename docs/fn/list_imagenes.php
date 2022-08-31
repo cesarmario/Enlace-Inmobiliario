@@ -16,7 +16,7 @@
         $imagen = "assets/images/inmuebles/" . str_pad($imagenes['idImagen'], 8, "0", STR_PAD_LEFT) . "." . $imagenes['tipoImagen'];
         
         $listado .= "<tr>";
-        $listado .= "<td><a href='". $imagen . "' target='_blank'><img src='". $imagen . "' height='70px'></a></td>";
+        $listado .= "<td><a href='". $imagen . "' target='_blank'><img src='". $imagen . "' height='60px'></a></td>";
         $listado .= "<td>". $imagenes['detalleImagen'] . "</td>";
         $listado .= "<td><a href='fn/abm_img.php?idImagen=". $imagenes['idImagen'] . "&idInmueble=". $_REQUEST['idInmueble'] ."&abm=b' class='btn btn-danger me-1 mb-1'><i class='fa-solid fa-trash-can'></i></i></a></td>";
         $listado .= "</tr>";

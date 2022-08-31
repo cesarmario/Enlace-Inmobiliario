@@ -43,9 +43,16 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	'$_SESSION[idUsu]',
 	'0')";
 	$result = mysqli_query($conexion, $query);
-    if (mysqli_affected_rows($conexion)>0){ ?>
+    if (mysqli_affected_rows($conexion)>0){ 
+		
+		$queryctrl="SELECT * FROM inmueble WHERE baja != '1' ORDER BY idInmueble DESC LIMIT 1";
+		$rtsctrl = mysqli_query($conexion, $queryctrl);
+		$ctrl=mysqli_fetch_assoc($rtsctrl);
+		$idInmueble=$ctrl['idInmueble'];		
+		?>
 		<script>
-        	location.replace("../inmuebles.php");
+			location.replace("../inmueble_abm_img.php?idInmueble=<?PHP echo $idInmueble;?>");
+        //	location.replace("../inmuebles.php");
         </script>		
 <?PHP } else { 
 	//	echo '<br>idPropiedad: ' . $_REQUEST['idPropiedad']; 

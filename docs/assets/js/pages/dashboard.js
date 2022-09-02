@@ -15,18 +15,18 @@ var optionsProfileVisit = {
 	plotOptions: {
 	},
 	series: [{
-		name: 'Inmuebles',
-		data: [9,20,30,20 ]
+		name: 'Propiedades',
+		data: [9,20,30,20,5,15,50]
 	}],
 	colors: '#435ebe',
 	xaxis: {
-		categories: ["Casas","Departamentos","Cocheras","Fincas"],
+		categories: ["Casas","Cocheras","Departamentos","Desarrollo Inmobiliario","Fincas","Local Comercial","Lote"],
 	},
 }
 let optionsVisitorsProfile  = {
-	series: [70, 30],
-	labels: ['Venta', 'Alquiler'],
-	colors: ['#435ebe','#55c6e8'],
+	series: [50, 40, 10],
+	labels: ['Venta', 'Alquiler', 'Leasing'],
+	colors: ['#435ebe','#55c6e8','#45b09a'],
 	chart: {
 		type: 'donut',
 		width: '100%',

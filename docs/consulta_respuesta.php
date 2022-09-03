@@ -54,14 +54,14 @@
                                 <span>Inmuebles</span>
                             </a>
                             <ul class="submenu active">
-                                <li class="submenu-item ">
+                                <li class="submenu-item">
                                     <a href="inmuebles.php">Inmuebles</a>
                                 </li>
-                                <li class="submenu-item ">
-                                    <a href="consulta_abm.php">Consultas</a>
-                                </li>
                                 <li class="submenu-item active">
-                                    <a href="pedido_abm.php"><i class="fa-solid fa-circle-chevron-right"></i>&nbsp;Pedidos</a>
+                                    <a href="consultas.php"><i class="fa-solid fa-circle-chevron-right"></i>&nbsp;Consultas</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="pedidos.php">Pedidos</a>
                                 </li>                              
                             </ul>
                         </li>
@@ -72,17 +72,17 @@
                                 <span>Datos</span>
                             </a>
                             <ul class="submenu">
-                                <li class="submenu-item ">
+                                <li class="submenu-item">
                                     <a href="localidades.php">Localidades</a>
                                 </li>
-                                <li class="submenu-item ">
+                                <li class="submenu-item">
                                     <a href="operciones.php">Operaciones</a>
                                 </li>
-                                <li class="submenu-item ">
+                                <li class="submenu-item">
                                     <a href="propiedades.php">Propiedades</a>
                                 </li>                                  
                             </ul>
-                        </li>
+                        </li>   
 
                         <li class="sidebar-item">
                             <a href="fn/logout.php" class='sidebar-link'>

@@ -49,15 +49,30 @@
                             </a>
                         </li>
 
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-house"></i>
+                                <span>Inmuebles</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="inmuebles.php">Inmuebles</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="consultas.php">Consultas</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="pedidos.php">Pedidos</a>
+                                </li>                              
+                            </ul>
+                        </li>
+
                         <li class="sidebar-item active has-sub ">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
                                 <span>Datos</span>
                             </a>
                             <ul class="submenu active">
-                                <li class="submenu-item">
-                                    <a href="inmuebles.php">Inmuebles</a>
-                                </li>
                                 <li class="submenu-item ">
                                     <a href="localidades.php">Localidades</a>
                                 </li>

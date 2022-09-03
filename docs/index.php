@@ -156,7 +156,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <h6 class="text-muted font-semibold">Pedidos</h6>
-                                                <h6 class="font-extrabold mb-0"><?PHP echo 0; //$pedidos['totalPedidos']; ?></h6>
+                                                <h6 class="font-extrabold mb-0"><?PHP echo $pedidos['totalPedidos']; ?></h6>
                                             </div>
                                         </div>
                                     </div>

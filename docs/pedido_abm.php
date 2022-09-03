@@ -53,7 +53,7 @@
                                 <i class="bi bi-house"></i>
                                 <span>Inmuebles</span>
                             </a>
-                            <ul class="submenu ">
+                            <ul class="submenu active">
                                 <li class="submenu-item ">
                                     <a href="inmuebles.php">Inmuebles</a>
                                 </li>

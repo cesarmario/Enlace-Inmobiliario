@@ -51,24 +51,39 @@
 
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
-                                <i class="bi bi-stack"></i>
-                                <span>Datos</span>
+                                <i class="bi bi-house"></i>
+                                <span>Inmuebles</span>
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
                                     <a href="inmuebles.php">Inmuebles</a>
                                 </li>
                                 <li class="submenu-item ">
+                                    <a href="#">Consultas</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="pedidos_abm.php">Pedidos</a>
+                                </li>                              
+                            </ul>
+                        </li>
+                        
+                        <li class="sidebar-item has-sub ">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-stack"></i>
+                                <span>Datos</span>
+                            </a>
+                            <ul class="submenu">
+                                <li class="submenu-item ">
                                     <a href="localidades.php">Localidades</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="operaciones.php">Operaciones</a>
+                                    <a href="operciones.php">Operaciones</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="propiedades.php">Propiedades</a>
-                                </li>                                
+                                </li>                                  
                             </ul>
-                        </li>                        
+                        </li>
 
                         <li class="sidebar-item">
                             <a href="fn/logout.php" class='sidebar-link'>
@@ -124,7 +139,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <h6 class="text-muted font-semibold">Consultas</h6>
-                                                <h6 class="font-extrabold mb-0"><?PHP echo $consultas['totalConsultas']; ?></h6>
+                                                <h6 class="font-extrabold mb-0"><?PHP echo 0;//$consultas['totalConsultas']; ?></h6>
                                             </div>
                                         </div>
                                     </div>
@@ -141,7 +156,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <h6 class="text-muted font-semibold">Pedidos</h6>
-                                                <h6 class="font-extrabold mb-0"><?PHP echo $pedidos['totalPedidos']; ?></h6>
+                                                <h6 class="font-extrabold mb-0"><?PHP echo 0; //$pedidos['totalPedidos']; ?></h6>
                                             </div>
                                         </div>
                                     </div>

@@ -91,7 +91,7 @@
             </header>
 
             <div class="page-heading">
-                <h3>Pedidos</h3>
+                <h3>Consultas desde la Web</h3>
             </div>
             <div class="page-content">
                 <section class="row">
@@ -100,10 +100,7 @@
                             <div class="col-12">
                                 <div class="card">                                    
                                     <div class="card-body">
-                                        <div class="buttons">
-                                            <a href="pedido_abm.php" class="btn btn-sm btn-outline-success">Nuevo Pedido</a>
-                                        </div>
-                                        <?PHP echo $listadoConsultas; ?>                                     
+                                         <?PHP echo $listadoConsultas; ?>                                     
                                     </div>
                                 </div>
                             </div>

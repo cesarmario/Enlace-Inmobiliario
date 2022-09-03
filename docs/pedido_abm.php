@@ -142,10 +142,10 @@
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Localidad</label>
-                                                        <select class="choices form-select" id='idLocalidad' name='idLocalidad' require>
+                                                        <select class="choices form-select" id='localidadesPedido' name='localidadesPedido' require>
                                                             <option value="">Localidad</option>
                                                             <?PHP while($localidad=mysqli_fetch_assoc($rtslocalidad)){?>
-                                                            <option value="<?PHP echo $localidad['idLocalidad']; ?>"> <?PHP echo $localidad['nombreLocalidad'];?></option>
+                                                            <option value="<?PHP echo $localidad['nombreLocalidad']; ?>"> <?PHP echo $localidad['nombreLocalidad'];?></option>
                                                             <?PHP } ?> 
                                                         </select>                                    
                                                     </div>

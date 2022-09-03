@@ -18,7 +18,6 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	`idUsuario`,
 	`baja`
 	)VALUES(
-	'$_REQUEST[idUsuario]',
 	'$_REQUEST[idPropiedad]',
 	'$_REQUEST[idOperacion]',
 	'$_REQUEST[localidadesPedido]',
@@ -55,7 +54,7 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 		<script>
 			alert("Ocurrio un Error a guardar en la Base de Datos!!");
 		</script>
-		<input type ='button' value = 'Volver' onClick="location.replace('../inmuebles.php');" class="button"/>
+		<input type ='button' value = 'Volver' onClick="location.replace('../index.php');" class="button"/>
 <?PHP } 
 } ?>
 

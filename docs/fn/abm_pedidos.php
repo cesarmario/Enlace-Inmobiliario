@@ -6,8 +6,7 @@ error_reporting(E_ALL ^ E_NOTICE);
 $fecha = date("Y-m-d H:i:s");
 
 if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
-	$query="INSERT INTO pedido (
-	`idUsuario`,
+	$query="INSERT INTO pedido (	
 	`idPropiedad`,
 	`idOperacion`,
 	`localidadesPedido`,
@@ -16,6 +15,7 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	`importeHastaPedido`,
 	`caracteristicasPedido`,
 	`comentariosPedido`,
+	`idUsuario`,
 	`baja`
 	)VALUES(
 	'$_REQUEST[idUsuario]',
@@ -30,16 +30,9 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	'$_SESSION[idUsu]',
 	'0')";
 	$result = mysqli_query($conexion, $query);
-    if (mysqli_affected_rows($conexion)>0){ 
-		
-		$queryctrl="SELECT * FROM pedido WHERE baja != '1' ORDER BY idPedido DESC LIMIT 1";
-		$rtsctrl = mysqli_query($conexion, $queryctrl);
-		$ctrl=mysqli_fetch_assoc($rtsctrl);
-		$idInmueble=$ctrl['idPedido'];		
-		?>
+    if (mysqli_affected_rows($conexion)>0){ ?>
 		<script>
-			location.replace("../inmueble_abm_img.php?idInmueble=<?PHP echo $idInmueble;?>");
-        //	location.replace("../inmuebles.php");
+        	location.replace("../pedido_abm.php");
         </script>		
 <?PHP } else { 
 	//	echo '<br>idPropiedad: ' . $_REQUEST['idPropiedad']; 

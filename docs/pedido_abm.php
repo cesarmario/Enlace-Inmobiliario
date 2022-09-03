@@ -104,12 +104,6 @@
                                         <div class="row">
                                             <form action="fn/abm_pedidos.php" method="GET">
                                                 <div class="col-md-8">
-                                            
-                                                    <div class="form-group">
-                                                        <label for="basicInput">Nombre de Usuario</label>
-                                                        <input type="text" class="form-control" id='idUsuario'	name='idUsuario'
-                                                            placeholder="Nombre Usuario" require>
-                                                    </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Tipo de Propiedad</label>

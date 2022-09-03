@@ -141,7 +141,7 @@
                                                     </div>                                                  
 
                                                     <div class="form-group">
-                                                        <label for="basicInput">Localidad</label>
+                                                        <label for="basicInput">Localidades</label>
                                                         <select class="choices form-select" id='localidadesPedido' name='localidadesPedido' require>
                                                             <option value="">Localidad</option>
                                                             <?PHP while($localidad=mysqli_fetch_assoc($rtslocalidad)){?>

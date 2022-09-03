@@ -18,7 +18,7 @@
         $listadoConsultas .= "<tr>";
         $listadoConsultas .= "<td>". $consultas['fechaConsulta'] . "</td>";
         $listadoConsultas .= "<td>". $consultas['tituloInmueble'] . "</td>";
-        $listadoConsultas .= "<td>". $consultas['idAgenteInmueble'] . "</td>";
+        $listadoConsultas .= "<td>". $consultas['nombreAgente'] . "</td>";
         $listadoConsultas .= "<td>". $consultas['nombreConsulta'] . "</td>";
         $listadoConsultas .= "<td>". $consultas['fechaRespuestaConsulta'] . "</td>";
         $listadoConsultas .= "<td><a href='consulta_abm.php?idConsulta=". $consultas['idConsulta'] ."' class='btn btn-warning me-1 mb-1'>Editar</a></td>";

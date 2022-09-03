@@ -59,7 +59,7 @@
                                     <a href="inmuebles.php">Inmuebles</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="#">Consultas</a>
+                                    <a href="consultas.php">Consultas</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="pedidos.php">Pedidos</a>

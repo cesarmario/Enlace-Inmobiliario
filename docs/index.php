@@ -62,7 +62,7 @@
                                     <a href="#">Consultas</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="pedido_abm.php">Pedidos</a>
+                                    <a href="pedidos.php">Pedidos</a>
                                 </li>                              
                             </ul>
                         </li>

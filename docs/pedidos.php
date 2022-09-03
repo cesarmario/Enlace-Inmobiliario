@@ -2,7 +2,7 @@
     session_start();
     include('fn/login_ctrl.php');
     include('fn/list_opciones.php');
-    include('fn/list_inmuebles.php');
+    include('fn/list_pedidos.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -57,7 +57,7 @@
                             </a>
                             <ul class="submenu active">
                                 <li class="submenu-item active">
-                                    <a href="inmuebles.php"><i class="fa-solid fa-circle-chevron-right"></i>&nbsp;Inmuebles</a>
+                                    <a href="pedidos.php"><i class="fa-solid fa-circle-chevron-right"></i>&nbsp;Pedidos</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="localidades.php">Localidades</a>
@@ -91,7 +91,7 @@
             </header>
 
             <div class="page-heading">
-                <h3>Inmuebles</h3>
+                <h3>Pedidos</h3>
             </div>
             <div class="page-content">
                 <section class="row">
@@ -101,9 +101,9 @@
                                 <div class="card">                                    
                                     <div class="card-body">
                                         <div class="buttons">
-                                            <a href="inmueble_abm.php" class="btn btn-sm btn-outline-success">Nuevo Inmueble</a>
+                                            <a href="pedidos_abm.php" class="btn btn-sm btn-outline-success">Nuevo Pedido</a>
                                         </div>
-                                        <?PHP echo $listado; ?>                                     
+                                        <?PHP echo $listadoPedidos; ?>                                     
                                     </div>
                                 </div>
                             </div>

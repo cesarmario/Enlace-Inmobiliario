@@ -2,7 +2,7 @@
     session_start();
     include('fn/login_ctrl.php');
     include('fn/list_opciones.php');
-    include('fn/list_pedidos.php');
+    include('fn/list_consultas.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -103,7 +103,7 @@
                                         <div class="buttons">
                                             <a href="pedido_abm.php" class="btn btn-sm btn-outline-success">Nuevo Pedido</a>
                                         </div>
-                                        <?PHP echo $listadoPedidos; ?>                                     
+                                        <?PHP echo $listadoConsultas; ?>                                     
                                     </div>
                                 </div>
                             </div>

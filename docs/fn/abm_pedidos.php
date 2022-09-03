@@ -31,7 +31,7 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	$result = mysqli_query($conexion, $query);
     if (mysqli_affected_rows($conexion)>0){ ?>
 		<script>
-        	location.replace("../pedido_abm.php");
+        	location.replace("../pedidos.php");
         </script>		
 <?PHP } else { 
 	//	echo '<br>idPropiedad: ' . $_REQUEST['idPropiedad']; 
@@ -54,7 +54,7 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 		<script>
 			alert("Ocurrio un Error a guardar en la Base de Datos!!");
 		</script>
-		<input type ='button' value = 'Volver' onClick="location.replace('../index.php');" class="button"/>
+		<input type ='button' value = 'Volver' onClick="location.replace('../pedidos.php');" class="button"/>
 <?PHP } 
 } ?>
 

@@ -1,6 +1,6 @@
 <?PHP
     include('conexion.php');
-    $querypedidos = "SELECT * FROM vista_pedidos ORDER BY fecha DESC";
+    $querypedidos = "SELECT * FROM vista_pedidos ORDER BY fechaPedido DESC";
     $rtspedidos = mysqli_query($conexion, $querypedidos);
     $listadoPedidos = "<table class='table table-striped' id='table1'>";
     $listadoPedidos .= "<thead>";
@@ -27,7 +27,7 @@
         $listadoPedidos .= "<td><b>". $pedidos['importeMonedaPedido'] . "</b>&nbsp;". $pedidos['importeHastaPedido'] . "</td>";
         $listadoPedidos .= "<td>". $pedidos['caracteristicasPedido'] . "</td>";
         $listadoPedidos .= "<td><b>". $pedidos['comentariosPedido'] . "</td>";
-        $listadoPedidos .= "<td><a href='pedido_abm.php?idPedido=". $pedido['idPedido'] ."' class='btn btn-warning me-1 mb-1'>Editar</a></td>";
+        $listadoPedidos .= "<td><a href='pedido_abm.php?idPedido=". $pedidos['idPedido'] ."' class='btn btn-warning me-1 mb-1'>Editar</a></td>";
         $listadoPedidos .= "</tr>";
     }
     $listadoPedidos .= "</tbody>";

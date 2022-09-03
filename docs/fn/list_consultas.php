@@ -9,6 +9,7 @@
     $listadoConsultas .= "<th>Inmueble</th>";
     $listadoConsultas .= "<th>Agente</th>";
     $listadoConsultas .= "<th>Nombre y Apellido</th>";
+    $listadoConsultas .= "<th>Respuesta</th>";
     $listadoConsultas .= "<th></th>";
     $listadoConsultas .= "</tr>";
     $listadoConsultas .= "</thead>";

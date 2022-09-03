@@ -89,7 +89,7 @@
             </header>
 
             <div class="page-heading">
-                <h3>ABM Inmueble</h3>
+                <h3>ABM Pedido</h3>
             </div>
             <div class="page-content">
                 <section class="row">
@@ -102,13 +102,13 @@
                                     </!--div-->
                                     <div class="card-body">
                                         <div class="row">
-                                            <form action="fn/abm_inmuebles.php" method="GET">
+                                            <form action="fn/abm_pedidos.php" method="GET">
                                                 <div class="col-md-8">
                                             
                                                     <div class="form-group">
-                                                        <label for="basicInput">Titulo Inmueble</label>
-                                                        <input type="text" class="form-control" id='tituloInmueble'	name='tituloInmueble'
-                                                            placeholder="Titulo" require>
+                                                        <label for="basicInput">Nombre de Usuario</label>
+                                                        <input type="text" class="form-control" id='idUsuario'	name='idUsuario'
+                                                            placeholder="Nombre Usuario" require>
                                                     </div>
 
                                                     <div class="form-group">
@@ -131,35 +131,6 @@
                                                         </select>                                    
                                                     </div>                                                  
 
-                                                    <div class="form-group mb-3">
-                                                        <label for="exampleFormControlTextarea1" class="form-label">Descripcion Inmueble</label>
-                                                        <textarea class="form-control" id='descripcionInmueble' name='descripcionInmueble'
-                                                            rows="3"></textarea>
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label for="basicInput">Calle</label>
-                                                        <input type="text" class="form-control" id='domicilioCalleInmueble' name='domicilioCalleInmueble'
-                                                            placeholder="Domicilio" require>
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label for="basicInput">N&uacute;mero</label>
-                                                        <input type="text" class="form-control" id='domicilioNumeroInmueble' name='domicilioNumeroInmueble'
-                                                            placeholder="N&uacute;mero">
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label for="basicInput">Orientacion</label>
-                                                        <select class="choices form-select" id='domicilioOrientacionInmueble' name='domicilioOrientacionInmueble'>
-                                                            <option value=""></option>
-                                                            <option value="Este">Este</option>
-                                                            <option value="Oeste">Oeste</option>
-                                                            <option value="Norte">Norte</option>
-                                                            <option value="Sur">Sur</option>
-                                                        </select>                                    
-                                                    </div>
-                                                    
                                                     <div class="form-group">
                                                         <label for="basicInput">Localidad</label>
                                                         <select class="choices form-select" id='idLocalidad' name='idLocalidad' require>
@@ -169,15 +140,42 @@
                                                             <?PHP } ?> 
                                                         </select>                                    
                                                     </div>
-                                                    
+
                                                     <div class="form-group">
-                                                        <label for="basicInput">Habitaciones</label>
-                                                        <input type="text" class="form-control" id='habitacionesInmueble' name='habitacionesInmueble'
-                                                            placeholder="Habitaciones">
+                                                        <label for="basicInput">Moneda</label>
+                                                    <select class="choices form-select" id='importeMonedaPedido' name='importeMonedaPedido'>
+                                                            <option value=""></option>
+                                                            <option value="$">Pesos</option>
+                                                            <option value="USD">Dolares</option>
+                                                        </select>                                    
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput">Baños</label>
+                                                        <label for="basicInput">Valor desde</label>
+                                                        <input type="text" class="form-control" id='importeDesdePedido' name='importeDesdePedido'
+                                                            placeholder="Valor desde">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Valor hasta</label>
+                                                        <input type="text" class="form-control" id='importeHastaPedido' name='importeHastaPedido'
+                                                            placeholder="Valor hasta">                                   
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Características</label>
+                                                        <input type="text" class="form-control" id='caracteristicasPedido' name='caracteristicasPedido'
+                                                            placeholder="Características">
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Comentarios</label>
+                                                        <input type="text" class="form-control" id='comentariosPedido' name='comentariosPedido'
+                                                            placeholder="Comentarios">
+                                                    </div>
+
+                                                <!--    <div class="form-group">
+                                                        <label for="basicInput">Fecha</label>
                                                         <input type="text" class="form-control" id='banosInmueble' name='banosInmueble'
                                                             placeholder="Baños">
                                                     </div>
@@ -213,7 +211,7 @@
                                                             <option value="USD">Dolares</option>
                                                         </select>                                    
                                                     </div>
-                                                </div>
+                                                </div> -->
 
                                                 <div class="buttons">
                                                     <input type="hidden" id="abm" name="abm" value="a"/>

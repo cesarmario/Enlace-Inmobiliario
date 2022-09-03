@@ -117,13 +117,13 @@
                                     </!--div-->
                                     <div class="card-body">
                                         <div class="row">
-                                            <form action="fn/abm_pedidos.php" method="GET">
+                                            <form class="form form-vertical" action="fn/abm_pedidos.php" method="GET">
                                                 <div class="col-md-8">
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Tipo de Propiedad</label>
                                                         <select class="choices form-select" id='idPropiedad' name='idPropiedad' require>
-                                                            <option value="">Propiedad</option>
+                                                            <option value=""></option>
                                                             <?PHP while($propiedad=mysqli_fetch_assoc($rtspropiedad)){?>
                                                             <option value="<?PHP echo $propiedad['idPropiedad']; ?>"> <?PHP echo $propiedad['nombrePropiedad'];?></option>
                                                             <?PHP } ?> 
@@ -133,7 +133,7 @@
                                                     <div class="form-group">
                                                         <label for="basicInput">Tipo de Operacion</label>
                                                         <select class="choices form-select" id='idOperacion' name='idOperacion'require>
-                                                            <option value="">Operacion</option>
+                                                            <option selected value=""></option>
                                                             <?PHP while($operacion=mysqli_fetch_assoc($rtsoperacion)){?>
                                                             <option value="<?PHP echo $operacion['idOperacion']; ?>"> <?PHP echo $operacion['nombreOperacion'];?></option>
                                                             <?PHP } ?> 
@@ -143,7 +143,7 @@
                                                     <div class="form-group">
                                                         <label for="basicInput">Localidades</label>
                                                         <select class="choices form-select" id='localidadesPedido' name='localidadesPedido' require>
-                                                            <option value="">Localidad</option>
+                                                            <option value=""></option>
                                                             <?PHP while($localidad=mysqli_fetch_assoc($rtslocalidad)){?>
                                                             <option value="<?PHP echo $localidad['nombreLocalidad']; ?>"> <?PHP echo $localidad['nombreLocalidad'];?></option>
                                                             <?PHP } ?> 

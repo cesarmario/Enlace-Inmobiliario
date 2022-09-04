@@ -234,8 +234,8 @@
                                                 <div class="buttons">
                                                     <input type="hidden" id="idInmueble" name="idInmueble" value="<?PHP echo $_REQUEST['idInmueble']; ?>"/>
                                                     <input type="hidden" id="abm" name="abm" value="<?PHP echo $_REQUEST['abm']; ?>"/>
-                                                    <button type="submit" class="btn btn-primary me-1 mb-1">Guardar</button>
-                                                    <button type="reset" class="btn btn-secondary me-1 mb-1">Reset</button>
+                                                    <button type="submit" class="btn btn-success me-1 mb-1">Guardar</button>
+                                                    <!--button type="reset" class="btn btn-secondary me-1 mb-1">Reset</button-->
                                                     <a href="inmuebles.php" class="btn btn-warning me-1 mb-1">Cancelar</a>
                                                 </div> 
                                             </form>

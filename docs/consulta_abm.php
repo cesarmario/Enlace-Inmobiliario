@@ -187,7 +187,7 @@
                                                 </div> -->
 
                                                 <div class="buttons">
-                                                    <input type="hidden" id="abm" name="abm" value="a"/>
+                                                    <input type="hidden" id="idConsulta" name="idConsulta" value="<?PHP echo $_REQUEST['idConsulta']; ?>"/>
                                                     <button type="submit" class="btn btn-primary me-1 mb-1">Guardar</button>
                                                     <a href="inmuebles.php" class="btn btn-warning me-1 mb-1">Cancelar</a>
                                                 </div> 

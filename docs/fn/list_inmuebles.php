@@ -3,10 +3,6 @@
     $queryinmuebles = "SELECT * FROM vista_inmuebles ORDER BY fecha DESC";
     $rtsinmuebles = mysqli_query($conexion, $queryinmuebles);
 
-    $domicilio = "";
-    if(!empty($inmuebles['domicilioNumeroInmueble'])){$domicilio .= " " . $inmuebles['domicilioNumeroInmueble'];}
-    if(!empty($inmuebles['domicilioOrientacionInmueble'])){$domicilio .= " " . $inmuebles['domicilioOrientacionInmueble'];}
-
     $listado = "<table class='table table-striped' id='table1'>";
     $listado .= "<thead>";
     $listado .= "<tr>";
@@ -23,6 +19,11 @@
     $listado .= "</thead>";
     $listado .= "<tbody>";
     while($inmuebles=mysqli_fetch_assoc($rtsinmuebles)){
+
+        $domicilio = "";
+        if(!empty($inmuebles['domicilioNumeroInmueble'])){$domicilio .= " " . $inmuebles['domicilioNumeroInmueble'];}
+        if(!empty($inmuebles['domicilioOrientacionInmueble'])){$domicilio .= " " . $inmuebles['domicilioOrientacionInmueble'];}
+
         $listado .= "<tr>";
         $listado .= "<td>". $inmuebles['nombreOperacion'] . "</td>";
         $listado .= "<td>". $inmuebles['nombrePropiedad'] . "</td>";

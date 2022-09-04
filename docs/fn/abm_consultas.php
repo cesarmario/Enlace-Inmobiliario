@@ -38,6 +38,6 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 		</script>
 		<input type ='button' value = 'Volver' onClick="location.replace('../consultas.php');" class="button"/>
 <?PHP } 
-} ?>
+} ?> 
 
 

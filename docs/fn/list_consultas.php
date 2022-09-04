@@ -1,6 +1,6 @@
 <?PHP
     include('conexion.php');
-    $queryconsultas = "SELECT * FROM vista_consulta ORDER BY fechaConsulta DESC";
+    $queryconsultas = "SELECT * FROM vista_consultas ORDER BY fechaConsulta DESC";
     $rtsconsultas = mysqli_query($conexion, $queryconsultas);
     $listadoConsultas = "<table class='table table-striped' id='table1'>";
     $listadoConsultas .= "<thead>";

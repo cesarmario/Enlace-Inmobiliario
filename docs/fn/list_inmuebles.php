@@ -12,6 +12,7 @@
     $listado .= "<th>Localidad</th>";
     $listado .= "<th>Valor</th>";
     $listado .= "<th>Agente</th>";
+    $listado .= "<th></th>";
     $listado .= "<th>Editar</th>";
     $listado .= "</tr>";
     $listado .= "</thead>";
@@ -26,6 +27,7 @@
         $listado .= "<td><b>". $inmuebles['monedaInmueble'] . "</b>&nbsp;". $inmuebles['valorInmueble'] . "</td>";
         $listado .= "<td><b>". $inmuebles['nombreAgente'] . "</td>";
         $listado .= "<td><a href='inmueble_abm_img.php?idInmueble=". $inmuebles['idInmueble'] ."' class='btn btn-warning me-1 mb-1'>Imagenes</a></td>";
+        $listado .= "<td><a href='inmueble_abm.php?idInmueble=". $inmuebles['idInmueble'] . "&abm=m' class='btn btn-info me-1 mb-1'>Editar</a></td>";
         $listado .= "</tr>";
     }
     $listado .= "</tbody>";

@@ -141,7 +141,12 @@
                                                         <label for="basicInput">Mail</label>
                                                         <input type="text" class="form-control" value="<?PHP echo $consulta['mailConsulta']; ?>" disabled>
                                                     </div>
-                                                                                       
+                                                    
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Consulta</label>
+                                                        <textarea class="form-control" rows="3" disabled><?PHP echo $consulta['comentarioConsulta']; ?></textarea>
+                                                    </div>
+                                                    
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1" class="form-label">Respuesta</label>
                                                         <textarea class="form-control" id='respuestaConsulta' name='respuestaConsulta' rows="3"></textarea>

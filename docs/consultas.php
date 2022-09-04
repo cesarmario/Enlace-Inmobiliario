@@ -1,7 +1,6 @@
 <?PHP
     session_start();
     include('fn/login_ctrl.php');
-    include('fn/list_opciones.php');
     include('fn/list_consultas.php');
 ?>
 <!DOCTYPE html>

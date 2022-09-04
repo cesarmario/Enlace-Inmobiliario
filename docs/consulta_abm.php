@@ -1,7 +1,7 @@
 <?PHP
     session_start();
     include('fn/login_ctrl.php');
-    include('fn/list_opciones.php');
+    include('fn/datos_consulta.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -119,57 +119,33 @@
                                         <div class="row">
                                             <form class="form form-vertical" action="fn/abm_consultas.php" method="GET">
                                                 <div class="col-md-8">
+                                                
 
                                                     <div class="form-group">
-                                                        <label for="basicInput">Tipo de Propiedad</label>
-                                                        <select class="choices form-select" id='idPropiedad' name='idPropiedad' require>
-                                                            <option value=""></option>
-                                                            <?PHP while($propiedad=mysqli_fetch_assoc($rtspropiedad)){?>
-                                                            <option value="<?PHP echo $propiedad['idPropiedad']; ?>"> <?PHP echo $propiedad['nombrePropiedad'];?></option>
-                                                            <?PHP } ?> 
-                                                        </select>                                    
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label for="basicInput">Tipo de Operacion</label>
-                                                        <select class="choices form-select" id='idOperacion' name='idOperacion'require>
-                                                            <option selected value=""></option>
-                                                            <?PHP while($operacion=mysqli_fetch_assoc($rtsoperacion)){?>
-                                                            <option value="<?PHP echo $operacion['idOperacion']; ?>"> <?PHP echo $operacion['nombreOperacion'];?></option>
-                                                            <?PHP } ?> 
-                                                        </select>                                    
-                                                    </div>                                                  
-
-                                                    <div class="form-group">
-                                                        <label for="basicInput">Agente</label>
-                                                        <input type="text" class="form-control" id='idAgenteInmueble' name='idAgenteInmueble'
-                                                            placeholder="Nombre del Agente">                                   
+                                                        <label for="basicInput">Inmueble</label>
+                                                        <input type="text" class="form-control" value="<?PHP echo $consulta['tituloInmueble']; ?>" disabled>
+                                                                                                                                          
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Nombre y Apellido</label>
-                                                        <input type="text" class="form-control" id='nombreConsulta' name='nombreConsulta'
-                                                            placeholder="Nombre y Apellido">                                   
+                                                        <input type="text" class="form-control" value="<?PHP echo $consulta['nombreConsulta']; ?>" disabled>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Teléfono</label>
-                                                        <input type="text" class="form-control" id='telefonoConsulta' name='telefonoConsulta'
-                                                            placeholder="Teléfono sin el 0 y sin el 15">
+                                                        <input type="text" class="form-control" value="<?PHP echo $consulta['telefonoConsulta']; ?>" disabled>
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput">Fecha de Consulta</label>
-                                                        <input type="datetime" class="form-control" id='fechaConsulta' name='fechaConsulta'
-                                                            placeholder="Fecha de Consulta">                                   
+                                                        <label for="basicInput">Mail</label>
+                                                        <input type="text" class="form-control" value="<?PHP echo $consulta['mailConsulta']; ?>" disabled>
                                                     </div>
-                                                    
+                                                                                       
                                                     <div class="form-group">
-                                                        <label for="basicInput">Fecha de Respuesta</label>
-                                                        <input type="datetima" class="form-control" id='fechaRespuestaConsulta' name='fechaRespuestaConsulta'
-                                                            placeholder="Fecha de Respuesta">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Respuesta</label>
+                                                        <textarea class="form-control" id='respuestaConsulta' name='respuestaConsulta' rows="3"></textarea>
                                                     </div>
-                                                    
 
                                                 <!--    <div class="form-group">
                                                         <label for="basicInput">Fecha</label>

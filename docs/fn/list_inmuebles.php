@@ -2,6 +2,11 @@
     include('conexion.php');
     $queryinmuebles = "SELECT * FROM vista_inmuebles ORDER BY fecha DESC";
     $rtsinmuebles = mysqli_query($conexion, $queryinmuebles);
+
+    $domicilio = "";
+    if(!empty($inmuebles['domicilioNumeroInmueble'])){$domicilio .= " " . $inmuebles['domicilioNumeroInmueble'];}
+    if(!empty($inmuebles['domicilioOrientacionInmueble'])){$domicilio .= " " . $inmuebles['domicilioOrientacionInmueble'];}
+
     $listado = "<table class='table table-striped' id='table1'>";
     $listado .= "<thead>";
     $listado .= "<tr>";
@@ -13,7 +18,7 @@
     $listado .= "<th>Valor</th>";
     $listado .= "<th>Agente</th>";
     $listado .= "<th></th>";
-    $listado .= "<th>Editar</th>";
+    $listado .= "<th></th>";
     $listado .= "</tr>";
     $listado .= "</thead>";
     $listado .= "<tbody>";
@@ -22,7 +27,7 @@
         $listado .= "<td>". $inmuebles['nombreOperacion'] . "</td>";
         $listado .= "<td>". $inmuebles['nombrePropiedad'] . "</td>";
         $listado .= "<td>". $inmuebles['tituloInmueble'] . "</td>";
-        $listado .= "<td>". $inmuebles['domicilioCalleInmueble'] . "</td>";
+        $listado .= "<td>". $inmuebles['domicilioCalleInmueble'] . $domicilio . "</td>";
         $listado .= "<td>". $inmuebles['nombreLocalidad'] . "</td>";
         $listado .= "<td><b>". $inmuebles['monedaInmueble'] . "</b>&nbsp;". $inmuebles['valorInmueble'] . "</td>";
         $listado .= "<td><b>". $inmuebles['nombreAgente'] . "</td>";

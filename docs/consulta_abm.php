@@ -189,7 +189,6 @@
                                                 <div class="buttons">
                                                     <input type="hidden" id="abm" name="abm" value="a"/>
                                                     <button type="submit" class="btn btn-primary me-1 mb-1">Guardar</button>
-                                                    <button type="reset" class="btn btn-secondary me-1 mb-1">Reset</button>
                                                     <a href="inmuebles.php" class="btn btn-warning me-1 mb-1">Cancelar</a>
                                                 </div> 
                                             </form>

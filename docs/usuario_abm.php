@@ -147,7 +147,7 @@
                                                     <div class="form-group">
                                                         <label for="basicInput">Mail</label>
                                                         <input type="text" class="form-control" id='mailUsuario' name='mailUsuario'
-                                                            placeholder="Mail" value='<?PHP echo $$usuario['mailUsuario']; ?>' require>
+                                                            placeholder="Mail" value='<?PHP echo $usuario['mailUsuario']; ?>' require>
                                                     </div>
 
                                                     <div class="form-group">

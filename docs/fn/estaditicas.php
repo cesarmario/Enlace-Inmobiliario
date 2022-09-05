@@ -9,7 +9,7 @@
     } else { 
         $totalInmuebles = '0';
     }    
-    
+
     $queryConsultas = "SELECT COUNT(`idConsulta`) AS totalConsultas FROM consulta WHERE baja != '1' GROUP BY baja";
     $rtsConsultas = mysqli_query($conexion, $queryConsultas);
     if (mysqli_num_rows($rtsConsultas)>0){
@@ -19,8 +19,6 @@
         $totalConsultas = '0';
     }  
 
-
-    ;
     $queryPedidos = "SELECT COUNT(`idPedido`) AS totalPedidos FROM pedido WHERE baja != '1' GROUP BY baja";
     $rtsPedidos = mysqli_query($conexion, $queryPedidos);
     if (mysqli_num_rows($rtsPedidos)>0){

@@ -1,6 +1,6 @@
 <?PHP
     include('conexion.php');
-    $queryusuarios = "SELECT * FROM vista_usuarios ORDER BY fecha DESC";
+    $queryusuarios = "SELECT * FROM usuario ORDER BY nombreUsuario DESC";
     $rtsusuarios = mysqli_query($conexion, $queryusuarios);
 
     $listadoUsuarios = "<table class='table table-striped' id='table1'>";

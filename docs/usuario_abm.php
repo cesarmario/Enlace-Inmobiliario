@@ -122,13 +122,13 @@
                                                         <input type="text" class="form-control" id='uidUsuario'	name='uidUsuario'
                                                             placeholder="Usuario" value='<?PHP echo $uidUsuario; ?>' require>
                                                     </div>
-
+                                                    <?PHP if ($_REQUEST['abm']=='a') { ?>
                                                     <div class="form-group">
                                                         <label for="basicInput">Contraseña</label>
                                                         <input type="text" class="form-control" id='pswUsuario'	name='pswUsuario'
                                                             placeholder="Contraseña" value='<?PHP echo $pswUsuario; ?>' require>                                  
                                                     </div>
-
+                                                    <?PHP } ?>    
                                                     <div class="form-group">
                                                         <label for="basicInput">Nombre y Apellido</label>
                                                         <input type="text" class="form-control" id='nombreUsuario' name='nombreUsuario'

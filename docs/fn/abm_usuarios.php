@@ -22,8 +22,8 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	'$_REQUEST[matriculaUsuario]',
 	'$_REQUEST[mailUsuario]',
 	'$_REQUEST[telefonoUsuario]',
-	'2'),
-    '0'");
+	'2',
+    '0')";
 	$result = mysqli_query($conexion, $query);
     if (mysqli_affected_rows($conexion)>0){ ?>
 		<script>
@@ -34,14 +34,14 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 		<script>
 			alert("Ocurrio un Error a guardar en la Base de Datos!!");
 		</script>
-		<input type ='button' value = 'Volver' onClick="location.replace('../usuario.php');" class="button"/>
+		<input type ='button' value = 'Volver' onClick="location.replace('../usuarios.php');" class="button"/>
 <?PHP } 
 } ?>
 
 <?php 
 if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
 
-	$query="UPDATE inmueble SET
+	$query="UPDATE usuario SET
 	uidUsuario='$_REQUEST[uidUsuario]',
 	nombreUsuario='$_REQUEST[nombreUsuario]',
 	matriculaUsuario='$_REQUEST[matriculaUsuario]',
@@ -51,7 +51,7 @@ if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
     if (mysqli_affected_rows($conexion)>0){
 		?>
 		<script>
-       		location.replace("../inmuebles.php");
+       		location.replace("../usuarios.php");
         </script>		
 	<?PHP } else { 	?>
 		<script>

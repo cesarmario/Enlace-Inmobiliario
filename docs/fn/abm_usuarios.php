@@ -23,18 +23,11 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	'$_REQUEST[mailUsuario]',
 	'$_REQUEST[telefonoUsuario]',
 	'2'),
-    '0');
+    '0'");
 	$result = mysqli_query($conexion, $query);
-    if (mysqli_affected_rows($conexion)>0){ 
-		
-		$queryctrl="SELECT * FROM usuario WHERE baja != '1' ORDER BY idUsuario DESC LIMIT 1";
-		$rtsctrl = mysqli_query($conexion, $queryctrl);
-		$ctrl=mysqli_fetch_assoc($rtsctrl);
-		$idUsuario=$ctrl['idUsuario'];		
-		?>
+    if (mysqli_affected_rows($conexion)>0){ ?>
 		<script>
-			location.replace("../usuario_abm_img.php?idUsuario=<?PHP echo $idUsuario;?>");
-        //	location.replace("../usuario.php");
+        	location.replace("../usuario.php");
         </script>		
 <?PHP } else { 
 		?>
@@ -48,22 +41,12 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 <?php 
 if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
 
-	$query="UPDATE inmueble  SET
-	idPropiedad='$_REQUEST[idPropiedad]',
-	idOperacion='$_REQUEST[idOperacion]',
-	idLocalidad='$_REQUEST[idLocalidad]',
-	tituloInmueble='$_REQUEST[tituloInmueble]',
-	descripcionInmueble='$_REQUEST[descripcionInmueble]',
-	domicilioCalleInmueble='$_REQUEST[domicilioCalleInmueble]',
-	domicilioNumeroInmueble='$_REQUEST[domicilioNumeroInmueble]',
-	domicilioOrientacionInmueble='$_REQUEST[domicilioOrientacionInmueble]',
-	habitacionesInmueble='$_REQUEST[habitacionesInmueble]',
-	banosInmueble='$_REQUEST[banosInmueble]',
-	superficieCubiertaInmueble='$_REQUEST[superficieCubiertaInmueble]',
-	superficieTotalInmueble='$_REQUEST[superficieTotalInmueble]',
-	informacionAdicionalInmueble='$_REQUEST[informacionAdicionalInmueble]',
-	valorInmueble='$_REQUEST[valorInmueble]',
-	monedaInmueble='$_REQUEST[monedaInmueble]' WHERE idInmueble = '$_REQUEST[idInmueble]' ";
+	$query="UPDATE inmueble SET
+	uidUsuario='$_REQUEST[uidUsuario]',
+	nombreUsuario='$_REQUEST[nombreUsuario]',
+	matriculaUsuario='$_REQUEST[matriculaUsuario]',
+	mailUsuario='$_REQUEST[mailUsuario]',
+	telefonoUsuario='$_REQUEST[telefonoUsuario]'WHERE idUsuario = '$_REQUEST[idUsuario]' ";
 	$result = mysqli_query($conexion, $query);
     if (mysqli_affected_rows($conexion)>0){
 		?>
@@ -74,27 +57,6 @@ if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
 		<script>
 			alert("Ocurrio un Error a guardar en la Base de Datos!!");
 		</script>
-		<input type ='button' value = 'Volver' onClick="location.replace('../inmuebles.php');" class="button"/>
+		<input type ='button' value = 'Volver' onClick="location.replace('../usuarios.php');" class="button"/>
 	<?PHP } 
 } ?>
-
-<?PHP 
-//echo '<br>idPropiedad: ' . $_REQUEST['idPropiedad']; 
-//echo '<br>idOperacion: ' . $_REQUEST['idOperacion']; 
-//echo '<br>idLocalidad: ' . $_REQUEST['idLocalidad']; 
-//echo '<br>tituloInmueble: ' . $_REQUEST['tituloInmueble']; 
-//echo '<br>descripcionInmueble: ' . $_REQUEST['descripcionInmueble']; 
-//echo '<br>domicilioCalleInmueble: ' . $_REQUEST['domicilioCalleInmueble']; 
-//echo '<br>domicilioNumeroInmueble: ' . $_REQUEST['domicilioNumeroInmueble']; 
-//echo '<br>domicilioOrientacionInmueble: ' . $_REQUEST['domicilioOrientacionInmueble']; 
-//echo '<br>habitacionesInmueble: ' . $_REQUEST['habitacionesInmueble']; 
-//echo '<br>banosInmueble: ' . $_REQUEST['banosInmueble']; 
-//echo '<br>superficieCubiertaInmueble: ' . $_REQUEST['superficieCubiertaInmueble']; 
-//echo '<br>superficieTotalInmueble: ' . $_REQUEST['superficieTotalInmueble']; 
-//echo '<br>informacionAdicionalInmueble: ' . $_REQUEST['informacionAdicionalInmueble']; 
-//echo '<br>valorInmueble: ' . $_REQUEST['valorInmueble']; 
-//echo '<br>monedaInmueble: ' . $_REQUEST['monedaInmueble'];
-//echo '<br>agenteInmueble: ' . $_SESSION['idUsu'] .'<br>';
-
-?>
-

@@ -112,9 +112,6 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
-                                    <!--div-- class="card-header">
-                                        <h4>ABM Inmueble</h4>
-                                    </!--div-->
                                     <div class="card-body">
                                         <div class="row">
                                             <form action="fn/abm_usuarios.php" method="GET">
@@ -123,47 +120,45 @@
                                                     <div class="form-group">
                                                         <label for="basicInput">Usuario</label>
                                                         <input type="text" class="form-control" id='uidUsuario'	name='uidUsuario'
-                                                            placeholder="Usuario" value='<?PHP echo $usuario['uidUsuario']; ?>' require>
+                                                            placeholder="Usuario" value='<?PHP echo $uidUsuario; ?>' require>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Contraseña</label>
                                                         <input type="text" class="form-control" id='pswUsuario'	name='pswUsuario'
-                                                            placeholder="Contraseña" value='<?PHP echo $usuario['pswUsuario']; ?>' require>                                  
+                                                            placeholder="Contraseña" value='<?PHP echo $pswUsuario; ?>' require>                                  
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Nombre y Apellido</label>
                                                         <input type="text" class="form-control" id='nombreUsuario' name='nombreUsuario'
-                                                            placeholder="Nombre y Apellido" value='<?PHP echo $usuario['nombreUsuario']; ?>' require>
+                                                            placeholder="Nombre y Apellido" value='<?PHP echo $nombreUsuario; ?>' require>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Matrícula</label>
                                                         <input type="text" class="form-control" id='matriculaUsuario' name='matriculaUsuario'
-                                                            placeholder="Mail" value='<?PHP echo $usuario['matriculaUsuario']; ?>' require>
+                                                            placeholder="Mail" value='<?PHP echo $matriculaUsuario; ?>' require>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Mail</label>
                                                         <input type="text" class="form-control" id='mailUsuario' name='mailUsuario'
-                                                            placeholder="Mail" value='<?PHP echo $usuario['mailUsuario']; ?>' require>
+                                                            placeholder="Mail" value='<?PHP echo $mailUsuario; ?>' require>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Teléfono</label>
                                                         <input type="text" class="form-control" id='telefonoUsuario' name='telefonoUsuario'
-                                                            placeholder="teléfono" value='<?PHP echo $usuario['telefonoUsuario']; ?>'>
+                                                            placeholder="teléfono" value='<?PHP echo $telefonoUsuario; ?>'>
                                                     </div>
-
                                                 </div>
 
                                                 <div class="buttons">
                                                     <input type="hidden" id="idUsuario" name="idUsuario" value="<?PHP echo $_REQUEST['idUsuario']; ?>"/>
                                                     <input type="hidden" id="abm" name="abm" value="<?PHP echo $_REQUEST['abm']; ?>"/>
                                                     <button type="submit" class="btn btn-success me-1 mb-1">Guardar</button>
-                                                    <!--button type="reset" class="btn btn-secondary me-1 mb-1">Reset</button-->
-                                                    <a href="usuario.php" class="btn btn-warning me-1 mb-1">Cancelar</a>
+                                                    <a href="usuarios.php" class="btn btn-warning me-1 mb-1">Cancelar</a>
                                                 </div> 
                                             </form>
                                         </div>

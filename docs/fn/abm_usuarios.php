@@ -27,7 +27,7 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	$result = mysqli_query($conexion, $query);
     if (mysqli_affected_rows($conexion)>0){ ?>
 		<script>
-        	location.replace("../usuario.php");
+        	location.replace("../usuarios.php");
         </script>		
 <?PHP } else { 
 		?>

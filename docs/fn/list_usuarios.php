@@ -19,7 +19,6 @@
     $listadoUsuarios .= "</thead>";
     $listadoUsuarios .= "<tbody>";
     while($usuarios=mysqli_fetch_assoc($rtsusuarios)){
-
         $listadoUsuarios .= "<tr>";
         $listadoUsuarios .= "<td>". $usuarios['uidUsuario'] . "</td>";
         $listadoUsuarios .= "<td>". $usuarios['pswUsuario'] . "</td>";
@@ -27,10 +26,9 @@
         $listadoUsuarios .= "<td>". $usuarios['matriculaUsuario'] . "</td>";
         $listadoUsuarios .= "<td>". $usuarios['mailUsuario'] . "</td>";
         $listadoUsuarios .= "<td><b>". $usuarios['telefonoUsuario'] . "</td>";
-        $listadoUsuarios .= "<td><b>". $usuarios['rolUsuario'] . "</td>";
-        
+        $listadoUsuarios .= "<td><b>". $usuarios['rolUsuario'] . "</td>";        
         $listadoUsuarios .= "<td><a href='usuario_abm.php?idUsuario=". $usuarios['idUsuario'] . "&abm=m' class='btn btn-info me-1 mb-1'>Editar</a></td>";
-        $listado .= "</tr>";
+        $listadoUsuarios .= "</tr>";
     }
     $listadoUsuarios .= "</tbody>";
     $listadoUsuarios .= "</table>";

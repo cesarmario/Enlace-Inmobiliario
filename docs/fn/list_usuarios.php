@@ -28,10 +28,10 @@
         $listadoUsuarios .= "<td>". $usuarios['mailUsuario'] . "</td>";
         $listadoUsuarios .= "<td><b>". $usuarios['telefonoUsuario'] . "</td>";
         $listadoUsuarios .= "<td><b>". $usuarios['rolUsuario'] . "</td>";
-        $listado .= "<td><a href='usuario_abm_img.php?idUsuario=". $usuarios['idUsuario'] ."' class='btn btn-warning me-1 mb-1'>Imagenes</a></td>";
-        $listado .= "<td><a href='usuario_abm.php?idUsuario=". $usuarios['idUsuario'] . "&abm=m' class='btn btn-info me-1 mb-1'>Editar</a></td>";
+        $listadoUsuarios .= "<td><a href='usuario_abm_img.php?idUsuario=". $usuarios['idUsuario'] ."' class='btn btn-warning me-1 mb-1'>Imagenes</a></td>";
+        $listadoUsuarios .= "<td><a href='usuario_abm.php?idUsuario=". $usuarios['idUsuario'] . "&abm=m' class='btn btn-info me-1 mb-1'>Editar</a></td>";
         $listado .= "</tr>";
     }
-    $listado .= "</tbody>";
-    $listado .= "</table>";
+    $listadoUsuarios .= "</tbody>";
+    $listadoUsuarios .= "</table>";
 ?>

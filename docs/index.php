@@ -73,6 +73,9 @@
                                 <span>Datos</span>
                             </a>
                             <ul class="submenu">
+                            <li class="submenu-item ">
+                                    <a href="usuarios.php">Usuarios</a>
+                                </li>
                                 <li class="submenu-item ">
                                     <a href="localidades.php">Localidades</a>
                                 </li>

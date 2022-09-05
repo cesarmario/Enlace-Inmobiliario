@@ -161,10 +161,11 @@
                                                 </div>
 
                                                 <div class="buttons">
+                                                    <?PHP if ($_SESSION['rolUsu'] =='1'){$return="usuarios.php";}else{$return="index.php";} ?>
                                                     <input type="hidden" id="idUsuario" name="idUsuario" value="<?PHP echo $_REQUEST['idUsuario']; ?>"/>
                                                     <input type="hidden" id="abm" name="abm" value="<?PHP echo $_REQUEST['abm']; ?>"/>
                                                     <button type="submit" class="btn btn-success me-1 mb-1">Guardar</button>
-                                                    <a href="usuarios.php" class="btn btn-warning me-1 mb-1">Cancelar</a>
+                                                    <a href="<?PHP echo $return;?>" class="btn btn-warning me-1 mb-1">Cancelar</a>
                                                 </div> 
                                             </form>
                                         </div>

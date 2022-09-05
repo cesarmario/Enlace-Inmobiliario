@@ -81,13 +81,35 @@
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="propiedades.php">Propiedades</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="usuarios.php">Usuarios</a>
-                                </li>                                     
+                                </li>                                                                   
                             </ul>
                         </li>
-
+                        <!-- Seccion que solo se habilita si el ROL del Usuario es Administrador -->
+                        <?PHP if ($_SESSION['rolUsu'] =='1') { ?>
+                            <li class="sidebar-item  has-sub">
+                                <a href="#" class='sidebar-link'>
+                                    <i class="bi bi-person-badge-fill"></i>
+                                    <span>Permisos</span>
+                                </a>
+                                <ul class="submenu ">
+                                <li class="submenu-item ">
+                                        <a href="usuarios.php">Usuarios</a>
+                                    </li>  
+                                </ul>
+                            </li>
+                        <?PHP } else { ?>
+                            <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-person-badge-fill"></i>
+                                <span>Perfil</span>
+                            </a>
+                            <ul class="submenu ">
+                            <li class="submenu-item ">
+                                    <a href="usuario_abm.php?idUsuario=<?PHP echo $_SESSION['idUsu'];?>&abm=m">Mis Datos</a>
+                                </li>  
+                            </ul>
+                        </li>    
+                        <?PHP } ?>
                         <li class="sidebar-item">
                             <a href="fn/logout.php" class='sidebar-link'>
                                 <i class="bi bi-x-square"></i>

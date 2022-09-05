@@ -5,6 +5,8 @@ include('conexion.php');
 error_reporting(E_ALL ^ E_NOTICE);
 $fecha = date("Y-m-d H:i:s");
 
+if ($_SESSION['rolUsu'] =='1'){$return="usuarios.php";}else{$return="index.php";}
+
 if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	$query="INSERT INTO usuario (
 	`uidUsuario`,
@@ -27,14 +29,14 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	$result = mysqli_query($conexion, $query);
     if (mysqli_affected_rows($conexion)>0){ ?>
 		<script>
-        	location.replace("../usuarios.php");
+        	location.replace("../<?PHP echo $return;?>");
         </script>		
 <?PHP } else { 
 		?>
 		<script>
 			alert("Ocurrio un Error al guardar en los Datos!!");
 		</script>
-		<input type ='button' value = 'Volver' onClick="location.replace('../usuarios.php');" class="button"/>
+		<input type ='button' value = 'Volver' onClick="location.replace('../<?PHP echo $return;?>');" class="button"/>
 <?PHP } 
 } ?>
 
@@ -50,13 +52,13 @@ if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
 	$result = mysqli_query($conexion, $query);
     if (mysqli_affected_rows($conexion)>0){ ?>
 		<script>
-       		location.replace("../usuarios.php");
+       		location.replace("../<?PHP echo $return;?>");
         </script>		
 	<?PHP } else { 	?>
 		<script>
 			alert("Ocurrio un Error al guardar en los Datos!!");
 		</script>
-		<input type ='button' value = 'Volver' onClick="location.replace('../usuarios.php');" class="button"/>
+		<input type ='button' value = 'Volver' onClick="location.replace('../<?PHP echo $return;?>');" class="button"/>
 	<?PHP } 
 } ?>
 
@@ -67,12 +69,12 @@ if ($_REQUEST['abm']=='p') { //Funcion Modificar Inmueble
 	$result = mysqli_query($conexion, $query);
     if (mysqli_affected_rows($conexion)>0){ ?>
 		<script>
-       		location.replace("../usuarios.php");
+       		location.replace("../<?PHP echo $return;?>");
         </script>		
 	<?PHP } else { 	?>
 		<script>
 			alert("Ocurrio un Error al guardar en los Datos!!");
 		</script>
-		<input type ='button' value = 'Volver' onClick="location.replace('../usuarios.php');" class="button"/>
+		<input type ='button' value = 'Volver' onClick="location.replace('../<?PHP echo $return;?>');" class="button"/>
 	<?PHP } 
 } ?>

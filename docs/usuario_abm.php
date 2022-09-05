@@ -125,7 +125,7 @@
                                                     <?PHP if ($_REQUEST['abm']=='a') { ?>
                                                     <div class="form-group">
                                                         <label for="basicInput">Contraseña</label>
-                                                        <input type="text" class="form-control" id='pswUsuario'	name='pswUsuario'
+                                                        <input type="password" class="form-control" id='pswUsuario'	name='pswUsuario'
                                                             placeholder="Contraseña" value='<?PHP echo $pswUsuario; ?>' require>                                  
                                                     </div>
                                                     <?PHP } ?>    

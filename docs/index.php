@@ -84,7 +84,10 @@
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="propiedades.php">Propiedades</a>
-                                </li>                                  
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="usuarios.php">Usuarios</a>
+                                </li>                                     
                             </ul>
                         </li>
 

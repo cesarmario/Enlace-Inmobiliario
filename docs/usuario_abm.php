@@ -123,43 +123,37 @@
                                                     <div class="form-group">
                                                         <label for="basicInput">Usuario</label>
                                                         <input type="text" class="form-control" id='uidUsuario'	name='uidUsuario'
-                                                            placeholder="Usuario" value='<?PHP echo $uidUsuario; ?>' require>
+                                                            placeholder="Usuario" value='<?PHP echo $usuario['uidUsuario']; ?>' require>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Contraseña</label>
                                                         <input type="text" class="form-control" id='pswUsuario'	name='pswUsuario'
-                                                            placeholder="Contraseña" value='<?PHP echo $pswUsuario; ?>' require>                                  
+                                                            placeholder="Contraseña" value='<?PHP echo $usuario['pswUsuario']; ?>' require>                                  
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Nombre y Apellido</label>
                                                         <input type="text" class="form-control" id='nombreUsuario' name='nombreUsuario'
-                                                            placeholder="Nombre y Apellido" value='<?PHP echo $nombreUsuario; ?>' require>
+                                                            placeholder="Nombre y Apellido" value='<?PHP echo $usuario['nombreUsuario']; ?>' require>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Matrícula</label>
                                                         <input type="text" class="form-control" id='matriculaUsuario' name='matriculaUsuario'
-                                                            placeholder="Mail" value='<?PHP echo $matriculaUsuario; ?>' require>
+                                                            placeholder="Mail" value='<?PHP echo $usuario['matriculaUsuario']; ?>' require>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Mail</label>
                                                         <input type="text" class="form-control" id='mailUsuario' name='mailUsuario'
-                                                            placeholder="Mail" value='<?PHP echo $mailUsuario; ?>' require>
+                                                            placeholder="Mail" value='<?PHP echo $$usuario['mailUsuario']; ?>' require>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Teléfono</label>
                                                         <input type="text" class="form-control" id='telefonoUsuario' name='telefonoUsuario'
-                                                            placeholder="teléfono" value='<?PHP echo $telefonoUsuario; ?>'>
-                                                    </div>
-                                                    
-                                                    <div class="form-group">
-                                                        <label for="basicInput">Rol</label>
-                                                        <input type="text" class="form-control" id='rolUsuario' name='rolUsuario'
-                                                            placeholder="Rol" value='<?PHP echo $rolUsuario; ?>'>
+                                                            placeholder="teléfono" value='<?PHP echo $usuario['telefonoUsuario']; ?>'>
                                                     </div>
 
                                                 </div>

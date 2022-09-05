@@ -72,10 +72,7 @@
                                 <i class="bi bi-stack"></i>
                                 <span>Datos</span>
                             </a>
-                            <ul class="submenu">
-                            <li class="submenu-item ">
-                                    <a href="usuarios.php">Usuarios</a>
-                                </li>
+                            <ul class="submenu">                                
                                 <li class="submenu-item ">
                                     <a href="localidades.php">Localidades</a>
                                 </li>

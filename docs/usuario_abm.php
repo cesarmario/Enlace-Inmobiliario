@@ -120,13 +120,13 @@
                                                     <div class="form-group">
                                                         <label for="basicInput">Usuario</label>
                                                         <input type="text" class="form-control" id='uidUsuario'	name='uidUsuario'
-                                                            placeholder="Usuario" value='<?PHP echo $uidUsuario; ?>' require>
+                                                            placeholder="Usuario" value='<?PHP echo $uidUsuario; ?>' onKeyUp="this.value=this.value.toLowerCase();"  require>
                                                     </div>
                                                     <?PHP if ($_REQUEST['abm']=='a') { ?>
                                                     <div class="form-group">
                                                         <label for="basicInput">Contraseña</label>
                                                         <input type="password" class="form-control" id='pswUsuario'	name='pswUsuario'
-                                                            placeholder="Contraseña" value='<?PHP echo $pswUsuario; ?>' onKeyUp="this.value=this.value.toUpperCase();" require>                                  
+                                                            placeholder="Contraseña" value='<?PHP echo $pswUsuario; ?>' onKeyUp="this.value=this.value.toLowerCase();" require>                                  
                                                     </div>
                                                     <?PHP } ?>    
                                                     <div class="form-group">

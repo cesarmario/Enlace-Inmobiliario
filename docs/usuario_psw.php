@@ -133,13 +133,13 @@
                                                     <div class="form-group">
                                                         <label for="basicInput">Nueva Contraseña</label>
                                                         <input type="password" class="form-control" id='pswUsuario'	name='pswUsuario'
-                                                            placeholder="Ingrese Contraseña" onKeyUp="this.value=this.value.toUpperCase();" require>                                  
+                                                            placeholder="Ingrese Contraseña" onKeyUp="this.value=this.value.toLowerCase();" require>                                  
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Repita Contraseña</label>
                                                         <input type="password" class="form-control" id='repswUsuario' name='repswUsuario'
-                                                            placeholder="Repita Contraseña" onChange="pswcontrol()" onKeyUp="this.value=this.value.toUpperCase();" require>                                  
+                                                            placeholder="Repita Contraseña" onChange="pswcontrol()" onKeyUp="this.value=this.value.toLowerCase();" require>                                  
                                                     </div>
 
                                                 </div>

@@ -147,7 +147,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <h6 class="text-muted font-semibold">Inmuebles</h6>
-                                                <h6 class="font-extrabold mb-0"><?PHP echo $inmuebles['totalInmuebles']; ?></h6>
+                                                <h6 class="font-extrabold mb-0"><?PHP echo $totalInmuebles; ?></h6>
                                             </div>
                                         </div>
                                     </div>
@@ -164,7 +164,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <h6 class="text-muted font-semibold">Consultas</h6>
-                                                <h6 class="font-extrabold mb-0"><?PHP echo $consultas['totalConsultas']; ?></h6>
+                                                <h6 class="font-extrabold mb-0"><?PHP echo $totalConsultas; ?></h6>
                                             </div>
                                         </div>
                                     </div>
@@ -181,7 +181,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <h6 class="text-muted font-semibold">Pedidos</h6>
-                                                <h6 class="font-extrabold mb-0"><?PHP echo $pedidos['totalPedidos']; ?></h6>
+                                                <h6 class="font-extrabold mb-0"><?PHP echo $totalPedidos; ?></h6>
                                             </div>
                                         </div>
                                     </div>

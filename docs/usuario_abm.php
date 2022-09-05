@@ -165,7 +165,7 @@
                                                     <div class="form-group">
                                                         <label for="basicInput">Matrícula</label>
                                                         <input type="text" class="form-control" id='matriculaUsuario' name='matriculaUsuario'
-                                                            placeholder="Mail" value='<?PHP echo $matriculaUsuario; ?>' require>
+                                                            placeholder="Matricula" value='<?PHP echo $matriculaUsuario; ?>' require>
                                                     </div>
 
                                                     <div class="form-group">

@@ -105,7 +105,7 @@
             </header>
 
             <div class="page-heading">
-                <h3>Operaciones</h3>
+                <h3>Tipo&nbsp;de&nbsp;Operaciones</h3>
             </div>
             <div class="page-content">
                 <section class="section">

@@ -105,7 +105,7 @@
             </header>
 
             <div class="page-heading">
-                <h3>Propiedadades</h3>
+                <h3>Tipo&nbsp;de&nbsp;Propiedadades</h3>
             </div>
             <div class="page-content">
                 <section class="secction">

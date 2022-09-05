@@ -50,14 +50,14 @@
                             </a>
                         </li>
                         
-                        <li class="sidebar-item active has-sub">
+                        <li class="sidebar-itemhas-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-house"></i>
                                 <span>Inmuebles</span>
                             </a>
-                            <ul class="submenu active">
-                                <li class="submenu-item active">
-                                    <a href="inmuebles.php"><i class="fa-solid fa-circle-chevron-right"></i>&nbsp;Inmuebles</a>
+                            <ul class="submenu">
+                                <li class="submenu-item">
+                                    <a href="inmuebles.php">Inmuebles</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="consultas.php">Consultas</a>
@@ -88,6 +88,33 @@
                                 </li>                                  
                             </ul>
                         </li>
+
+                        <!-- Seccion que solo se habilita si el ROL del Usuario es Administrador -->
+                        <?PHP if ($_SESSION['rolUsu'] =='1') { ?>
+                            <li class="sidebar-item   activehas-sub">
+                                <a href="#" class='sidebar-link'>
+                                    <i class="bi bi-person-badge-fill"></i>
+                                    <span>Permisos</span>
+                                </a>
+                                <ul class="submenu active">
+                                <li class="submenu-item active">
+                                        <a href="usuarios.php"><i class="fa-solid fa-circle-chevron-right"></i>&nbsp;Usuarios</a>
+                                    </li>  
+                                </ul>
+                            </li>
+                        <?PHP } else { ?>
+                            <li class="sidebar-item has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-person-badge-fill"></i>
+                                <span>Perfil</span>
+                            </a>
+                            <ul class="submenu">
+                                <li class="submenu-item">
+                                    <a href="usuario_abm.php?idUsuario=<?PHP echo $_SESSION['idUsu'];?>&abm=m">Mis Datos</a>
+                                </li>  
+                            </ul>
+                        </li>    
+                        <?PHP } ?>
 
                         <li class="sidebar-item">
                             <a href="fn/logout.php" class='sidebar-link'>

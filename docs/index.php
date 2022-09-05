@@ -77,10 +77,10 @@
                                     <a href="localidades.php">Localidades</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="operciones.php">Operaciones</a>
+                                    <a href="operciones.php">Tipo&nbsp;Operaciones</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="propiedades.php">Propiedades</a>
+                                    <a href="propiedades.php">Tipo&nbsp;Propiedades</a>
                                 </li>                                                                   
                             </ul>
                         </li>

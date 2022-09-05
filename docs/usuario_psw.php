@@ -80,7 +80,7 @@
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="propiedades.php">Propiedades</a>
-                                </li>                                  
+                                </li>                                 
                             </ul>
                         </li>
 
@@ -104,7 +104,7 @@
             </header>
 
             <div class="page-heading">
-                <h3>ABM Usuarios</h3>
+                <h3>Cambiar Contraseña</h3>
             </div>
             <div class="page-content">
                 <section class="row">
@@ -119,51 +119,35 @@
                                             
                                                     <div class="form-group">
                                                         <label for="basicInput">Usuario</label>
-                                                        <input type="text" class="form-control" id='uidUsuario'	name='uidUsuario'
-                                                            placeholder="Usuario" value='<?PHP echo $uidUsuario; ?>' require>
+                                                        <input type="text" class="form-control" value='<?PHP echo $uidUsuario; ?>' disabled>
                                                     </div>
-                                                    <?PHP if ($_REQUEST['abm']=='a') { ?>
-                                                    <div class="form-group">
-                                                        <label for="basicInput">Contraseña</label>
-                                                        <input type="password" class="form-control" id='pswUsuario'	name='pswUsuario'
-                                                            placeholder="Contraseña" value='<?PHP echo $pswUsuario; ?>' onKeyUp="this.value=this.value.toUpperCase();" require>                                  
-                                                    </div>
-                                                    <?PHP } ?>    
+                                                    
                                                     <div class="form-group">
                                                         <label for="basicInput">Nombre y Apellido</label>
-                                                        <input type="text" class="form-control" id='nombreUsuario' name='nombreUsuario'
-                                                            placeholder="Nombre y Apellido" value='<?PHP echo $nombreUsuario; ?>' require>
+                                                        <input type="text" class="form-control" value='<?PHP echo $nombreUsuario; ?>' disabled>
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput">Matrícula</label>
-                                                        <input type="text" class="form-control" id='matriculaUsuario' name='matriculaUsuario'
-                                                            placeholder="Mail" value='<?PHP echo $matriculaUsuario; ?>' require>
+
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Nueva Contraseña</label>
+                                                        <input type="password" class="form-control" id='pswUsuario'	name='pswUsuario'
+                                                            placeholder="Ingrese Contraseña" onKeyUp="this.value=this.value.toUpperCase();" require>                                  
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput">Mail</label>
-                                                        <input type="text" class="form-control" id='mailUsuario' name='mailUsuario'
-                                                            placeholder="Mail" value='<?PHP echo $mailUsuario; ?>' require>
+                                                        <label for="basicInput">Repita Contraseña</label>
+                                                        <input type="password" class="form-control" id='repswUsuario' name='repswUsuario'
+                                                            placeholder="Repita Contraseña" onChange="pswcontrol()" onKeyUp="this.value=this.value.toUpperCase();" require>                                  
                                                     </div>
 
-                                                    <div class="form-group">
-                                                        <label for="basicInput">Teléfono</label>
-                                                        <input type="text" class="form-control" id='telefonoUsuario' name='telefonoUsuario'
-                                                            placeholder="teléfono" value='<?PHP echo $telefonoUsuario; ?>'>
-                                                    </div>
-                                                     
-                                                    <?PHP if ($_REQUEST['abm']!='a') { ?>
-                                                    <div class="form-group">
-                                                    <a href="usuario_psw.php?idUsuario=<?PHP echo $_REQUEST['idUsuario']; ?>&abm=p" class="btn btn-info me-1 mb-1">Cambiar Contraseña</a>
-                                                    </di>
-                                                    <?PHP } ?>  
                                                 </div>
 
                                                 <div class="buttons">
                                                     <input type="hidden" id="idUsuario" name="idUsuario" value="<?PHP echo $_REQUEST['idUsuario']; ?>"/>
                                                     <input type="hidden" id="abm" name="abm" value="<?PHP echo $_REQUEST['abm']; ?>"/>
-                                                    <button type="submit" class="btn btn-success me-1 mb-1">Guardar</button>
+                                                    <button type="submit" id="access" class="btn btn-success me-1 mb-1" disabled>Guardar</button>
                                                     <a href="usuarios.php" class="btn btn-warning me-1 mb-1">Cancelar</a>
                                                 </div> 
                                             </form>
@@ -192,6 +176,19 @@
     <script src="assets/js/pages/dashboard.js"></script>
     <script src="https://kit.fontawesome.com/1ffc2bde27.js" crossorigin="anonymous"></script>                                                            
     <script src="assets/js/main.js"></script>
+    <script>
+		function pswcontrol(){
+				contpin=document.getElementById('pswUsuario').value;
+				contrepin=document.getElementById('repswUsuario').value;
+					if (contpin != contrepin){
+					alert("Las contraseñas ingresadas no son iguales");
+						document.getElementById('pswUsuario').focus();
+						return (false);
+					}else{
+					    document.getElementById('access').disabled = false;	
+					}
+				}
+	</script>
 </body>
 
 </html>

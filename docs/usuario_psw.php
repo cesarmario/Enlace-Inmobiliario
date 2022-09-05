@@ -86,12 +86,12 @@
 
                         <!-- Seccion que solo se habilita si el ROL del Usuario es Administrador -->
                         <?PHP if ($_SESSION['rolUsu'] =='1') { ?>
-                            <li class="sidebar-item  active has-sub">
+                            <li class="sidebar-item   active has-sub">
                                 <a href="#" class='sidebar-link'>
                                     <i class="bi bi-person-badge-fill"></i>
                                     <span>Permisos</span>
                                 </a>
-                                <ul class="submenu ">
+                                <ul class="submenu active">
                                 <li class="submenu-item active">
                                         <a href="usuarios.php"><i class="fa-solid fa-circle-chevron-right"></i>&nbsp;Usuarios</a>
                                     </li>  
@@ -103,9 +103,9 @@
                                 <i class="bi bi-person-badge-fill"></i>
                                 <span>Perfil</span>
                             </a>
-                            <ul class="submenu  active">
-                                <li class="submenu-item  active">
-                                    <a href="usuario_abm.php?idUsuario=<?PHP echo $_SESSION['idUsu'];?>&abm=m"><i class="fa-solid fa-circle-chevron-right"></i>&nbsp;Mis Datos</a>
+                            <ul class="submenu">
+                                <li class="submenu-item">
+                                    <a href="usuario_abm.php?idUsuario=<?PHP echo $_SESSION['idUsu'];?>&abm=m">Mis Datos</a>
                                 </li>  
                             </ul>
                         </li>    

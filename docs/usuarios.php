@@ -74,9 +74,6 @@
                                 <span>Datos</span>
                             </a>
                             <ul class="submenu">
-                            <li class="submenu-item ">
-                                    <a href="usuarios.php">Usuarios</a>
-                                </li>
                                 <li class="submenu-item ">
                                     <a href="localidades.php">Localidades</a>
                                 </li>
@@ -91,7 +88,7 @@
 
                         <!-- Seccion que solo se habilita si el ROL del Usuario es Administrador -->
                         <?PHP if ($_SESSION['rolUsu'] =='1') { ?>
-                            <li class="sidebar-item   activehas-sub">
+                            <li class="sidebar-item   active has-sub">
                                 <a href="#" class='sidebar-link'>
                                     <i class="bi bi-person-badge-fill"></i>
                                     <span>Permisos</span>
@@ -103,7 +100,7 @@
                                 </ul>
                             </li>
                         <?PHP } else { ?>
-                            <li class="sidebar-item has-sub">
+                            <li class="sidebar-item active has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-person-badge-fill"></i>
                                 <span>Perfil</span>

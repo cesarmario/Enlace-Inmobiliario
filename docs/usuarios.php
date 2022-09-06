@@ -50,7 +50,7 @@
                             </a>
                         </li>
                         
-                        <li class="sidebar-itemhas-sub">
+                        <li class="sidebar-item has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-house"></i>
                                 <span>Inmuebles</span>
@@ -59,28 +59,28 @@
                                 <li class="submenu-item">
                                     <a href="inmuebles.php">Inmuebles</a>
                                 </li>
-                                <li class="submenu-item ">
+                                <li class="submenu-item">
                                     <a href="consultas.php">Consultas</a>
                                 </li>
-                                <li class="submenu-item ">
+                                <li class="submenu-item">
                                     <a href="pedidos.php">Pedidos</a>
                                 </li>                              
                             </ul>
                         </li>
                         
-                        <li class="sidebar-item has-sub ">
+                        <li class="sidebar-item has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
                                 <span>Datos</span>
                             </a>
                             <ul class="submenu">
-                                <li class="submenu-item ">
+                                <li class="submenu-item">
                                     <a href="localidades.php">Localidades</a>
                                 </li>
-                                <li class="submenu-item ">
+                                <li class="submenu-item">
                                     <a href="operciones.php">Operaciones</a>
                                 </li>
-                                <li class="submenu-item ">
+                                <li class="submenu-item">
                                     <a href="propiedades.php">Propiedades</a>
                                 </li>                                  
                             </ul>
@@ -133,7 +133,7 @@
             </header>
 
             <div class="page-heading">
-                <h3>Inmuebles</h3>
+                <h3>Usuarios</h3>
             </div>
             <div class="page-content">
                 <section class="row">

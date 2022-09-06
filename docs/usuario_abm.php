@@ -131,7 +131,7 @@
             </header>
 
             <div class="page-heading">
-                <h3>ABM Usuarios</h3>
+                    <h3>ABM Usuarios</h3>
             </div>
             <div class="page-content">
                 <section class="row">
@@ -140,11 +140,14 @@
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-body">
+                                        <?PHP if ($_REQUEST['abm']=='b') { ?>
+                                            <div class="alert alert-danger"><i class="bi bi-exclamation-triangle"></i> Baja Usuario</div>
+                                        <?PHP } ?>
                                         <div class="row">
                                             <form action="fn/abm_usuarios.php" method="GET">
                                                 <div class="col-md-6">
                                                     
-                                                    <?PHP if ($_REQUEST['abm']=='b') { $disabled="disabled"; }else{ $disabled=""; } ?>
+                                                    <?PHP if ($_REQUEST['abm']=='b') { $disabled="disabled"; } else { $disabled=""; } ?>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Usuario</label>

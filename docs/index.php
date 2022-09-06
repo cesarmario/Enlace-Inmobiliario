@@ -84,7 +84,7 @@
                                 </li>                                                                   
                             </ul>
                         </li>
-                        <!-- Seccion que solo se habilita si el ROL del Usuario es Administrador -->
+                        <!-- Seccion Administrativa: Solo se habilita si el ROL del Usuario es Administrador -->
                         <?PHP if ($_SESSION['rolUsu'] =='1') { ?>
                             <li class="sidebar-item  has-sub">
                                 <a href="#" class='sidebar-link'>
@@ -110,6 +110,8 @@
                             </ul>
                         </li>    
                         <?PHP } ?>
+                        <!-- /Seccion Administrativa-->
+                        
                         <li class="sidebar-item">
                             <a href="fn/logout.php" class='sidebar-link'>
                                 <i class="bi bi-x-square"></i>

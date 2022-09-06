@@ -17,4 +17,4 @@ $result = mysqli_query($conexion, $query);
 			alert("Ocurrio un Error a guardar en la Base de Datos!!");
 		</script>
 		<input type ='button' value = 'Volver' onClick="location.replace('../consultas.php');" class="button"/>
-<?PHP } ?> 
+<?PHP } ?>

@@ -33,24 +33,7 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 		<script>
         	location.replace("../pedidos.php");
         </script>		
-<?PHP } else { 
-	//	echo '<br>idPropiedad: ' . $_REQUEST['idPropiedad']; 
-	//	echo '<br>idOperacion: ' . $_REQUEST['idOperacion']; 
-	//	echo '<br>idLocalidad: ' . $_REQUEST['idLocalidad']; 
-	//	echo '<br>tituloInmueble: ' . $_REQUEST['tituloInmueble']; 
-	//	echo '<br>descripcionInmueble: ' . $_REQUEST['descripcionInmueble']; 
-	//	echo '<br>domicilioCalleInmueble: ' . $_REQUEST['domicilioCalleInmueble']; 
-	//	echo '<br>domicilioNumeroInmueble: ' . $_REQUEST['domicilioNumeroInmueble']; 
-	//	echo '<br>domicilioOrientacionInmueble: ' . $_REQUEST['domicilioOrientacionInmueble']; 
-	//	echo '<br>habitacionesInmueble: ' . $_REQUEST['habitacionesInmueble']; 
-	//	echo '<br>banosInmueble: ' . $_REQUEST['banosInmueble']; 
-	//	echo '<br>superficieCubiertaInmueble: ' . $_REQUEST['superficieCubiertaInmueble']; 
-	//	echo '<br>superficieTotalInmueble: ' . $_REQUEST['superficieTotalInmueble']; 
-	//	echo '<br>informacionAdicionalInmueble: ' . $_REQUEST['informacionAdicionalInmueble']; 
-	//	echo '<br>valorInmueble: ' . $_REQUEST['valorInmueble']; 
-	//	echo '<br>monedaInmueble: ' . $_REQUEST['monedaInmueble'];
-	//	echo '<br>agenteInmueble: ' . $_SESSION['idUsu'] .'<br>';
-		?>
+<?PHP } else { ?>
 		<script>
 			alert("Ocurrio un Error a guardar en la Base de Datos!!");
 		</script>

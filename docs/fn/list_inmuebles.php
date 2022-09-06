@@ -1,6 +1,6 @@
 <?PHP
     include('conexion.php');
-    if ($_SESSION['rolUsu']!='1') { $filtro = " AND agenteInmueble=" . $_SESSION['idUsu']; }else{ $filtro = ""; };
+    if ($_SESSION['rolUsu']!='1') { $filtro = " AND idUsuario =" . $_SESSION['idUsu']; }else{ $filtro = ""; };
     $queryinmuebles = "SELECT * FROM vista_inmuebles WHERE baja = 0 $filtro ORDER BY fecha DESC";
     $rtsinmuebles = mysqli_query($conexion, $queryinmuebles);
     $listado = "<table class='table table-striped' id='table1'>";

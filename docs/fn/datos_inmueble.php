@@ -1,4 +1,5 @@
 <?PHP
+
     //Si la Operacion que estoy haciendo NO es alta osea es "m" o "b" busco los datos del Inmuebles  para mostrarlos en el Formulario
     if($_REQUEST['abm']!='a'){ 
         include('conexion.php');

@@ -1,4 +1,5 @@
 <?PHP
+
     include('conexion.php');
     $queryimagenes = "SELECT * FROM imagen WHERE idInmueble = '$_REQUEST[idInmueble]' AND baja != '1' ORDER BY idImagen ASC";
     $rtsimagenes = mysqli_query($conexion, $queryimagenes);

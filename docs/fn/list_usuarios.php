@@ -1,4 +1,5 @@
 <?PHP    
+    
     include('conexion.php');
     $queryusuarios = "SELECT * FROM usuario WHERE rolUsuario != 1 ORDER BY nombreUsuario DESC";
     $rtsusuarios = mysqli_query($conexion, $queryusuarios);

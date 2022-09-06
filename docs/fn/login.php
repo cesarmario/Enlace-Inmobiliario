@@ -13,7 +13,17 @@ if (mysqli_num_rows($result)>0){
 	$_SESSION['uidUsu'] = $row['uidUsuario'];
 	$_SESSION['nomUsu'] = $row['nombreUsuario'];
 	$_SESSION['rolUsu'] = $row['rolUsuario'];
-	$_SESSION['matUsu'] = $row['matriculaUsuario'];	
+	$_SESSION['matUsu'] = $row['matriculaUsuario'];
+	
+	$_SESSION['filtroInmuebleUsu'] = "";
+    $_SESSION['filtroConsultaUsu'] = "";
+    $_SESSION['filtroPedidoUsu'] = "";
+    if ($_SESSION['rolUsu']!='1') { 
+		 $_SESSION['filtroInmuebleUsu'] = " AND agenteInmueble=" . $_SESSION['idUsu'];
+         $_SESSION['filtroConsultaUsu'] = " AND idAgenteInmueble=" . $_SESSION['idUsu'];
+         $_SESSION['filtroPedidoUsu']   = " AND idUsuario=" . $_SESSION['idUsu'];
+    }
+
 	if ($row['baja']==0) { ?>
 		<script>	
 			location.replace("../index.php");

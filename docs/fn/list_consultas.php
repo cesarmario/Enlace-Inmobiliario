@@ -1,6 +1,8 @@
 <?PHP
+    session_start();
     include('conexion.php');
-    $queryconsultas = "SELECT * FROM vista_consultas ORDER BY fechaConsulta DESC";
+    if ($_SESSION['rolUsu']!='1') { $filtro = " AND idAgenteInmueble=" . $_SESSION['idUsu']; }else{ $filtro = ""; };
+    $queryconsultas = "SELECT * FROM vista_consultas WHERE baja = 0 $filtro ORDER BY fechaConsulta DESC";
     $rtsconsultas = mysqli_query($conexion, $queryconsultas);
     $listadoConsultas = "<table class='table table-striped' id='table1'>";
     $listadoConsultas .= "<thead>";

@@ -19,7 +19,8 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	`banosInmueble`,
 	`superficieCubiertaInmueble`,
 	`superficieTotalInmueble`,
-	`informacionAdicionalInmueble`,	
+	`informacionAdicionalInmueble`,
+	`informacionPrivadaInmueble`,	
 	`valorInmueble`,
 	`monedaInmueble`,
 	`idUsuario`,
@@ -38,6 +39,7 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	'$_REQUEST[superficieCubiertaInmueble]',
 	'$_REQUEST[superficieTotalInmueble]',
 	'$_REQUEST[informacionAdicionalInmueble]',
+	'$_REQUEST[informacionPrivadaInmueble]',
 	'$_REQUEST[valorInmueble]',
 	'$_REQUEST[monedaInmueble]',
 	'$_SESSION[idUsu]',
@@ -80,6 +82,7 @@ if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
 	superficieCubiertaInmueble='$_REQUEST[superficieCubiertaInmueble]',
 	superficieTotalInmueble='$_REQUEST[superficieTotalInmueble]',
 	informacionAdicionalInmueble='$_REQUEST[informacionAdicionalInmueble]',
+	informacionPrivadaInmueble='$_REQUEST[informacionPrivadaInmueble]',
 	valorInmueble='$_REQUEST[valorInmueble]',
 	monedaInmueble='$_REQUEST[monedaInmueble]' WHERE idInmueble = '$_REQUEST[idInmueble]' ";
 	$result = mysqli_query($conexion, $query);

@@ -22,6 +22,7 @@
         $superficieCubiertaInmueble = $inmueble['superficieCubiertaInmueble'];
         $superficieTotalInmueble = $inmueble['superficieTotalInmueble'];
         $informacionAdicionalInmueble = $inmueble['informacionAdicionalInmueble'];
+        $informacionPrivadaInmueble = $inmueble['informacionPrivadaInmueble'];
         $valorInmueble = $inmueble['valorInmueble'];
         $monedaInmueble = $inmueble['monedaInmueble'];
     

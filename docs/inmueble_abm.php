@@ -148,7 +148,9 @@
                                         <div class="row">
                                             <form action="fn/abm_inmuebles.php" method="GET">
                                                 <div class="col-md-8">
-                                            
+                                                    <div class="alert alert-light-success color-success"><i class="bi bi-check-circle"></i>
+                                                        Informaci&oacute;n p&uacute;blica, puede ser vista desde la web. 
+                                                    </div>
                                                     <div class="form-group">
                                                         <label for="basicInput">Titulo Inmueble</label>
                                                         <input type="text" class="form-control" id='tituloInmueble'	name='tituloInmueble'
@@ -256,6 +258,16 @@
                                                             <option value="$">Pesos</option>
                                                             <option value="USD">Dolares</option>
                                                         </select>                                    
+                                                    </div>
+                                                
+                                                
+                                                    <div class="alert alert-light-warning color-warning"><i class="bi bi-exclamation-triangle"></i>
+                                                        Informaci&oacute;n privada, solo puede ser vista en esta p&aacute;gina de gesti&oacute;n. 
+                                                    </div>
+                                                    
+                                                    <div class="form-group mb-3">
+                                                        <label for="exampleFormControlTextarea1" class="form-label">Informacion Extra del Inmueble</label>
+                                                        <textarea class="form-control" id='informacionPrivadaInmueble' name='informacionPrivadaInmueble' rows="3"><?PHP echo $informacionPrivadaInmueble; ?></textarea>
                                                     </div>
                                                 </div>
 

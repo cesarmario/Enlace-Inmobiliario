@@ -188,7 +188,7 @@
                                                     <?PHP if ($_REQUEST['abm']=='m') { ?>
                                                     <div class="form-group">
                                                         <a href="usuario_psw.php?idUsuario=<?PHP echo $_REQUEST['idUsuario']; ?>&abm=p" class="btn btn-info me-1 mb-1">Cambiar Contraseña</a>
-                                                    </di>
+                                                    </div>
                                                     <?PHP } ?>  
                                                 </div>
 

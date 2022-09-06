@@ -80,7 +80,7 @@ if ($_REQUEST['abm']=='p') { //Funcion Modificar Inmueble
 } ?>
 
 
-<!-- Baja de Imagen -->
+<!-- Baja de Usuarios -->
 <?PHP
 if ($_REQUEST['abm']=='b'){ 
 	$query="UPDATE usuario SET baja='1' WHERE idUsuario='$_REQUEST[idUsuario]'";
@@ -88,6 +88,23 @@ if ($_REQUEST['abm']=='b'){
     if (mysqli_affected_rows($conexion)>0){ 	?>
 		<script>
            alert("Usuario Eliminado correctamente"); 
+        </script>
+    <?PHP } else { ?>
+		<script>
+            alert("Ocurrio un Error!!");
+        </script>
+	<?PHP }; ?>    
+<?PHP }; ?>
+
+
+<!-- Actiivar de Imagen -->
+<?PHP
+if ($_REQUEST['abm']=='r'){ 
+	$query="UPDATE usuario SET baja='0' WHERE idUsuario='$_REQUEST[idUsuario]'";
+    $result = mysqli_query($conexion, $query);
+    if (mysqli_affected_rows($conexion)>0){ 	?>
+		<script>
+           alert("Usuario Activado correctamente"); 
         </script>
     <?PHP } else { ?>
 		<script>

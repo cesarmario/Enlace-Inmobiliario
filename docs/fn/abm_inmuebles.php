@@ -22,7 +22,7 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	`informacionAdicionalInmueble`,	
 	`valorInmueble`,
 	`monedaInmueble`,
-	`agenteInmueble`,
+	`idUsuario`,
 	`baja`
 	)VALUES(
 	'$_REQUEST[idPropiedad]',

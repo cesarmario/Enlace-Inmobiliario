@@ -62,7 +62,7 @@ if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
 	<?PHP } 
 } ?>
 
-<?php 
+<?PHP 
 if ($_REQUEST['abm']=='p') { //Funcion Modificar Inmueble
 
 	$query="UPDATE usuario SET pswUsuario = md5('$_REQUEST[pswUsuario]') WHERE idUsuario = '$_REQUEST[idUsuario]' ";
@@ -78,3 +78,24 @@ if ($_REQUEST['abm']=='p') { //Funcion Modificar Inmueble
 		<input type ='button' value = 'Volver' onClick="location.replace('../<?PHP echo $return;?>');" class="button"/>
 	<?PHP } 
 } ?>
+
+
+<!-- Baja de Imagen -->
+<?PHP
+if ($_REQUEST['abm']=='b'){ 
+	$query="UPDATE usuario SET baja='1' WHERE idUsuario='$_REQUEST[idUsuario]'";
+    $result = mysqli_query($conexion, $query);
+    if (mysqli_affected_rows($conexion)>0){ 	?>
+		<script>
+           alert("Usuario Eliminado correctamente"); 
+        </script>
+    <?PHP } else { ?>
+		<script>
+            alert("Ocurrio un Error!!");
+        </script>
+	<?PHP }; ?>    
+<?PHP }; ?>
+
+<script>
+    location.replace("../usuarios.php");
+</script>

@@ -143,10 +143,12 @@
                                         <div class="row">
                                             <form action="fn/abm_usuarios.php" method="GET">
                                                 <div class="col-md-6">
-                                            
+                                                    
+                                                    <?PHP if ($_REQUEST['abm']=='b') { $disabled="disabled"; }else{ $disabled=""; } ?>
+
                                                     <div class="form-group">
                                                         <label for="basicInput">Usuario</label>
-                                                        <input type="text" class="form-control" id='uidUsuario'	name='uidUsuario'
+                                                        <input type="text" class="form-control" id='uidUsuario'	name='uidUsuario' <?PHP echo $disabled; ?>
                                                             placeholder="Usuario" value='<?PHP echo $uidUsuario; ?>' onKeyUp="this.value=this.value.toLowerCase();"  require>
                                                     </div>
                                                     <?PHP if ($_REQUEST['abm']=='a') { ?>
@@ -158,31 +160,31 @@
                                                     <?PHP } ?>    
                                                     <div class="form-group">
                                                         <label for="basicInput">Nombre y Apellido</label>
-                                                        <input type="text" class="form-control" id='nombreUsuario' name='nombreUsuario'
+                                                        <input type="text" class="form-control" id='nombreUsuario' name='nombreUsuario' <?PHP echo $disabled; ?>
                                                             placeholder="Nombre y Apellido" value='<?PHP echo $nombreUsuario; ?>' require>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Matrícula</label>
-                                                        <input type="text" class="form-control" id='matriculaUsuario' name='matriculaUsuario'
+                                                        <input type="text" class="form-control" id='matriculaUsuario' name='matriculaUsuario' <?PHP echo $disabled; ?>
                                                             placeholder="Matricula" value='<?PHP echo $matriculaUsuario; ?>' require>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Mail</label>
-                                                        <input type="text" class="form-control" id='mailUsuario' name='mailUsuario'
+                                                        <input type="text" class="form-control" id='mailUsuario' name='mailUsuario' <?PHP echo $disabled; ?>
                                                             placeholder="Mail" value='<?PHP echo $mailUsuario; ?>' require>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Teléfono</label>
-                                                        <input type="text" class="form-control" id='telefonoUsuario' name='telefonoUsuario'
+                                                        <input type="text" class="form-control" id='telefonoUsuario' name='telefonoUsuario' <?PHP echo $disabled; ?>
                                                             placeholder="teléfono" value='<?PHP echo $telefonoUsuario; ?>'>
                                                     </div>
                                                      
-                                                    <?PHP if ($_REQUEST['abm']!='a') { ?>
+                                                    <?PHP if ($_REQUEST['abm']=='m') { ?>
                                                     <div class="form-group">
-                                                    <a href="usuario_psw.php?idUsuario=<?PHP echo $_REQUEST['idUsuario']; ?>&abm=p" class="btn btn-info me-1 mb-1">Cambiar Contraseña</a>
+                                                        <a href="usuario_psw.php?idUsuario=<?PHP echo $_REQUEST['idUsuario']; ?>&abm=p" class="btn btn-info me-1 mb-1">Cambiar Contraseña</a>
                                                     </di>
                                                     <?PHP } ?>  
                                                 </div>
@@ -191,7 +193,11 @@
                                                     <?PHP if ($_SESSION['rolUsu'] =='1'){$return="usuarios.php";}else{$return="index.php";} ?>
                                                     <input type="hidden" id="idUsuario" name="idUsuario" value="<?PHP echo $_REQUEST['idUsuario']; ?>"/>
                                                     <input type="hidden" id="abm" name="abm" value="<?PHP echo $_REQUEST['abm']; ?>"/>
-                                                    <button type="submit" class="btn btn-success me-1 mb-1">Guardar</button>
+                                                    <?PHP if ($_REQUEST['abm']=='b') { ?>
+                                                        <button type="submit" class="btn btn-danger me-1 mb-1">Eliminar</button>    
+                                                    <?PHP } else {?>      
+                                                        <button type="submit" class="btn btn-success me-1 mb-1">Guardar</button>
+                                                    <?PHP } ?>  
                                                     <a href="<?PHP echo $return;?>" class="btn btn-warning me-1 mb-1">Cancelar</a>
                                                 </div> 
                                             </form>

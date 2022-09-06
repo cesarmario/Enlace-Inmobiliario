@@ -1,6 +1,6 @@
-<?PHP
+<?PHP    
     include('conexion.php');
-    $queryusuarios = "SELECT * FROM usuario ORDER BY nombreUsuario DESC";
+    $queryusuarios = "SELECT * FROM usuario WHERE baja = 0 ORDER BY nombreUsuario DESC";
     $rtsusuarios = mysqli_query($conexion, $queryusuarios);
     
     $listadoUsuarios = "<table class='table table-striped' id='table1'>";
@@ -27,7 +27,7 @@
         $listadoUsuarios .= "<td>". $usuarios['telefonoUsuario'] . "</td>";
         $listadoUsuarios .= "<td>". $usuarios['rolUsuario'] . "</td>";        
         $listadoUsuarios .= "<td><a href='usuario_abm.php?idUsuario=". $usuarios['idUsuario'] . "&abm=m' class='btn btn-info me-1 mb-1'>Editar</a></td>";
-        $listadoUsuarios .= "<td>". $estado . "</td>";
+        $listadoUsuarios .= "<td><a href='usuario_abm.php?idUsuario=". $usuarios['idUsuario'] . "&abm=b' class='btn btn-danger me-1 mb-1'>Eliminar</a></td>";
         $listadoUsuarios .= "</tr>";
     }
     $listadoUsuarios .= "</tbody>";

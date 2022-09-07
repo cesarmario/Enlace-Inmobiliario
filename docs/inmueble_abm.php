@@ -242,7 +242,7 @@
 
                                                     <div class="form-group mb-3">
                                                         <label for="exampleFormControlTextarea1" class="form-label">Informacion Adicional</label>
-                                                        <textarea class="form-control" id='InformacionAdicionalInmueble' name='InformacionAdicionalInmueble' rows="3"><?PHP echo $informacionAdicionalInmueble; ?></textarea>
+                                                        <textarea class="form-control" id='informacionAdicionalInmueble' name='informacionAdicionalInmueble' rows="3"><?PHP echo $informacionAdicionalInmueble; ?></textarea>
                                                     </div>
 
                                                     <div class="form-group">

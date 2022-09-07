@@ -144,9 +144,9 @@
                                 <div class="card">                                    
                                     <div class="card-body">
                                         <div class="buttons">
-                                            <a href="inmueble_abm.php?abm=a" class="btn btn-sm btn-outline-success">Nuevo Inmueble</a>
+                                            <a href="inmueble_abm.php?abm=a" class="btn btn-outline-success">Nuevo Inmueble</a>
                                         </div>
-                                        <?PHP echo $listado; ?>                                     
+                                        <?PHP echo $listado; ?>
                                     </div>
                                 </div>
                             </div>

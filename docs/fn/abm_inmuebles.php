@@ -62,7 +62,7 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 		<script>
 			alert("Ocurrio un Error a guardar en la Base de Datos!!");
 		</script>
-		<input type ='button' value = 'Volver' onClick="location.replace('../inmuebles.php');" class="button"/>
+		<!--input type ='button' value = 'Volver' onClick="location.replace('../inmuebles.php');" class="button"/-->
 <?PHP } 
 } ?>
 
@@ -96,6 +96,6 @@ if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
 		<script>
 			alert("Ocurrio un Error a guardar en la Base de Datos!!");
 		</script>
-		<input type ='button' value = 'Volver' onClick="location.replace('../inmuebles.php');" class="button"/>
+		<!--input type ='button' value = 'Volver' onClick="location.replace('../inmuebles.php');" class="button"/-->
 	<?PHP } 
 } ?>

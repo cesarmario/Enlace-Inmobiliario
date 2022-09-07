@@ -1,15 +1,10 @@
 <?PHP session_start();
 include('conexion.php');
-include('process.php');  
-//ini_set('display_errors', 1);
-//ini_set('display_startup_errors', 1);
+include('process.php');
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
 error_reporting(E_ALL ^ E_NOTICE);
 $fecha = date("Y-m-d H:i:s");
-?>
-
-
-
-<?PHP 
 
 if ($_SESSION['rolUsu'] =='1'){$return="usuarios.php";}else{$return="index.php";}
 

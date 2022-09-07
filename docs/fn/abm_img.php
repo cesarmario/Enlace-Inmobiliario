@@ -1,7 +1,13 @@
 <?PHP
 session_start();
 error_reporting(E_ALL ^ E_NOTICE); 
-include('conexion.php'); ?>
+include('conexion.php'); 
+include('process.php');
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL ^ E_NOTICE);
+?>
+
 <!-- Cargar Imagen -->
 <?PHP
 if ($_REQUEST['abm']=='a'){

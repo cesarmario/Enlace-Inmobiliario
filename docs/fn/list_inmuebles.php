@@ -27,9 +27,10 @@
         if($inmuebles['habitacionesInmueble']>0){$habitacionesInmueble=$inmuebles['habitacionesInmueble'] . "<sup>+</sup>";}else{$habitacionesInmueble="-";}
         if($inmuebles['banosInmueble']>0){$banosInmueble=$inmuebles['banosInmueble'];}else{$banosInmueble="&nbsp;-&nbsp;";}
         if($inmuebles['superficieCubiertaInmueble']>0){$superficieCubiertaInmueble=$inmuebles['superficieCubiertaInmueble'];}else{$superficieCubiertaInmueble="-";}
+        if($inmuebles['superficieTotalInmueble']>0){$superficieTotalInmueble=$inmuebles['superficieTotalInmueble'];}else{$superficieTotalInmueble="-";}
         if($inmuebles['valorInmueble']>0){$valorInmueble=$inmuebles['monedaInmueble'] . "</b>&nbsp;". $inmuebles['valorInmueble'];}else{$valorInmueble="Consultar";}
 
-        $datosmodal = "<button type='button' class='btn btn-primary block' data-bs-toggle='modal' data-bs-target='#DatosModal". $inmuebles['idInmueble'] ."'> Detalle</button>";
+        $datosmodal = "<button type='button' class='btn btn-primary block' data-bs-toggle='modal' data-bs-target='#DatosModal". $inmuebles['idInmueble'] ."'><i class='bi bi-list-ul'></i></button>";
         $datosmodal .= "<div class='modal fade' id='DatosModal". $inmuebles['idInmueble'] ."' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>";
         $datosmodal .= "<div class='modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable' role='document'>";
         $datosmodal .= "<div class='modal-content'>";
@@ -49,7 +50,7 @@
         $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Habitacion:</b>&nbsp;" .  $habitacionesInmueble;
         $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Ba&ntilde;os:</b>&nbsp;" .  $banosInmueble;
         $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Superficie Cubierta:</b>&nbsp;" .  $superficieCubiertaInmueble;
-        $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Superficie Total:</b>&nbsp;" .  $inmuebles['superficieTotalInmueble'];
+        $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Superficie Total:</b>&nbsp;" .  $superficieTotalInmueble;
         $datosmodal .= "<br><i class='bi bi-card-text'></i>&nbsp;<b>Descripci&oacute;n:</b>&nbsp;" .  $inmuebles['descripcionInmueble'];        
         $datosmodal .= "<br><i class='bi bi-card-text'></i>&nbsp;<b>Informacion Adicional:</b>&nbsp;" .  $inmuebles['informacionAdicionalInmueble'];
         $datosmodal .= "<br><i class='bi bi-info-square-fill'></i>&nbsp;<b>Informacion Extra:</b>&nbsp;" .  $inmuebles['informacionPrivadaInmueble'];       
@@ -59,7 +60,7 @@
         $datosmodal .= "<button type='button' class='btn btn-light-secondary'";
         $datosmodal .= "data-bs-dismiss='modal'>";
         $datosmodal .= "<i class='bx bx-x d-block d-sm-none'></i>";
-        $datosmodal .= "<span class='d-none d-sm-block'>Cerrar</span>";
+        $datosmodal .= "<span class='d-none d-sm-block'>X Cerrar</span>";
         $datosmodal .= "</button>";
         $datosmodal .= "</div>";
         $datosmodal .= "</div>";

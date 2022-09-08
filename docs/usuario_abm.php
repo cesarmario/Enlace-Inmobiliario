@@ -111,6 +111,18 @@
                         </li>    
                         <?PHP } ?>
 
+                        <li class="sidebar-item has-sub ">
+                            <div class="d-flex align-items-center">
+                                <div class="avatar avatar-xs">
+                                    <img src="assets/images/faces/1.jpg" alt="Face 1">
+                                </div>
+                                <div class="ms-3 name">
+                                    <h5 class="font-bold"><?PHP echo $_SESSION['nomUsu']; ?></h5>
+                                    <h6 class="text-muted mb-0">@<?PHP echo $_SESSION['uidUsu']; ?></h6>
+                                </div>
+                            </div>
+                        </li>
+
                         <li class="sidebar-item">
                             <a href="fn/logout.php" class='sidebar-link'>
                                 <i class="bi bi-x-square"></i>

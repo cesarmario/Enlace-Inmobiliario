@@ -110,7 +110,8 @@
                             </ul>
                         </li>    
                         <?PHP } ?>
-                        <!-- /Seccion Administrativa-->                        
+                        <!-- /Seccion Administrativa-->
+                                                
                         <li class="sidebar-item has-sub ">
                             <div class="d-flex align-items-center">
                                 <div class="avatar avatar-xs">

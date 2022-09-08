@@ -82,7 +82,47 @@
                                     <a href="propiedades.php">Propiedades</a>
                                 </li>                                  
                             </ul>
-                        </li>   
+                        </li>
+                        
+                        <!-- Seccion Administrativa: Solo se habilita si el ROL del Usuario es Administrador -->
+                        <?PHP if ($_SESSION['rolUsu'] =='1') { ?>
+                            <li class="sidebar-item  has-sub">
+                                <a href="#" class='sidebar-link'>
+                                    <i class="bi bi-person-badge-fill"></i>
+                                    <span>Permisos</span>
+                                </a>
+                                <ul class="submenu ">
+                                <li class="submenu-item ">
+                                        <a href="usuarios.php">Usuarios</a>
+                                    </li>  
+                                </ul>
+                            </li>
+                        <?PHP } else { ?>
+                            <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-person-badge-fill"></i>
+                                <span>Perfil</span>
+                            </a>
+                            <ul class="submenu ">
+                            <li class="submenu-item ">
+                                    <a href="usuario_abm.php?idUsuario=<?PHP echo $_SESSION['idUsu'];?>&abm=m">Mis Datos</a>
+                                </li>  
+                            </ul>
+                        </li>    
+                        <?PHP } ?>
+                        <!-- /Seccion Administrativa-->
+
+                        <li class="sidebar-item has-sub ">
+                            <div class="d-flex align-items-center">
+                                <div class="avatar avatar-xs">
+                                    <img src="assets/images/faces/1.jpg" alt="Face 1">
+                                </div>
+                                <div class="ms-3 name">
+                                    <h5 class="font-bold"><?PHP echo $_SESSION['nomUsu']; ?></h5>
+                                    <h6 class="text-muted mb-0">@<?PHP echo $_SESSION['uidUsu']; ?></h6>
+                                </div>
+                            </div>
+                        </li>
 
                         <li class="sidebar-item">
                             <a href="fn/logout.php" class='sidebar-link'>

@@ -90,31 +90,6 @@ $query="INSERT INTO imagen (
 
 <?PHP }; ?>
 
-<!-- Actualizar Imagen -->
-<?PHP
-if ($_REQUEST['abm']=='m'){ //Funcion Modificar Pacientes
-	$fecha = str_replace("/", "-", $_GET[fecha]);
-	$fecha = date("Y-m-d",strtotime($fecha));
-	$query="UPDATE consultas SET
-	fecha='$fecha',
-	matricula='$_GET[matricula]',
-	motivo='$_GET[motivo]',
-	medicacion='$_GET[medicacion]',
-	estudios='$_GET[estudios]',
-	WHERE id='$_GET[id_mod]'";
-    $result = mysqli_query($conexion, $query);
-    if (mysqli_affected_rows($conexion)>0){
-	?>
-		<script>
-           // alert("Datos cargados correctamente");
-        </script>
-    <?PHP } else {?>
-		<script>
-            alert("Ocurrio un Error!!");
-        </script>
-	<?PHP }; ?>
-<?PHP }; ?>
-
 <!-- Baja de Imagen -->
 <?PHP
 if ($_REQUEST['abm']=='b'){ 

@@ -1,6 +1,7 @@
 <?PHP
     include('conexion.php');
-    if ($_SESSION['rolUsu']!='1') { $filtro = " AND idUsuario=" . $_SESSION['idUsu']; }else{ $filtro = ""; };
+    //if ($_SESSION['rolUsu']!='1') { $filtro = " AND idUsuario=" . $_SESSION['idUsu']; }else{ $filtro = ""; };
+    $filtro = "";
     $querypedidos = "SELECT * FROM vista_pedidos WHERE baja = 0 $filtro ORDER BY fechaPedido DESC";
     $rtspedidos = mysqli_query($conexion, $querypedidos);
     $listadoPedidos = "<table class='table table-striped' id='table1'>";

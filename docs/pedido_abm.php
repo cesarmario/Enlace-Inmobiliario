@@ -58,7 +58,7 @@
                                     <a href="inmuebles.php">Inmuebles</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="#">Consultas</a>
+                                    <a href="consulta.php">Consultas</a>
                                 </li>
                                 <li class="submenu-item active">
                                     <a href="pedido_abm.php"><i class="fa-solid fa-circle-chevron-right"></i>&nbsp;Pedidos</a>
@@ -265,8 +265,7 @@
                                                 <div class="buttons">
                                                     <input type="hidden" id="abm" name="abm" value="a"/>
                                                     <button type="submit" class="btn btn-primary me-1 mb-1">Guardar</button>
-                                                    <button type="reset" class="btn btn-secondary me-1 mb-1">Reset</button>
-                                                    <a href="inmuebles.php" class="btn btn-warning me-1 mb-1">Cancelar</a>
+                                                    <a href="pedidos.php" class="btn btn-warning me-1 mb-1">Cancelar</a>
                                                 </div> 
                                             </form>
                                         </div>

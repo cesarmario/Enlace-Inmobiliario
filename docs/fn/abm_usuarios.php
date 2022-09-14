@@ -102,7 +102,7 @@ if ($_REQUEST['abm']=='b'){
 <?PHP }; ?>
 
 
-<!-- Actiivar de Imagen -->
+<!-- Actiivar de Usuario -->
 <?PHP
 if ($_REQUEST['abm']=='r'){ 
 	$query="UPDATE usuario SET baja='0' WHERE idUsuario='$_REQUEST[idUsuario]'";

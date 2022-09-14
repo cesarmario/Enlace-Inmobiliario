@@ -29,7 +29,7 @@
         $listadoPedidos .= "<td><b>". $pedidos['importeMonedaPedido'] . "</b>&nbsp;". $pedidos['importeHastaPedido'] . "</td>";
         $listadoPedidos .= "<td>". $pedidos['caracteristicasPedido'] . "</td>";
         $listadoPedidos .= "<td><b>". $pedidos['comentariosPedido'] . "</td>";
-        $listadoPedidos .= "<td><a href='pedido_abm.php?idPedido=". $pedidos['idPedido'] ."' class='btn btn-warning me-1 mb-1'>Editar</a></td>";
+        $listadoPedidos .= "<td><a href='pedido_abm.php?idPedido=". $pedidos['idPedido'] ."&abm=m' class='btn btn-info me-1 mb-1'>Editar</a></td>";
         $listadoPedidos .= "</tr>";
     }
     $listadoPedidos .= "</tbody>";

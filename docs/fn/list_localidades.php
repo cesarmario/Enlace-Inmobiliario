@@ -16,7 +16,7 @@
         $listado .= "<tr>";
         $listado .= "<td>". $localidades['idLocalidad'] . "</td>";
         $listado .= "<td>". $localidades['nombreLocalidad'] . "</td>";
-        $listado .= "<td><span class='badge bg-success'>" . $localidades['cpLocalidad'] . "</span></td>";
+        $listado .= "<td><span class='badge bg-light-secondary'>" . $localidades['cpLocalidad'] . "</span></td>";
         $listado .= "</tr>";
     }
     $listado .= "</tbody>";

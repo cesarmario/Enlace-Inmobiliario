@@ -2,6 +2,7 @@
     session_start();
     include('fn/login_ctrl.php');
     include('fn/list_opciones.php');
+    include('fn/datos_pedido.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -58,10 +59,10 @@
                                     <a href="inmuebles.php">Inmuebles</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="consulta.php">Consultas</a>
+                                    <a href="consultas.php">Consultas</a>
                                 </li>
                                 <li class="submenu-item active">
-                                    <a href="pedido_abm.php"><i class="fa-solid fa-circle-chevron-right"></i>&nbsp;Pedidos</a>
+                                    <a href="pedidos.php"><i class="fa-solid fa-circle-chevron-right"></i>&nbsp;Pedidos</a>
                                 </li>                              
                             </ul>
                         </li>
@@ -202,8 +203,8 @@
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Tipo de Propiedad</label>
-                                                        <select class="choices form-select" id='idPropiedad' name='idPropiedad' require>
-                                                            <option value=""></option>
+                                                        <select class="form-select" id='idPropiedad' name='idPropiedad' require>
+                                                            <option value="<?PHP echo $idPropiedad; ?>"><?PHP echo $nombrePropiedad; ?></option>
                                                             <?PHP while($propiedad=mysqli_fetch_assoc($rtspropiedad)){?>
                                                             <option value="<?PHP echo $propiedad['idPropiedad']; ?>"> <?PHP echo $propiedad['nombrePropiedad'];?></option>
                                                             <?PHP } ?> 
@@ -212,8 +213,8 @@
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Tipo de Operacion</label>
-                                                        <select class="choices form-select" id='idOperacion' name='idOperacion'require>
-                                                            <option selected value=""></option>
+                                                        <select class="form-select" id='idOperacion' name='idOperacion'require>
+                                                            <option selected value="<?PHP echo $idOperacion; ?>"><?PHP echo $nombreOperacion; ?></option>
                                                             <?PHP while($operacion=mysqli_fetch_assoc($rtsoperacion)){?>
                                                             <option value="<?PHP echo $operacion['idOperacion']; ?>"> <?PHP echo $operacion['nombreOperacion'];?></option>
                                                             <?PHP } ?> 
@@ -222,18 +223,18 @@
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Localidades</label>
-                                                        <select class="choices form-select" id='localidadesPedido' name='localidadesPedido' require>
-                                                            <option value=""></option>
+                                                        <select class="form-select"  id='localidadesPedido' name='localidadesPedido'>
+                                                            <option value="<?PHP echo $localidadesPedido; ?>"><?PHP echo $localidadesPedido; ?></option>
                                                             <?PHP while($localidad=mysqli_fetch_assoc($rtslocalidad)){?>
                                                             <option value="<?PHP echo $localidad['nombreLocalidad']; ?>"> <?PHP echo $localidad['nombreLocalidad'];?></option>
                                                             <?PHP } ?> 
                                                         </select>                                    
-                                                    </div>
+                                                    </div >
 
-                                                    <div class="form-group">
+                                                     <div class="form-group">
                                                         <label for="basicInput">Moneda</label>
                                                     <select class="choices form-select" id='importeMonedaPedido' name='importeMonedaPedido'>
-                                                            <option value=""></option>
+                                                            <option value="<?PHP echo $importeMonedaPedido; ?>"><?PHP echo $importeMonedaPedido; ?></option>
                                                             <option value="$">Pesos</option>
                                                             <option value="USD">Dolares</option>
                                                         </select>                                    
@@ -242,25 +243,25 @@
                                                     <div class="form-group">
                                                         <label for="basicInput">Valor desde</label>
                                                         <input type="text" class="form-control" id='importeDesdePedido' name='importeDesdePedido'
-                                                            placeholder="Valor desde">
+                                                                value="<?PHP echo $importeDesdePedido; ?>" placeholder="Valor desde">
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Valor hasta</label>
                                                         <input type="text" class="form-control" id='importeHastaPedido' name='importeHastaPedido'
-                                                            placeholder="Valor hasta">                                   
+                                                                value="<?PHP echo $importeHastaPedido; ?>" placeholder="Valor hasta">                                   
                                                     </div>
                                                     
                                                     <div class="form-group">
                                                         <label for="basicInput">Características</label>
                                                         <input type="text" class="form-control" id='caracteristicasPedido' name='caracteristicasPedido'
-                                                            placeholder="Características">
+                                                                value="<?PHP echo $caracteristicasPedido; ?>" placeholder="Características">
                                                     </div>
                                                     
                                                     <div class="form-group">
                                                         <label for="basicInput">Comentarios</label>
                                                         <input type="text" class="form-control" id='comentariosPedido' name='comentariosPedido'
-                                                            placeholder="Comentarios">
+                                                            value="<?PHP echo $comentariosPedido; ?>" placeholder="Comentarios">
                                                     </div>
 
                                                 <!--    <div class="form-group">
@@ -331,8 +332,12 @@
 
     <script src="assets/vendors/apexcharts/apexcharts.js"></script>
     <script src="assets/js/pages/dashboard.js"></script>
-    <script src="https://kit.fontawesome.com/1ffc2bde27.js" crossorigin="anonymous"></script>                                                            
+    <script src="https://kit.fontawesome.com/1ffc2bde27.js" crossorigin="anonymous"></script>
+
+    <!-- Include Choices JavaScript -->
+    <script src="assets/vendors/choices.js/choices.min.js"></script>                                                            
     <script src="assets/js/main.js"></script>
+    
 </body>
 
 </html>

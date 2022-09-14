@@ -3,6 +3,10 @@
     $querylocalidad = "SELECT * FROM localidad ORDER BY idLocalidad";
     $rtslocalidad = mysqli_query($conexion, $querylocalidad);
     //$localidad=mysqli_fetch_assoc($rtslocalidad)
+    $localidades = "";
+    while($localidad=mysqli_fetch_assoc($rtslocalidad)){
+    $localidades .= "<option value='" . $localidad['nombreLocalidad'] . "'>" . $localidad['nombreLocalidad'] . "</option>";
+    }
 
     $queryoperacion = "SELECT * FROM operacion ORDER BY nombreOperacion";
     $rtsoperacion = mysqli_query($conexion, $queryoperacion);

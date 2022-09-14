@@ -192,7 +192,7 @@
                             <div class="col-6">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>ABM Usuarios</h4>
+                                        <h4><?PHP if ($_SESSION['rolUsu'] =='1') {echo "Datos del Usuario"; }else{echo "Mis Datos";}?></h4>
                                     </div>
                                     <div class="card-body">
                                         <?PHP if ($_REQUEST['abm']=='b') { ?>

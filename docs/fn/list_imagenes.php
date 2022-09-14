@@ -5,7 +5,7 @@
     $queryimagenes = "SELECT @i:=@i+1 AS posicion, imagen.* FROM imagen WHERE idInmueble = '$_REQUEST[idInmueble]' AND baja != '1' ORDER BY idImagen ASC";
     $rtsimagenes = mysqli_query($conexion, $queryimagenes);
 
-    $caurosel  = "<div id='carouselExampleSlidesOnly' class='carousel slide' data-bs-ride='carousel'>";
+    $caurosel  = "<div id='carouselExampleControls' class='carousel slide' data-bs-ride='carousel'>";
     $caurosel .= "<div class='carousel-inner'>";
 
 /*  $caurosel .= "<div class='carousel-item active'>";
@@ -37,7 +37,7 @@
     $listado .= "<tr>";
     $listado .= "<th>#</th>";
     $listado .= "<th>Imagen</th>";
-    $listado .= "<th>Detalles de la Imagen</th>";
+    $listado .= "<th>Descripci&oacute;n</th>";
     $listado .= "<th>Eliminar</th>";
     $listado .= "</tr>";
     $listado .= "</thead>";
@@ -55,6 +55,9 @@
         if($imagenes['posicion']==1){$act="active";}else{$act="";}
         $caurosel .= "<div class='carousel-item ". $act ."'>";
         $caurosel .= "<img src='" . $imagen ."' class='d-block w-100' alt='". $imagenes['idImagen'] ."'>";
+        $caurosel .= "<div class='carousel-caption d-none d-md-block'>";
+        $caurosel .= "<p>". $imagenes['detalleImagen'] . "</p>";
+        $caurosel .= "</div>";
         $caurosel .= "</div>";
     }
     $listado .= "</tbody>";

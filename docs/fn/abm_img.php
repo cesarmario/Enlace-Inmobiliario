@@ -66,9 +66,9 @@ if ($_REQUEST['abm']=='a' or $_REQUEST['abm']=='m'){
 			$nombre=str_pad($id_new, 8, "0", STR_PAD_LEFT) . "." . $qtipo;
 		
 			// Ruta donde se guardaran las imagenes cuando se ejecuta Local
-			$directorio = $_SERVER['DOCUMENT_ROOT'].$_SESSION['sesionc_Path'].'/enlaceinmobiliario/docs/assets/images/inmuebles/';
+			//$directorio = $_SERVER['DOCUMENT_ROOT'].$_SESSION['sesionc_Path'].'/enlaceinmobiliario/docs/assets/images/inmuebles/';
 			// Ruta donde se guardaran las imagenes cuando se ejecuta en al web
-			//$directorio = $_SERVER['DOCUMENT_ROOT'].$_SESSION['sesionc_Path'].'/gestion/assets/images/inmuebles/';
+			$directorio = $_SERVER['DOCUMENT_ROOT'].$_SESSION['sesionc_Path'].'/gestion/assets/images/inmuebles/';
 			
 			$fullpath=$directorio.$nombre;
 			//echo "Nombre: " . $nombre;

@@ -22,7 +22,7 @@
         $superficieCubiertaInmueble = $inmueble['superficieCubiertaInmueble'];
         $superficieTotalInmueble = $inmueble['superficieTotalInmueble'];
         $informacionAdicionalInmueble = $inmueble['informacionAdicionalInmueble'];
-        $informacionPrivadaInmueble = $inmueble['informacionPrivadaInmueble'];
+        $informacionPrivadaInmueble = $inmueble['informacionPrivadaInmueble'];        
         $valorInmueble = $inmueble['valorInmueble'];
         $monedaInmueble = $inmueble['monedaInmueble'];
     
@@ -43,7 +43,8 @@
         $banosInmueble = ''; 
         $superficieCubiertaInmueble = ''; 
         $superficieTotalInmueble = ''; 
-        $informacionAdicionalInmueble = ''; 
+        $informacionAdicionalInmueble = '';
+        $informacionPrivadaInmueble = ''; 
         $valorInmueble = ''; 
         $monedaInmueble = '';
     }

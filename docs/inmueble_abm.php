@@ -2,7 +2,7 @@
     session_start();
     include('fn/login_ctrl.php');
     include('fn/list_opciones.php');
-    include('fn/datos_inmueble.php')
+    include('fn/datos_inmueble.php');    
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -77,7 +77,7 @@
                                     <a href="localidades.php">Localidades</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="operciones.php">Operaciones</a>
+                                    <a href="operaciones.php">Operaciones</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="propiedades.php">Propiedades</a>
@@ -151,7 +151,7 @@
                 <section class="row">
                     <div class="col-12 col-lg-9">                        
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-12 col-md-6">
                                 <div class="card">
                                     <!--div-- class="card-header">
                                         <h4>ABM Inmueble</h4>
@@ -159,7 +159,7 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <form action="fn/abm_inmuebles.php" method="GET">
-                                                <div class="col-md-8">
+                                                <div class="col-md-12">
                                                     <div class="alert alert-light-success color-success"><i class="bi bi-check-circle"></i>
                                                         Informaci&oacute;n p&uacute;blica, puede ser vista desde la web. 
                                                     </div>
@@ -295,6 +295,41 @@
                                     </div>
                                 </div>
                             </div>
+                            <?PHP if($_REQUEST['abm']!='a'){ 
+                             include('fn/list_imagenes.php'); ?>
+
+                            <div class="col-12 col-md-6">                                
+                                <div class="card">
+                                    <div class="card-body">                                        
+                                        <!--form action="fn/abm_img.php" method="GET"-->
+                                        <form role="form" action="fn/abm_img.php" method="POST" enctype="multipart/form-data">    
+                                        <div class="form-group">
+                                            <label>Subir Imagen</label><br>
+                                            <!--input type="file" class="basic-filepond" name="imagen"-->
+                                            <input type="file" name="imagen" id="imagen" require>
+
+                                            <!--label-- for="basicInput">Detalle</°label-->
+                                            <textarea rows="2" class="form-control" placeholder="Detalle de la Imagen"
+                                            name="detalleImagen" id="detalleImagen"></textarea>
+                                        </div>
+
+                                        <div class="buttons">
+                                            <input type="hidden" id="idInmueble" name="idInmueble" value="<?PHP echo $_REQUEST['idInmueble']; ?>"/>
+                                            <input type="hidden" id="abm" name="abm" value="m"/>
+                                            <button type="submit" class="btn btn-primary me-1 mb-1">Guardar</button>
+                                                                            </div> 
+                                            </form>                                  
+                                        </div>
+                                                                            
+                                        <div class="card-body">
+                                            <div class="table-responsive">                                        
+                                                <?PHP echo $listado; ?>                                     
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?PHP } ?>    
                         </div>                        
                     </div>                    
                 </section>

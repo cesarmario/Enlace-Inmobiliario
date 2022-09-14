@@ -77,7 +77,7 @@
                                     <a href="localidades.php">Localidades</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="operciones.php">Operaciones</a>
+                                    <a href="operaciones.php">Operaciones</a>
                                 </li>
                                 <li class="submenu-item">
                                     <a href="propiedades.php">Propiedades</a>

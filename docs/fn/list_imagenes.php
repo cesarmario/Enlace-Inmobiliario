@@ -3,6 +3,7 @@
     include('conexion.php');
     $queryimagenes = "SELECT * FROM imagen WHERE idInmueble = '$_REQUEST[idInmueble]' AND baja != '1' ORDER BY idImagen ASC";
     $rtsimagenes = mysqli_query($conexion, $queryimagenes);
+
     $listado = "<table class='table table-lg'>";
     $listado .= "<thead>";
     $listado .= "<tr>";
@@ -19,7 +20,7 @@
         $listado .= "<tr>";
         $listado .= "<td><a href='". $imagen . "' target='_blank'><img src='". $imagen . "' height='60px'></a></td>";
         $listado .= "<td>". $imagenes['detalleImagen'] . "</td>";
-        $listado .= "<td><a href='fn/abm_img.php?idImagen=". $imagenes['idImagen'] . "&idInmueble=". $_REQUEST['idInmueble'] ."&abm=b' class='btn btn-danger me-1 mb-1'><i class='fa-solid fa-trash-can'></i></i></a></td>";
+        $listado .= "<td><a href='fn/abm_img.php?idImagen=". $imagenes['idImagen'] . "&idInmueble=". $_REQUEST['idInmueble'] ."&abm=b" . $_REQUEST['abm'] ."' class='btn btn-danger me-1 mb-1'><i class='fa-solid fa-trash-can'></i></i></a></td>";
         $listado .= "</tr>";
     }
     $listado .= "</tbody>";

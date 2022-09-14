@@ -320,6 +320,8 @@
                                                                             </div> 
                                             </form>                                  
                                         </div>
+
+                                        <?PHP echo $caurosel ?>
                                                                             
                                         <div class="card-body">
                                             <div class="table-responsive">                                        

@@ -181,6 +181,8 @@
                                             </div> 
                                         </form>                                  
                                     </div>
+
+                                    <?php echo $caurosel ?>
                                                                         
                                     <div class="card-body">
                                         <div class="table-responsive">                                        

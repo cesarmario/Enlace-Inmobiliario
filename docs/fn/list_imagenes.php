@@ -52,6 +52,13 @@
         $listado .= "<td>". $imagenes['detalleImagen'] . "</td>";
         $listado .= "<td><a href='fn/abm_img.php?idImagen=". $imagenes['idImagen'] . "&idInmueble=". $_REQUEST['idInmueble'] ."&abm=b" . $_REQUEST['abm'] ."' class='btn btn-danger me-1 mb-1'><i class='fa-solid fa-trash-can'></i></i></a></td>";
         $listado .= "</tr>";
+
+//        $imgmodal  = "<div id='myModal' class='modal'>";
+//        $imgmodal .= "<span class='close'>&times;</span>";
+//        $imgmodal .= "<img class='modal-content' id='". $imagenes['idImagen'] ."'>";
+//        $imgmodal .= "<div id='caption'></div>";
+//        $imgmodal .= "</div>";
+
         if($imagenes['posicion']==1){$act="active";}else{$act="";}
         $caurosel .= "<div class='carousel-item ". $act ."'>";
         $caurosel .= "<img src='" . $imagen ."' class='d-block w-100' alt='". $imagenes['idImagen'] ."'>";
@@ -73,8 +80,6 @@
     $caurosel .= "<span class='visually-hidden'>Next</span>";
     $caurosel .= "</a>";
     $caurosel .= "</div>";
-
-
 
     $queryinmuebles = "SELECT * FROM vista_inmuebles WHERE idInmueble = '$_REQUEST[idInmueble]' ";
     $rtsinmuebles = mysqli_query($conexion, $queryinmuebles);

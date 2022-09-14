@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/utils.css">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 </head>
 
@@ -113,18 +114,6 @@
                         <?PHP } ?>
                         <!-- /Seccion Administrativa-->
 
-                        <li class="sidebar-item has-sub ">
-                            <div class="d-flex align-items-center">
-                                <div class="avatar avatar-xs">
-                                    <img src="assets/images/faces/1.jpg" alt="Face 1">
-                                </div>
-                                <div class="ms-3 name">
-                                    <h5 class="font-bold"><?PHP echo $_SESSION['nomUsu']; ?></h5>
-                                    <h6 class="text-muted mb-0">@<?PHP echo $_SESSION['uidUsu']; ?></h6>
-                                </div>
-                            </div>
-                        </li>
-
                         <li class="sidebar-item">
                             <a href="fn/logout.php" class='sidebar-link'>
                                 <i class="bi bi-x-square"></i>
@@ -137,25 +126,78 @@
                 <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
             </div>
         </div>
-        <div id="main">
-            <header class="mb-3">
-                <a href="#" class="burger-btn d-block d-xl-none">
-                    <i class="bi bi-justify fs-3"></i>
-                </a>
+        <div id="main" class='layout-navbar'>
+            <header class='mb-3'>
+                <nav class="navbar navbar-expand navbar-light ">
+                    <div class="container-fluid">
+                        <a href="#" class="burger-btn d-block">
+                            <i class="bi bi-justify fs-3"></i>
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <!--li class="nav-item dropdown me-3">
+                                    <a class="nav-link active dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class='bi bi-bell bi-sub fs-4 text-gray-600'></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                        <li>
+                                            <h6 class="dropdown-header">Notificaciones</h6>
+                                        </li>
+                                        <li><a class="dropdown-item">No hay notificaciones!</a></li>
+                                    </ul>
+                                </!li -->
+                            </ul> 
+                            <div class="dropdown">
+                                <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="user-menu d-flex">
+                                        <div class="user-name text-end me-3">
+                                            <h6 class="mb-0 text-gray-600"><?PHP echo $_SESSION['nomUsu']; ?></h6>
+                                            <p class="mb-0 text-sm text-gray-600">@<?PHP echo $_SESSION['uidUsu']; ?></p>
+                                        </div>
+                                        <div class="user-img d-flex align-items-center">
+                                            <div class="avatar avatar-md">
+                                                <img src="assets/images/faces/1.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <li>
+                                        <h6 class="dropdown-header">Hola!</h6>
+                                    </li>
+                                    <li><a class="dropdown-item" href="usuario_abm.php?idUsuario=<?PHP echo $_SESSION['idUsu'];?>&abm=m"><i class="icon-mid bi bi-person me-2"></i>
+                                            Perfil</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="icon-mid bi bi-wallet me-2"></i>
+                                            Ayuda</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="fn/logout.php"><i
+                                                class="icon-mid bi bi-box-arrow-left me-2"></i> Cerrar Sesion</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
             </header>
 
-            <div class="page-heading">
-                <h3>ABM Inmueble</h3>
-            </div>
+            
             <div class="page-content">
                 <section class="row">
                     <div class="col-12 col-lg-9">                        
                         <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="card">
-                                    <!--div-- class="card-header">
+                                    <div class="card-header">
                                         <h4>ABM Inmueble</h4>
-                                    </!--div-->
+                                    </div>
                                     <div class="card-body">
                                         <div class="row">
                                             <form action="fn/abm_inmuebles.php" method="GET">
@@ -353,6 +395,7 @@
     <script src="assets/js/pages/dashboard.js"></script>
     <script src="https://kit.fontawesome.com/1ffc2bde27.js" crossorigin="anonymous"></script>                                                            
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/utils.js"></script>
 </body>
 
 </html>

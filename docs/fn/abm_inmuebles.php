@@ -66,7 +66,7 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 <?PHP } 
 } ?>
 
-<?php 
+<?PHP
 if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
 
 	$query="UPDATE inmueble  SET

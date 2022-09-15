@@ -9,23 +9,40 @@
         $nombrePropiedad = $pedido['nombrePropiedad'];
         $idOperacion = $pedido['idOperacion'];
         $nombreOperacion = $pedido['nombreOperacion'];
-        $localidadesPedido = $pedido['localidadesPedido'];
+        $localidadAPedido = $pedido['localidadAPedido'];
+        $localidadBPedido = $pedido['localidadBPedido'];
+        $localidadCPedido = $pedido['localidadCPedido'];
         $importeMonedaPedido = $pedido['importeMonedaPedido'];
         $importeDesdePedido = $pedido['importeDesdePedido'];
         $importeHastaPedido = $pedido['importeHastaPedido'];
         $caracteristicasPedido = $pedido['caracteristicasPedido'];
+        if($pedido['baja']==0){
+            $estado  = "<option active value='0'>Activo</option>";
+            $estado .= "<option value='1'>Baja</option>";
+        }else{
+            $estado  = "<option value='0'>Activo</option>";
+            $estado .= "<option active value='1'>Baja</option>";
+        }
+
     } else {
         //En caso de que la Operacin sea "a" inicializo todos los campos.    
         $idPropiedad = '';
-        $nombrePropiedad = ''; 
+        $nombrePropiedad = '';
         $idOperacion = ''; 
         $nombreOperacion = ''; 
-        $localidadesPedido = '';
+        $localidadAPedido = '';
+        $localidadBPedido = '';
+        $localidadCPedido = '';
         $importeMonedaPedido = '';
         $importeDesdePedido = '';
         $importeHastaPedido = '';
         $caracteristicasPedido = '';
-        $comentariosPedido = ''; 
+        $comentariosPedido = '';
+        $estado  = "<option value='0'>Activo</option>";
+        $estado .= "<option value='1'>Baja</option>";
+
+
+
     }
 
 ?>

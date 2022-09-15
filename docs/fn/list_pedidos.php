@@ -20,11 +20,16 @@
     $listadoPedidos .= "</thead>";
     $listadoPedidos .= "<tbody>";
     while($pedidos=mysqli_fetch_assoc($rtspedidos)){
+
+        $localidades = $pedidos['localidadAPedido'];
+        if(!empty($pedidos['localidadBPedido'])){$localidades .= ",".$pedidos['localidadBPedido'];}
+        if(!empty($pedidos['localidadCPedido'])){$localidades .= ",".$pedidos['localidadCPedido'];}        
+
         $listadoPedidos .= "<tr>";
         $listadoPedidos .= "<td>". $pedidos['nombreAgente'] . "</td>";
         $listadoPedidos .= "<td>". $pedidos['nombrePropiedad'] . "</td>";
         $listadoPedidos .= "<td>". $pedidos['nombreOperacion'] . "</td>";
-        $listadoPedidos .= "<td>". $pedidos['localidadesPedido'] . "</td>";
+        $listadoPedidos .= "<td>". $localidades . "</td>";
         $listadoPedidos .= "<td><b>". $pedidos['importeMonedaPedido'] . "</b>&nbsp;". $pedidos['importeDesdePedido'] . "</td>";
         $listadoPedidos .= "<td><b>". $pedidos['importeMonedaPedido'] . "</b>&nbsp;". $pedidos['importeHastaPedido'] . "</td>";
         $listadoPedidos .= "<td>". $pedidos['caracteristicasPedido'] . "</td>";

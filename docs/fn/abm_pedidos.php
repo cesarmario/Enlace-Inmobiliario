@@ -10,7 +10,9 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	$query="INSERT INTO pedido (	
 	`idPropiedad`,
 	`idOperacion`,
-	`localidadesPedido`,
+	`localidadAPedido`,
+	`localidadBPedido`,
+	`localidadCPedido`,
 	`importeMonedaPedido`,
 	`importeDesdePedido`,
 	`importeHastaPedido`,
@@ -21,7 +23,9 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	)VALUES(
 	'$_REQUEST[idPropiedad]',
 	'$_REQUEST[idOperacion]',
-	'$_REQUEST[localidadesPedido]',
+	'$_REQUEST[localidadAPedido]',
+	'$_REQUEST[localidadBPedido]',
+	'$_REQUEST[localidadCPedido]',
 	'$_REQUEST[importeMonedaPedido]',
 	'$_REQUEST[importeDesdePedido]',
 	'$_REQUEST[importeHastaPedido]',
@@ -40,6 +44,37 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 		</script>
 		<input type ='button' value = 'Volver' onClick="location.replace('../pedidos.php');" class="button"/>
 <?PHP } 
+} ?>
+
+
+<?PHP
+if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
+
+	$query="UPDATE pedidos  SET
+	idPropiedad='$_REQUEST[idPropiedad]',
+	idOperacion='$_REQUEST[idOperacion]',
+	localidadAPedido='$_REQUEST[localidadAPedido]',
+	localidadBPedido='$_REQUEST[localidadBPedido]',
+	localidadCPedido='$_REQUEST[localidadCPedido]',
+	importeMonedaPedido='$_REQUEST[importeMonedaPedido]',
+	importeDesdePedido='$_REQUEST[importeDesdePedido]',
+	importeHastaPedido='$_REQUEST[importeHastaPedido]',
+	caracteristicasPedido='$_REQUEST[caracteristicasPedido]',
+	comentariosPedido='$_REQUEST[comentariosPedido]',
+	baja='$_REQUEST[estado]'
+	WHERE idPedido = '$_REQUEST[idPedido]' ";
+	$result = mysqli_query($conexion, $query);
+    if (mysqli_affected_rows($conexion)>0){
+		?>
+		<script>
+       		location.replace("../pedidos.php");
+        </script>		
+	<?PHP } else { 	?>
+		<script>
+			alert("Ocurrio un Error a guardar en la Base de Datos!!");
+		</script>
+		<!--input type ='button' value = 'Volver' onClick="location.replace('../inmuebles.php');" class="button"/-->
+	<?PHP } 
 } ?>
 
 

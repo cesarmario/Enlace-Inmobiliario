@@ -199,7 +199,7 @@
                                     </div>                                    
                                     <div class="card-body">
                                         <div class="buttons">
-                                            <a href="pedido_abm.php" class="btn btn-sm btn-outline-success">Nuevo Pedido</a>
+                                            <a href="pedido_abm.php?abm=a" class="btn btn-sm btn-outline-success">Nuevo Pedido</a>
                                         </div>
                                         <?PHP echo $listadoPedidos; ?>                                     
                                     </div>

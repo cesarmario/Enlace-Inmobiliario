@@ -223,12 +223,28 @@
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Localidades</label>
-                                                        <select class="form-select"  id='localidadesPedido' name='localidadesPedido'>
-                                                            <option value="<?PHP echo $localidadesPedido; ?>"><?PHP echo $localidadesPedido; ?></option>
-                                                            <?PHP while($localidad=mysqli_fetch_assoc($rtslocalidad)){?>
-                                                            <option value="<?PHP echo $localidad['nombreLocalidad']; ?>"> <?PHP echo $localidad['nombreLocalidad'];?></option>
+                                                        <select class="form-select"  id='localidadAPedido' name='localidadAPedido'>
+                                                            <option value="<?PHP echo $localidadAPedido; ?>"><?PHP echo $localidadAPedido; ?></option>
+                                                            <?PHP while($localidadA=mysqli_fetch_assoc($rtslocalidad)){?>
+                                                            <option value="<?PHP echo $localidadA['nombreLocalidad']; ?>"> <?PHP echo $localidadA['nombreLocalidad'];?></option>
                                                             <?PHP } ?> 
-                                                        </select>                                    
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">    
+                                                        <select class="form-select"  id='localidadBPedido' name='localidadBPedido'>
+                                                            <option value="<?PHP echo $localidadBPedido; ?>"><?PHP echo $localidadBPedido; ?></option>
+                                                            <?PHP while($localidadB=mysqli_fetch_assoc($rtslocalidadB)){?>
+                                                            <option value="<?PHP echo $localidadB['nombreLocalidad']; ?>"> <?PHP echo $localidadB['nombreLocalidad'];?></option>
+                                                            <?PHP } ?> 
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">    
+                                                        <select class="form-select"  id='localidadCPedido' name='localidadCPedido'>
+                                                            <option value="<?PHP echo $localidadCPedido; ?>"><?PHP echo $localidadCPedido; ?></option>
+                                                            <?PHP while($localidadC=mysqli_fetch_assoc($rtslocalidadC)){?>
+                                                            <option value="<?PHP echo $localidadC['nombreLocalidad']; ?>"> <?PHP echo $localidadC['nombreLocalidad'];?></option>
+                                                            <?PHP } ?> 
+                                                        </select>                                     
                                                     </div >
 
                                                      <div class="form-group">
@@ -264,6 +280,16 @@
                                                             value="<?PHP echo $comentariosPedido; ?>" placeholder="Comentarios">
                                                     </div>
 
+                                                    <?PHP if($_REQUEST['abm']!='a'){ ?>
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Estado</label>
+                                                        <select class="choices form-select" id='estado' name='estado'>
+                                                            <?PHP echo $estado; ?>
+                                                        </select>                                    
+                                                    </div>    
+
+                                                    <?PHP } ?>    
+
                                                 <!--    <div class="form-group">
                                                         <label for="basicInput">Fecha</label>
                                                         <input type="text" class="form-control" id='banosInmueble' name='banosInmueble'
@@ -293,18 +319,12 @@
                                                             placeholder="Valor">
                                                     </div>
 
-                                                    <div class="form-group">
-                                                        <label for="basicInput">Moneda</label>
-                                                    <select class="choices form-select" id='monedaInmueble' name='monedaInmueble'>
-                                                            <option value=""></option>
-                                                            <option value="$">Pesos</option>
-                                                            <option value="USD">Dolares</option>
-                                                        </select>                                    
-                                                    </div>
+                                                   
                                                 </div> -->
 
                                                 <div class="buttons">
-                                                    <input type="hidden" id="abm" name="abm" value="a"/>
+                                                    <input type="hidden" id="abm" name="abm" value="<?PHP echo $_REQUEST['abm'];?>"/>
+                                                    <input type="hidden" id="idPedido" name="idPedido" value="<?PHP echo $_REQUEST['idPedido'];?>"/>
                                                     <button type="submit" class="btn btn-primary me-1 mb-1">Guardar</button>
                                                     <a href="pedidos.php" class="btn btn-warning me-1 mb-1">Cancelar</a>
                                                 </div> 
@@ -334,8 +354,7 @@
     <script src="assets/js/pages/dashboard.js"></script>
     <script src="https://kit.fontawesome.com/1ffc2bde27.js" crossorigin="anonymous"></script>
 
-    <!-- Include Choices JavaScript -->
-    <script src="assets/vendors/choices.js/choices.min.js"></script>                                                            
+                                                         
     <script src="assets/js/main.js"></script>
     
 </body>

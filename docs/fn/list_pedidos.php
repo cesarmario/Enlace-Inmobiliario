@@ -22,8 +22,8 @@
     while($pedidos=mysqli_fetch_assoc($rtspedidos)){
 
         $localidades = $pedidos['localidadAPedido'];
-        if(!empty($pedidos['localidadBPedido'])){$localidades .= ",".$pedidos['localidadBPedido'];}
-        if(!empty($pedidos['localidadCPedido'])){$localidades .= ",".$pedidos['localidadCPedido'];}        
+        if(!empty($pedidos['localidadBPedido'])){$localidades .= " , ".$pedidos['localidadBPedido'];}
+        if(!empty($pedidos['localidadCPedido'])){$localidades .= " , ".$pedidos['localidadCPedido'];}        
 
         $listadoPedidos .= "<tr>";
         $listadoPedidos .= "<td>". $pedidos['nombreAgente'] . "</td>";

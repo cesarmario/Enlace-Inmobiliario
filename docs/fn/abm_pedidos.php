@@ -50,7 +50,7 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 <?PHP
 if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
 
-	$query="UPDATE pedidos  SET
+	$query="UPDATE pedido SET
 	idPropiedad='$_REQUEST[idPropiedad]',
 	idOperacion='$_REQUEST[idOperacion]',
 	localidadAPedido='$_REQUEST[localidadAPedido]',
@@ -73,7 +73,7 @@ if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
 		<script>
 			alert("Ocurrio un Error a guardar en la Base de Datos!!");
 		</script>
-		<!--input type ='button' value = 'Volver' onClick="location.replace('../inmuebles.php');" class="button"/-->
+		<input type ='button' value = 'Volver' onClick="location.replace('../pedidos.php');" class="button"/>
 	<?PHP } 
 } ?>
 

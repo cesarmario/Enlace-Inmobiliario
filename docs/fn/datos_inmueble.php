@@ -35,7 +35,7 @@
         $pavimentoInmueble = $inmueble['pavimentoInmueble'];
         $tipoAguaCalienteInmueble = $inmueble['tipoAguaCalienteInmueble'];
         $aguaCorrienteInmueble = $inmueble['aguaCorrienteInmueble'];
-        $frenteTerrenoInmueble = $inmueble['frenteTerrenoInmueble']
+        $frenteTerrenoInmueble = $inmueble['frenteTerrenoInmueble'];
         $largoTerrenoInmueble = $inmueble['largoTerrenoInmueble'];
         $antiguedadInmueble = $inmueble['antiguedadInmueble'];
         $estadoInmueble = $inmueble['estadoInmueble'];

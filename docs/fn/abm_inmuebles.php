@@ -59,7 +59,7 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	'$_REQUEST[monedaInmueble]',
 	'$_REQUEST[plantasInmueble]',
 	'$_REQUEST[cloacaInmueble]',
-	'$_REQUEST[gasNaturalInmuebles]',
+	'$_REQUEST[gasNaturalInmueble]',
 	'$_REQUEST[pavimentoInmueble]',
 	'$_REQUEST[tipoAguaCalienteInmueble]',
 	'$_REQUEST[aguaCorrienteInmueble]',

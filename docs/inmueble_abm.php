@@ -367,7 +367,7 @@
                                                     <div class="form-group">
                                                         <label for="basicInput">Antigüedad del Inmueble</label>
                                                         <input type="text" class="form-control" id='antiguedadInmueble' name='antiguedadInmueble'
-                                                            placeholder="Antiüedad" value='<?PHP echo $antiguedadInmueble; ?>'>
+                                                            placeholder="Antigüedad" value='<?PHP echo $antiguedadInmueble; ?>'>
                                                     </div>
 
                                                     <div class="form-group">

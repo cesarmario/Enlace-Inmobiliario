@@ -30,7 +30,6 @@
         $totalPedidos = $pedidos['totalPedidos'];
     } else { 
         $totalPedidos = '0';
-    }  
-
+    } 
 
 ?>

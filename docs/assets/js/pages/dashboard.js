@@ -23,6 +23,7 @@ var optionsProfileVisit = {
 		categories: ["Casas","Cocheras","Departamentos","Desarrollo Inmobiliario","Fincas","Local Comercial","Lote"],
 	},
 }
+
 let optionsVisitorsProfile  = {
 	series: [50, 40, 10],
 	labels: ['Venta', 'Alquiler', 'Leasing'],

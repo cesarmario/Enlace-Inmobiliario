@@ -60,7 +60,7 @@
         $informacionPrivadaInmueble = ''; 
         $valorInmueble = ''; 
         $monedaInmueble = '';
-        $plantasInmueble =' ';
+        $plantasInmueble ='';
         $cloacaInmueble = '';
         $gasNaturalInmuebles = '';
         $pavimentoInmueble = '';
@@ -74,8 +74,6 @@
         $cocheraInmueble = '';
         $tipoCocheraInmueble = '';
         $vehiculosCocheraInmueble = '';
-
-
     }
 
 ?>

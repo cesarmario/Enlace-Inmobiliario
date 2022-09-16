@@ -71,7 +71,6 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 	'$_REQUEST[cocheraInmueble]',
 	'$_REQUEST[tipoCocheraInmueble]',
 	'$_REQUEST[vehiculosCocheraInmueble]',
-
 	'$_SESSION[idUsu]',
 	'0')";
 	$result = mysqli_query($conexion, $query);
@@ -114,6 +113,20 @@ if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
 	informacionAdicionalInmueble='$_REQUEST[informacionAdicionalInmueble]',
 	informacionPrivadaInmueble='$_REQUEST[informacionPrivadaInmueble]',
 	valorInmueble='$_REQUEST[valorInmueble]',
+	plantasInmueble='$_REQUEST[plantasInmueble]',
+	cloacaInmueble='$_REQUEST[cloacaInmueble]',
+	gasNaturalInmuebles='$_REQUEST[gasNaturalInmueble]',
+	pavimentoInmueble='$_REQUEST[pavimentoInmueble]',
+	tipoAguaCalienteInmueble='$_REQUEST[tipoAguaCalienteInmueble]',
+	aguaCorrienteInmueble='$_REQUEST[aguaCorrienteInmueble]',
+	frenteTerrenoInmueble='$_REQUEST[frenteTerrenoInmueble]',
+	largoTerrenoInmueble='$_REQUEST[largoTerrenoInmueble]',
+	antiguedadInmueble='$_REQUEST[antiguedadInmueble]',
+	estadoInmueble='$_REQUEST[estadoInmueble]',
+	mejorasInmueble='$_REQUEST[mejorasInmueble]',
+	cocheraInmueble='$_REQUEST[cocheraInmueble]',
+	tipoCocheraInmueble='$_REQUEST[tipoCocheraInmueble]',
+	vehiculosCocheraInmueble='$_REQUEST[vehiculosCocheraInmueble]',
 	monedaInmueble='$_REQUEST[monedaInmueble]' WHERE idInmueble = '$_REQUEST[idInmueble]' ";
 	$result = mysqli_query($conexion, $query);
     if (mysqli_affected_rows($conexion)>0){

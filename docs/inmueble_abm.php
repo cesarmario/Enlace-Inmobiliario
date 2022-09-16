@@ -366,7 +366,7 @@
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Antigüedad del Inmueble</label>
-                                                        <input type="text" class="form-control" id='antiguedadlInmueble' name='antiguedadInmueble'
+                                                        <input type="text" class="form-control" id='antiguedadInmueble' name='antiguedadInmueble'
                                                             placeholder="Antiüedad" value='<?PHP echo $antiguedadInmueble; ?>'>
                                                     </div>
 
@@ -404,8 +404,8 @@
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Capacidad de vehículos</label>
-                                                        <input type="text" class="form-control" id='vehículosCocheraInmueble' name='vehículosCocheraInmueble'
-                                                            placeholder="Capacidad de vehículos" value='<?PHP echo $vehículosCocheraInmueble; ?>'>
+                                                        <input type="text" class="form-control" id='vehiculosCocheraInmueble' name='vehiculosCocheraInmueble'
+                                                            placeholder="Capacidad de vehículos" value='<?PHP echo $vehiculosCocheraInmueble; ?>'>
                                                     </div>
 
                                                     <div class="form-group mb-3">

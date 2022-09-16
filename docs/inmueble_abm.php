@@ -283,6 +283,76 @@
                                                     </div>
 
                                                     <div class="form-group">
+                                                        <label for="basicInput">Plantas</label>
+                                                        <input type="text" class="form-control" id='plantasInmueble' name='plantasInmueble'
+                                                            placeholder="Plantas" value='<?PHP echo $plantasInmueble; ?>'>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Cloaca</label>
+                                                    <select class="choices form-select" id='cloacaInmueble' name='cloacaInmueble'>
+                                                            <option value='<?PHP echo $cloacaInmueble; ?>'><?PHP echo $cloacaInmueble; ?></option>
+                                                            <option value="">Sin especificar</option>
+                                                            <option value="Si">Si</option>
+                                                            <option value="No">No</option>
+                                                        </select>                                    
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Gas</label>
+                                                    <select class="choices form-select" id='gasNaturalInmueble' name='gasNaturalInmueble'>
+                                                            <option value='<?PHP echo $gasNaturalInmueble; ?>'><?PHP echo $gasNaturalInmueble; ?></option>
+                                                            <option value="">Sin especificar</option>
+                                                            <option value="Si">Si</option>
+                                                            <option value="No">No</option>
+                                                        </select>                                    
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Tipo de agua caliente</label>
+                                                    <select class="choices form-select" id='tipoAguaCalienteInmueble' name='tipoAguaCalienteInmueble'>
+                                                            <option value='<?PHP echo $tipoAguaCalienteInmueble; ?>'><?PHP echo $tipoAguaCalienteInmueble; ?></option>
+                                                            <option value="">Sin especificar</option>
+                                                            <option value="Calefón eléctrico">Calefón eléctrico</option>
+                                                            <option value="Calefón gas">Calefón gas</option>
+                                                            <option value="Termotanque eléctrico">Termotanque eléctrico</option>
+                                                            <option value="Termotanque gas">Termotanque gas</option>
+                                                        </select>                                    
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Agua corriente</label>
+                                                    <select class="choices form-select" id='aguaCorrienteInmueble' name='aguaCorrienteInmueble'>
+                                                            <option value='<?PHP echo $aguaCorrienteInmueble; ?>'><?PHP echo $aguaCorrienteInmueble; ?></option>
+                                                            <option value="">Sin especificar</option>
+                                                            <option value="Si">Si</option>
+                                                            <option value="No">No</option>
+                                                        </select>                                    
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Pavimento</label>
+                                                    <select class="choices form-select" id='pavimentoInmueble' name='pavimentoInmueble'>
+                                                            <option value='<?PHP echo $pavimentoInmueble; ?>'><?PHP echo $pavimentoInmueble; ?></option>
+                                                            <option value="">Sin especificar</option>
+                                                            <option value="Si">Si</option>
+                                                            <option value="No">No</option>
+                                                        </select>                                    
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Frente del terreno</label>
+                                                        <input type="text" class="form-control" id='frenteTerrenoInmueble' name='frenteTerrenoInmueble'
+                                                            placeholder="Frente del terreno" value='<?PHP echo $frenteTerrenoInmueble; ?>'>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Largo del terreno</label>
+                                                        <input type="text" class="form-control" id='largoTerrenoInmueble' name='largoTerrenoInmueble'
+                                                            placeholder="Largo del terreno" value='<?PHP echo $largoTerrenoInmueble; ?>'>
+                                                    </div>
+
+                                                    <div class="form-group">
                                                         <label for="basicInput">Superficie Cubierta</label>
                                                         <input type="text" class="form-control" id='superficieCubiertaInmueble' name='superficieCubiertaInmueble'
                                                             placeholder="Superficie Cubierta" value='<?PHP echo $superficieCubiertaInmueble; ?>'>
@@ -294,11 +364,55 @@
                                                             placeholder="Superficie Total" value='<?PHP echo $superficieTotalInmueble; ?>'>
                                                     </div>
 
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Antigüedad del Inmueble</label>
+                                                        <input type="text" class="form-control" id='antiguedadlInmueble' name='antiguedadInmueble'
+                                                            placeholder="Antiüedad" value='<?PHP echo $antiguedadInmueble; ?>'>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Estado del Inmueble</label>
+                                                        <input type="text" class="form-control" id='estadoInmueble' name='estadoInmueble'
+                                                            placeholder="Estado" value='<?PHP echo $estadoInmueble; ?>'>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Mejoras</label>
+                                                    <select class="choices form-select" id='mejorasInmueble' name='mejorasInmueble'>
+                                                            <option value='<?PHP echo $mejorasInmueble; ?>'><?PHP echo $mejorasInmueble; ?></option>
+                                                            <option value="">Sin especificar</option>
+                                                            <option value="Si">Si</option>
+                                                            <option value="No">No</option>
+                                                        </select>                                    
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Cochera</label>
+                                                    <select class="choices form-select" id='cocheraInmueble' name='cocheraInmueble'>
+                                                            <option value='<?PHP echo $cocheraInmueble; ?>'><?PHP echo $cocheraInmueble; ?></option>
+                                                            <option value="">Sin especificar</option>
+                                                            <option value="Si">Si</option>
+                                                            <option value="No">No</option>
+                                                        </select>                                    
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Tipo de cochera</label>
+                                                        <input type="text" class="form-control" id='tipoCocheraInmueble' name='tipoCocheraInmueble'
+                                                            placeholder="Tipo de cochera" value='<?PHP echo $tipoCocheraInmueble; ?>'>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="basicInput">Capacidad de vehículos</label>
+                                                        <input type="text" class="form-control" id='vehículosCocheraInmueble' name='vehículosCocheraInmueble'
+                                                            placeholder="Capacidad de vehículos" value='<?PHP echo $vehículosCocheraInmueble; ?>'>
+                                                    </div>
+
                                                     <div class="form-group mb-3">
                                                         <label for="exampleFormControlTextarea1" class="form-label">Informacion Adicional</label>
                                                         <textarea class="form-control" id='informacionAdicionalInmueble' name='informacionAdicionalInmueble' rows="3"><?PHP echo $informacionAdicionalInmueble; ?></textarea>
                                                     </div>
-
+_
                                                     <div class="form-group">
                                                         <label for="basicInput">Valor Inmueble</label>
                                                         <input type="text" class="form-control" id='valorInmueble' name='valorInmueble'

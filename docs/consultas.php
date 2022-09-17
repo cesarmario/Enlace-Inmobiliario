@@ -210,7 +210,7 @@
             <footer>
                 <div class="footer clearfix mb-0 text-muted">
                     <div class="float-start">
-                        <p>2022 &copy; Enlace Inmobiliario</p>
+                        <p>&nbsp;Copyright <b>&copy; Enlace Inmobiliario <script>document.write(new Date().getFullYear());</script></b></p>
                     </div>
                 </div>
             </footer>

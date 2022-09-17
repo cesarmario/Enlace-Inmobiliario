@@ -248,7 +248,7 @@
                                                     </div >
 
                                                      <div class="form-group">
-                                                        <label for="basicInput"><b>Moneda<</b></label>
+                                                        <label for="basicInput"><b>Moneda</b></label>
                                                     <select class="choices form-select" id='importeMonedaPedido' name='importeMonedaPedido'>
                                                             <option value="<?PHP echo $importeMonedaPedido; ?>"><?PHP echo $importeMonedaPedido; ?></option>
                                                             <option value="$">Pesos</option>
@@ -341,7 +341,7 @@
             <footer>
                 <div class="footer clearfix mb-0 text-muted">
                     <div class="float-start">
-                        <p>2022 &copy; Enlace Inmobiliario</p>
+                        <p>&nbsp;2022 &copy; Enlace Inmobiliario</p>
                     </div>
                 </div>
             </footer>

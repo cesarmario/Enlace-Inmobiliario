@@ -224,7 +224,7 @@
 
                                                     <div class="form-group">
                                                         <label for="basicInput"><b>Matrícula</b></label>
-                                                        <input type="text" class="form-control" id='matriculaUsuario' name='matriculaUsuario' <?PHP echo $disabled; ?>
+                                                        <input type="number" class="form-control" id='matriculaUsuario' name='matriculaUsuario' <?PHP echo $disabled; ?>
                                                             placeholder="Matricula" value='<?PHP echo $matriculaUsuario; ?>' require>
                                                     </div>
 
@@ -236,7 +236,7 @@
 
                                                     <div class="form-group">
                                                         <label for="basicInput"><b>Teléfono</b></label>
-                                                        <input type="text" class="form-control" id='telefonoUsuario' name='telefonoUsuario' <?PHP echo $disabled; ?>
+                                                        <input type="number" class="form-control" id='telefonoUsuario' name='telefonoUsuario' <?PHP echo $disabled; ?>
                                                             placeholder="teléfono" value='<?PHP echo $telefonoUsuario; ?>'>
                                                     </div>
                                                      
@@ -271,7 +271,7 @@
             <footer>
                 <div class="footer clearfix mb-0 text-muted">
                     <div class="float-start">
-                        <p>2022 &copy; Enlace Inmobiliario</p>
+                        <p>&nbsp;Copyright <b>&copy; Enlace Inmobiliario <script>document.write(new Date().getFullYear());</script></b></p>
                     </div>
                 </div>
             </footer>

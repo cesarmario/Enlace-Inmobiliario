@@ -209,9 +209,9 @@
                                         <!--form action="fn/abm_img.php" method="GET"-->
                                         <form role="form" action="fn/abm_img.php" method="POST" enctype="multipart/form-data">    
                                             <div class="form-group">
-                                                <label>Subir Imagen</label><br>
+                                                <label>Subir Im&aacute;genes</label><br>
                                                 <!--input type="file" class="basic-filepond" name="imagen"-->
-                                                <input type="file" name="imagen[]" id="imagen[]" require>
+                                                <input type="file" name="imagen[]" id="imagen[]" multiple>
 
                                                 <!--label-- for="basicInput">Detalle</label-->
                                                 <!--textarea rows="2" class="form-control" placeholder="Detalle de la Imagen"

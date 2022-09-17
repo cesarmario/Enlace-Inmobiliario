@@ -15,7 +15,7 @@ if ($_REQUEST['abm']=='a' or $_REQUEST['abm']=='m'){
 	if(empty($_FILES['imagen']['name'])){ ?>
 
 		<script>
-            alert("Debe seleccinar una imagen!");
+            alert("Debe seleccionar una imagen!");
 			window.history.back();
         </script>
 

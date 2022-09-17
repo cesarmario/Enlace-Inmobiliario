@@ -211,16 +211,17 @@
                                             <div class="form-group">
                                                 <label>Subir Imagen</label><br>
                                                 <!--input type="file" class="basic-filepond" name="imagen"-->
-                                                <input type="file" name="imagen" id="imagen" require>
+                                                <input type="file" name="imagen[]" id="imagen[]" require>
 
-                                                <!--label-- for="basicInput">Detalle</°label-->
-                                                <textarea rows="2" class="form-control" placeholder="Detalle de la Imagen"
-                                                name="detalleImagen" id="detalleImagen"></textarea>
+                                                <!--label-- for="basicInput">Detalle</label-->
+                                                <!--textarea rows="2" class="form-control" placeholder="Detalle de la Imagen"
+                                                name="detalleImagen" id="detalleImagen"></textarea-->
+                                                <input type="hidden" id="detalleImagen" name="detalleImagen" value=""/>
                                             </div>
                                             <div class="buttons">
                                                 <input type="hidden" id="idInmueble" name="idInmueble" value="<?PHP echo $_REQUEST['idInmueble']; ?>"/>
                                                 <input type="hidden" id="abm" name="abm" value="a"/>
-                                                <button type="submit" class="btn btn-primary me-1 mb-1">Guardar</button>
+                                                <button type="submit" class="btn btn-primary me-1 mb-1">Cargar</button>
                                                 <a href="inmuebles.php" class="btn btn-warning me-1 mb-1">Finalizar</a>
                                             </div> 
                                         </form>                                  

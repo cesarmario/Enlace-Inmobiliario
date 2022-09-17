@@ -7,86 +7,97 @@ error_reporting(E_ALL ^ E_NOTICE);
 $fecha = date("Y-m-d H:i:s");
 
 if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
-	$query="INSERT INTO inmueble (
-	`idPropiedad`,
-	`idOperacion`,
-	`idLocalidad`,
-	`tituloInmueble`,
-	`descripcionInmueble`,
-	`domicilioCalleInmueble`,
-	`domicilioNumeroInmueble`,
-	`domicilioOrientacionInmueble`,
-	`habitacionesInmueble`,
-	`banosInmueble`,
-	`superficieCubiertaInmueble`,
-	`superficieTotalInmueble`,
-	`informacionAdicionalInmueble`,
-	`informacionPrivadaInmueble`,	
-	`valorInmueble`,
-	`monedaInmueble`,
-	`plantasInmueble`,
-	`cloacaInmueble`,
-	`gasNaturalInmuebles`,
-	`pavimentoInmueble`,
-	`tipoAguaCalienteInmueble`,
-	`aguaCorrienteInmueble`,
-	`frenteTerrenoInmueble`,
-	`largoTerrenoInmueble`,
-	`antiguedadInmueble`,
-	`estadoInmueble`,
-	`mejorasInmueble`,
-	`cocheraInmueble`,
-	`tipoCocheraInmueble`,
-	`vehiculosCocheraInmueble`,
-	`idUsuario`,
-	`baja`
-	)VALUES(
-	'$_REQUEST[idPropiedad]',
-	'$_REQUEST[idOperacion]',
-	'$_REQUEST[idLocalidad]',
-	'$_REQUEST[tituloInmueble]',
-	'$_REQUEST[descripcionInmueble]',
-	'$_REQUEST[domicilioCalleInmueble]',
-	'$_REQUEST[domicilioNumeroInmueble]',
-	'$_REQUEST[domicilioOrientacionInmueble]',
-	'$_REQUEST[habitacionesInmueble]',
-	'$_REQUEST[banosInmueble]',
-	'$_REQUEST[superficieCubiertaInmueble]',
-	'$_REQUEST[superficieTotalInmueble]',
-	'$_REQUEST[informacionAdicionalInmueble]',
-	'$_REQUEST[informacionPrivadaInmueble]',
-	'$_REQUEST[valorInmueble]',
-	'$_REQUEST[monedaInmueble]',
-	'$_REQUEST[plantasInmueble]',
-	'$_REQUEST[cloacaInmueble]',
-	'$_REQUEST[gasNaturalInmueble]',
-	'$_REQUEST[pavimentoInmueble]',
-	'$_REQUEST[tipoAguaCalienteInmueble]',
-	'$_REQUEST[aguaCorrienteInmueble]',
-	'$_REQUEST[frenteTerrenoInmueble]',
-	'$_REQUEST[largoTerrenoInmueble]',
-	'$_REQUEST[antiguedadInmueble]',
-	'$_REQUEST[estadoInmueble]',
-	'$_REQUEST[mejorasInmueble]',
-	'$_REQUEST[cocheraInmueble]',
-	'$_REQUEST[tipoCocheraInmueble]',
-	'$_REQUEST[vehiculosCocheraInmueble]',
-	'$_SESSION[idUsu]',
-	'0')";
-	$result = mysqli_query($conexion, $query);
-    if (mysqli_affected_rows($conexion)>0){ 
-		
-		$queryctrl="SELECT * FROM inmueble WHERE baja != '1' ORDER BY idInmueble DESC LIMIT 1";
-		$rtsctrl = mysqli_query($conexion, $queryctrl);
-		$ctrl=mysqli_fetch_assoc($rtsctrl);
-		$idInmueble=$ctrl['idInmueble'];		
-		?>
+
+	$validate = true;
+
+	if (!isset($_REQUEST['idPropiedad'])){ ?>
 		<script>
-			location.replace("../inmueble_abm_img.php?idInmueble=<?PHP echo $idInmueble;?>");
-        //	location.replace("../inmuebles.php");
-        </script>		
-<?PHP } else { 
-		?>
+				alert("Debe seleccionar una Tipo de Propiedad!");
+				window.history.back();
+		</script>		
+	<?PHP $validate = false; }
+
+	if($validate){
+		$query="INSERT INTO inmueble (
+		`idPropiedad`,
+		`idOperacion`,
+		`idLocalidad`,
+		`tituloInmueble`,
+		`descripcionInmueble`,
+		`domicilioCalleInmueble`,
+		`domicilioNumeroInmueble`,
+		`domicilioOrientacionInmueble`,
+		`habitacionesInmueble`,
+		`banosInmueble`,
+		`superficieCubiertaInmueble`,
+		`superficieTotalInmueble`,
+		`informacionAdicionalInmueble`,
+		`informacionPrivadaInmueble`,	
+		`valorInmueble`,
+		`monedaInmueble`,
+		`plantasInmueble`,
+		`cloacaInmueble`,
+		`gasNaturalInmuebles`,
+		`pavimentoInmueble`,
+		`tipoAguaCalienteInmueble`,
+		`aguaCorrienteInmueble`,
+		`frenteTerrenoInmueble`,
+		`largoTerrenoInmueble`,
+		`antiguedadInmueble`,
+		`estadoInmueble`,
+		`mejorasInmueble`,
+		`cocheraInmueble`,
+		`tipoCocheraInmueble`,
+		`vehiculosCocheraInmueble`,
+		`idUsuario`,
+		`baja`
+		)VALUES(
+		'$_REQUEST[idPropiedad]',
+		'$_REQUEST[idOperacion]',
+		'$_REQUEST[idLocalidad]',
+		'$_REQUEST[tituloInmueble]',
+		'$_REQUEST[descripcionInmueble]',
+		'$_REQUEST[domicilioCalleInmueble]',
+		'$_REQUEST[domicilioNumeroInmueble]',
+		'$_REQUEST[domicilioOrientacionInmueble]',
+		'$_REQUEST[habitacionesInmueble]',
+		'$_REQUEST[banosInmueble]',
+		'$_REQUEST[superficieCubiertaInmueble]',
+		'$_REQUEST[superficieTotalInmueble]',
+		'$_REQUEST[informacionAdicionalInmueble]',
+		'$_REQUEST[informacionPrivadaInmueble]',
+		'$_REQUEST[valorInmueble]',
+		'$_REQUEST[monedaInmueble]',
+		'$_REQUEST[plantasInmueble]',
+		'$_REQUEST[cloacaInmueble]',
+		'$_REQUEST[gasNaturalInmueble]',
+		'$_REQUEST[pavimentoInmueble]',
+		'$_REQUEST[tipoAguaCalienteInmueble]',
+		'$_REQUEST[aguaCorrienteInmueble]',
+		'$_REQUEST[frenteTerrenoInmueble]',
+		'$_REQUEST[largoTerrenoInmueble]',
+		'$_REQUEST[antiguedadInmueble]',
+		'$_REQUEST[estadoInmueble]',
+		'$_REQUEST[mejorasInmueble]',
+		'$_REQUEST[cocheraInmueble]',
+		'$_REQUEST[tipoCocheraInmueble]',
+		'$_REQUEST[vehiculosCocheraInmueble]',
+		'$_SESSION[idUsu]',
+		'0')";
+		$result = mysqli_query($conexion, $query);
+		if (mysqli_affected_rows($conexion)>0){ 
+			
+			$queryctrl="SELECT * FROM inmueble WHERE baja != '1' ORDER BY idInmueble DESC LIMIT 1";
+			$rtsctrl = mysqli_query($conexion, $queryctrl);
+			$ctrl=mysqli_fetch_assoc($rtsctrl);
+			$idInmueble=$ctrl['idInmueble'];		
+			?>
+			<script>
+				location.replace("../inmueble_abm_img.php?idInmueble=<?PHP echo $idInmueble;?>");
+			//	location.replace("../inmuebles.php");
+			</script> 
+<?PHP } ?>			
+<?PHP } else { ?>
 		<script>
 			alert("Ocurrio un Error a guardar en la Base de Datos!!");
 		</script>

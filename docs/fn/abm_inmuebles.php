@@ -10,14 +10,28 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 
 	$validate = true;
 
-	if (!isset($_REQUEST['idPropiedad'])){ ?>
+	if (!isset($_REQUEST['idPropiedad']) or empty($_REQUEST['idPropiedad'])){ ?>
 		<script>
-				alert("Debe seleccionar una Tipo de Propiedad!");
-				window.history.back();
+			alert("Debe seleccionar una Tipo de Propiedad!");
+			window.history.back();
 		</script>		
 	<?PHP $validate = false; }
 
-	if($validate){
+	if (!isset($_REQUEST['idOperacion']) or empty($_REQUEST['idOperacion'])){ ?>
+		<script>
+			alert("Debe seleccionar una Tipo de Operacion!");
+			window.history.back();
+		</script>		
+	<?PHP $validate = false; }
+
+	if (!isset($_REQUEST['idLocalidad']) or empty($_REQUEST['idLocalidad'])){ ?>
+		<script>
+			alert("Debe seleccionar una Localidad!");
+			window.history.back();
+		</script>		
+	<?PHP $validate = false; }
+
+	if($validate = true){
 		$query="INSERT INTO inmueble (
 		`idPropiedad`,
 		`idOperacion`,

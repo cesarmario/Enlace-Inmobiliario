@@ -200,12 +200,12 @@
                                                 <div class="col-md-6">
                                             
                                                     <div class="form-group">
-                                                        <label for="basicInput">Usuario</label>
+                                                        <label for="basicInput"><b>Usuario</b></label>
                                                         <input type="text" class="form-control" value='<?PHP echo $uidUsuario; ?>' disabled>
                                                     </div>
                                                     
                                                     <div class="form-group">
-                                                        <label for="basicInput">Nombre y Apellido</label>
+                                                        <label for="basicInput"><b>Nombre y Apellido</b></label>
                                                         <input type="text" class="form-control" value='<?PHP echo $nombreUsuario; ?>' disabled>
                                                     </div>
 
@@ -213,13 +213,13 @@
 
 
                                                     <div class="form-group">
-                                                        <label for="basicInput">Nueva Contraseña</label>
+                                                        <label for="basicInput"><b>Nueva Contraseña</b></label>
                                                         <input type="password" class="form-control" id='pswUsuario'	name='pswUsuario'
                                                             placeholder="Ingrese Contraseña" onKeyUp="this.value=this.value.toLowerCase();" require>                                  
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput">Repita Contraseña</label>
+                                                        <label for="basicInput"><b>Repita Contraseña</b></label>
                                                         <input type="password" class="form-control" id='repswUsuario' name='repswUsuario'
                                                             placeholder="Repita Contraseña" onChange="pswcontrol()" onKeyUp="this.value=this.value.toLowerCase();" require>                                  
                                                     </div>

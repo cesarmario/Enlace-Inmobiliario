@@ -202,7 +202,7 @@
                                                 <div class="col-md-8">
 
                                                     <div class="form-group">
-                                                        <label for="basicInput">Tipo de Propiedad</label>
+                                                        <label for="basicInput"><b>Tipo de Propiedad</b></label>
                                                         <select class="form-select" id='idPropiedad' name='idPropiedad' require>
                                                             <option value="<?PHP echo $idPropiedad; ?>"><?PHP echo $nombrePropiedad; ?></option>
                                                             <?PHP while($propiedad=mysqli_fetch_assoc($rtspropiedad)){?>
@@ -212,7 +212,7 @@
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput">Tipo de Operacion</label>
+                                                        <label for="basicInput"><b>Tipo de Operacion</b></label>
                                                         <select class="form-select" id='idOperacion' name='idOperacion'require>
                                                             <option selected value="<?PHP echo $idOperacion; ?>"><?PHP echo $nombreOperacion; ?></option>
                                                             <?PHP while($operacion=mysqli_fetch_assoc($rtsoperacion)){?>
@@ -222,7 +222,7 @@
                                                     </div>                                                  
 
                                                     <div class="form-group">
-                                                        <label for="basicInput">Localidades</label>
+                                                        <label for="basicInput"><b>Localidades</label>
                                                         <select class="form-select"  id='localidadAPedido' name='localidadAPedido'>
                                                             <option value="<?PHP echo $localidadAPedido; ?>"><?PHP echo $localidadAPedido; ?></option>
                                                             <?PHP while($localidadA=mysqli_fetch_assoc($rtslocalidad)){?>
@@ -248,7 +248,7 @@
                                                     </div >
 
                                                      <div class="form-group">
-                                                        <label for="basicInput">Moneda</label>
+                                                        <label for="basicInput"><b>Moneda<</b></label>
                                                     <select class="choices form-select" id='importeMonedaPedido' name='importeMonedaPedido'>
                                                             <option value="<?PHP echo $importeMonedaPedido; ?>"><?PHP echo $importeMonedaPedido; ?></option>
                                                             <option value="$">Pesos</option>
@@ -257,32 +257,32 @@
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput">Valor desde</label>
+                                                        <label for="basicInput"><b>Valor desde</b></label>
                                                         <input type="text" class="form-control" id='importeDesdePedido' name='importeDesdePedido'
                                                                 value="<?PHP echo $importeDesdePedido; ?>" placeholder="Valor desde">
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput">Valor hasta</label>
+                                                        <label for="basicInput"><b>Valor hasta</b></label>
                                                         <input type="text" class="form-control" id='importeHastaPedido' name='importeHastaPedido'
                                                                 value="<?PHP echo $importeHastaPedido; ?>" placeholder="Valor hasta">                                   
                                                     </div>
                                                     
                                                     <div class="form-group">
-                                                        <label for="basicInput">Características</label>
+                                                        <label for="basicInput"><b>Características</b></label>
                                                         <input type="text" class="form-control" id='caracteristicasPedido' name='caracteristicasPedido'
                                                                 value="<?PHP echo $caracteristicasPedido; ?>" placeholder="Características">
                                                     </div>
                                                     
                                                     <div class="form-group">
-                                                        <label for="basicInput">Comentarios</label>
+                                                        <label for="basicInput"><b>Comentarios</b></label>
                                                         <input type="text" class="form-control" id='comentariosPedido' name='comentariosPedido'
                                                             value="<?PHP echo $comentariosPedido; ?>" placeholder="Comentarios">
                                                     </div>
 
                                                     <?PHP if($_REQUEST['abm']!='a'){ ?>
                                                     <div class="form-group">
-                                                        <label for="basicInput">Estado</label>
+                                                        <label for="basicInput"><b>Estado</b></label>
                                                         <select class="choices form-select" id='estado' name='estado'>
                                                             <?PHP echo $estado; ?>
                                                         </select>                                    

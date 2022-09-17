@@ -205,37 +205,37 @@
                                                     <?PHP if ($_REQUEST['abm']=='b') { $disabled="disabled"; } else { $disabled=""; } ?>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput">Usuario</label>
+                                                        <label for="basicInput"><b>Usuario</b></label>
                                                         <input type="text" class="form-control" id='uidUsuario'	name='uidUsuario' <?PHP echo $disabled; ?>
                                                             placeholder="Usuario" value='<?PHP echo $uidUsuario; ?>' onKeyUp="this.value=this.value.toLowerCase();"  require>
                                                     </div>
                                                     <?PHP if ($_REQUEST['abm']=='a') { ?>
                                                     <div class="form-group">
-                                                        <label for="basicInput">Contraseña</label>
+                                                        <label for="basicInput"><b>Contraseña</b></label>
                                                         <input type="password" class="form-control" id='pswUsuario'	name='pswUsuario'
                                                             placeholder="Contraseña" value='<?PHP echo $pswUsuario; ?>' onKeyUp="this.value=this.value.toLowerCase();" require>                                  
                                                     </div>
                                                     <?PHP } ?>    
                                                     <div class="form-group">
-                                                        <label for="basicInput">Nombre y Apellido</label>
+                                                        <label for="basicInput"><b>Nombre y Apellido</b></label>
                                                         <input type="text" class="form-control" id='nombreUsuario' name='nombreUsuario' <?PHP echo $disabled; ?>
                                                             placeholder="Nombre y Apellido" value='<?PHP echo $nombreUsuario; ?>' require>
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput">Matrícula</label>
+                                                        <label for="basicInput"><b>Matrícula</b></label>
                                                         <input type="text" class="form-control" id='matriculaUsuario' name='matriculaUsuario' <?PHP echo $disabled; ?>
                                                             placeholder="Matricula" value='<?PHP echo $matriculaUsuario; ?>' require>
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput">Mail</label>
+                                                        <label for="basicInput"><b>Mail</b></label>
                                                         <input type="text" class="form-control" id='mailUsuario' name='mailUsuario' <?PHP echo $disabled; ?>
                                                             placeholder="Mail" value='<?PHP echo $mailUsuario; ?>' require>
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput">Teléfono</label>
+                                                        <label for="basicInput"><b>Teléfono</b></label>
                                                         <input type="text" class="form-control" id='telefonoUsuario' name='telefonoUsuario' <?PHP echo $disabled; ?>
                                                             placeholder="teléfono" value='<?PHP echo $telefonoUsuario; ?>'>
                                                     </div>

@@ -25,6 +25,20 @@
         if(!empty($inmuebles['domicilioOrientacionInmueble'])){$domicilio .= " " . $inmuebles['domicilioOrientacionInmueble'];}
         if($inmuebles['habitacionesInmueble']>0){$habitacionesInmueble=$inmuebles['habitacionesInmueble'] . "<sup>+</sup>";}else{$habitacionesInmueble="-";}
         if($inmuebles['banosInmueble']>0){$banosInmueble=$inmuebles['banosInmueble'];}else{$banosInmueble="&nbsp;-&nbsp;";}
+
+        if($inmuebles['plantasInmueble']>0){$plantasInmueble = $inmuebles['plantasInmueble'];}else{$plantasInmueble="&nbsp;-&nbsp;";}
+        if($inmuebles['cloacaInmueble']>0){$cloacaInmueble = $inmuebles['cloacaInmueble'];}else{$cloacaInmueble="&nbsp;-&nbsp;";}
+        if($inmuebles['gasNaturalInmuebles']>0){$gasNaturalInmueble=$inmuebles['gasNaturalInmuebles'];}else{$gasNaturalInmueble="&nbsp;-&nbsp;";}
+        if($inmuebles['pavimentoInmueble']>0){$pavimentoInmueble=$inmuebles['pavimentoInmueble'];}else{$pavimentoInmueble="&nbsp;-&nbsp;";}
+        if($inmuebles['tipoAguaCalienteInmueble']>0){$tipoAguaCalienteInmueble=$inmuebles['tipoAguaCalienteInmueble'];}else{$tipoAguaCalienteInmueble="&nbsp;-&nbsp;";}
+        if($inmuebles['aguaCorrienteInmueble']>0){$aguaCorrienteInmueble=$inmuebles['aguaCorrienteInmueble'];}else{$aguaCorrienteInmueble="&nbsp;-&nbsp;";}
+        if($inmuebles['frenteTerrenoInmueble']>0){$frenteTerrenoInmueble=$inmuebles['frenteTerrenoInmueble'];}else{$frenteTerrenoInmueble="&nbsp;-&nbsp;";}
+        if($inmuebles['largoTerrenoInmueble']>0){$largoTerrenoInmueble=$inmuebles['largoTerrenoInmueble'];}else{$largoTerrenoInmueble="&nbsp;-&nbsp;";}
+        if($inmuebles['antiguedadInmueble']>0){$antiguedadInmueble=$inmuebles['antiguedadInmueble'];}else{$antiguedadInmueble="&nbsp;-&nbsp;";}
+        if($inmuebles['estadoInmueble']>0){$estadoInmueble=$inmuebles['estadoInmueble'];}else{$estadoInmueble="&nbsp;-&nbsp;";}
+        if($inmuebles['mejorasInmueble']>0){$mejorasInmueble=$inmuebles['mejorasInmueble'];}else{$mejorasInmueble="&nbsp;-&nbsp;";}
+        if($inmuebles['cocheraInmueble']>0){$cocheraInmueble=$inmuebles['cocheraInmueble'];}else{$cocheraInmueble="&nbsp;-&nbsp;";}
+
         if($inmuebles['superficieCubiertaInmueble']>0){$superficieCubiertaInmueble=$inmuebles['superficieCubiertaInmueble'];}else{$superficieCubiertaInmueble="-";}
         if($inmuebles['superficieTotalInmueble']>0){$superficieTotalInmueble=$inmuebles['superficieTotalInmueble'];}else{$superficieTotalInmueble="-";}
         if($inmuebles['valorInmueble']>0){$valorInmueble=$inmuebles['monedaInmueble'] . "</b>&nbsp;". $inmuebles['valorInmueble'];}else{$valorInmueble="Consultar";}
@@ -48,6 +62,23 @@
         $datosmodal .= "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>" .  $inmuebles['nombreLocalidad'] . "</b>";
         $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Habitacion:</b>&nbsp;" .  $habitacionesInmueble;
         $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Ba&ntilde;os:</b>&nbsp;" .  $banosInmueble;
+        $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Plantas:</b>&nbsp;" .  $plantasInmueble;
+        $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Cloacas:</b>&nbsp;" .  $cloacaInmueble;
+        $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Gas Natural:</b>&nbsp;" .  $gasNaturalInmuebles;
+        $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Pavimento:</b>&nbsp;" .  $pavimentoInmueble;
+        $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Tipo Agua Caliente:</b>&nbsp;" .  $tipoAguaCalienteInmueble;
+        $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Agua Corriente:</b>&nbsp;" .  $aguaCorrienteInmueble;
+
+        $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Cochera:</b>&nbsp;" .  $cocheraInmueble;
+        $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Tipo Cochera:</b>&nbsp;" .  $tipoCocheraInmueble;
+        $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Vehiculos Cochera:</b>&nbsp;" .  $vehiculosCocheraInmueble;
+
+        $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Antiguedad:</b>&nbsp;" .  $antiguedadInmueble;
+        $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Estado:</b>&nbsp;" .  $estadoInmueble;
+        $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Mejoras:</b>&nbsp;" .  $mejorasInmueble;
+
+        $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Frente del Terreno:</b>&nbsp;" .  $frenteTerrenoInmueble;
+        $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Lardo del Terreno:</b>&nbsp;" .  $largoTerrenoInmueble;
         $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Superficie Cubierta:</b>&nbsp;" .  $superficieCubiertaInmueble;
         $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Superficie Total:</b>&nbsp;" .  $superficieTotalInmueble;
         $datosmodal .= "<br><i class='bi bi-card-text'></i>&nbsp;<b>Descripci&oacute;n:</b>&nbsp;" .  $inmuebles['descripcionInmueble'];        

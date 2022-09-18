@@ -31,7 +31,7 @@
         $monedaInmueble = $inmueble['monedaInmueble'];
         $plantasInmueble = $inmueble['plantasInmueble'];
         $cloacaInmueble = $inmueble['cloacaInmueble'];
-        $gasNaturalInmuebles = $inmueble['gasNaturalInmuebles'];
+        $gasNaturalInmueble = $inmueble['gasNaturalInmueble'];
         $pavimentoInmueble = $inmueble['pavimentoInmueble'];
         $tipoAguaCalienteInmueble = $inmueble['tipoAguaCalienteInmueble'];
         $aguaCorrienteInmueble = $inmueble['aguaCorrienteInmueble'];

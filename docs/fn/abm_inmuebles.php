@@ -51,7 +51,7 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 		`monedaInmueble`,
 		`plantasInmueble`,
 		`cloacaInmueble`,
-		`gasNaturalInmuebles`,
+		`gasNaturalInmueble`,
 		`pavimentoInmueble`,
 		`tipoAguaCalienteInmueble`,
 		`aguaCorrienteInmueble`,
@@ -109,14 +109,14 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 			<script>
 				location.replace("../inmueble_abm_img.php?idInmueble=<?PHP echo $idInmueble;?>");
 			//	location.replace("../inmuebles.php");
-			</script> 
-<?PHP } ?>			
-<?PHP } else { ?>
-		<script>
-			alert("Ocurrio un Error a guardar en la Base de Datos!!");
-		</script>
+			</script>		
+		<?PHP } else { ?>
+			<script>
+				alert("Ocurrio un Error a guardar en la Base de Datos!!");
+			</script>
 		<!--input type ='button' value = 'Volver' onClick="location.replace('../inmuebles.php');" class="button"/-->
-<?PHP } 
+		<?PHP } 
+	}
 } ?>
 
 <?PHP
@@ -140,7 +140,7 @@ if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
 	valorInmueble='$_REQUEST[valorInmueble]',
 	plantasInmueble='$_REQUEST[plantasInmueble]',
 	cloacaInmueble='$_REQUEST[cloacaInmueble]',
-	gasNaturalInmuebles='$_REQUEST[gasNaturalInmueble]',
+	gasNaturalInmueble='$_REQUEST[gasNaturalInmueble]',
 	pavimentoInmueble='$_REQUEST[pavimentoInmueble]',
 	tipoAguaCalienteInmueble='$_REQUEST[tipoAguaCalienteInmueble]',
 	aguaCorrienteInmueble='$_REQUEST[aguaCorrienteInmueble]',

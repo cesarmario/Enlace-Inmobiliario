@@ -10,16 +10,13 @@
 
 /*  $caurosel .= "<div class='carousel-item active'>";
     $caurosel .= "<img src='assets/images/samples/architecture1.jpg' class='d-block w-100' alt='Image Architecture'>";
-    $caurosel .= "</div>";
-
+    $caurosel .= "</div>";    
     $caurosel .= "<div class='carousel-item'>";
     $caurosel .= "<img src='assets/images/samples/bg-mountain.jpg' class='d-block w-100' alt='Image Mountain'>";
     $caurosel .= "</div>";
-
     $caurosel .= "<div class='carousel-item'>";
     $caurosel .= "<img src='assets/images/samples/jump.jpg' class='d-block w-100' alt='Image Jump'>";
     $caurosel .= "</div>";
-
     $caurosel .= "</div>";
     $caurosel .= "<a class='carousel-control-prev' href='#carouselExampleControls' role='button' data-bs-slide='prev'>";
     $caurosel .= "<span class='carousel-control-prev-icon' aria-hidden='true'></span>";
@@ -30,7 +27,6 @@
     $caurosel .= "<span class='visually-hidden'>Next</span>";
     $caurosel .= "</a>";
     $caurosel .= "</div>"; */
-
 
     $listado = "<table class='table table-lg'>";
     $listado .= "<thead>";

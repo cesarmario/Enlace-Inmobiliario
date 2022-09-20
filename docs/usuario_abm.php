@@ -189,7 +189,7 @@
                 <section class="row">
                     <div class="col-12 col-lg-9">                        
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-9">
                                 <div class="card">
                                     <div class="card-header">
                                         <h4><?PHP if ($_SESSION['rolUsu'] =='1') {echo "Datos del Usuario"; }else{echo "Mis Datos";}?></h4>
@@ -200,7 +200,7 @@
                                         <?PHP } ?>
                                         <div class="row">
                                             <form action="fn/abm_usuarios.php" method="GET">
-                                                <div class="col-md-6">
+                                                <div class="col-md-8">
                                                     
                                                     <?PHP if ($_REQUEST['abm']=='b') { $disabled="disabled"; } else { $disabled=""; } ?>
 

@@ -166,3 +166,40 @@ if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
 		<!--input type ='button' value = 'Volver' onClick="location.replace('../inmuebles.php');" class="button"/-->
 	<?PHP } 
 } ?>
+
+<!-- Baja de Inmueble -->
+<?PHP
+if ($_REQUEST['abm']=='b'){ 
+	$query="UPDATE inmueble SET baja='1' WHERE idInmueble ='$_REQUEST[idInmueble]'";
+    $result = mysqli_query($conexion, $query);
+    if (mysqli_affected_rows($conexion)>0){ 	?>
+		<script>
+           alert("Inmueble Eliminado correctamente"); 
+		   location.replace("../inmuebles.php");
+        </script>
+    <?PHP } else { ?>
+		<script>
+            alert("Ocurrio un Error!!");
+			location.replace("../inmuebles.php");
+        </script>
+	<?PHP }; ?>    
+<?PHP }; ?>
+
+
+<!-- Activar de Inmueble -->
+<?PHP
+if ($_REQUEST['abm']=='r'){ 
+	$query="UPDATE inmueble SET baja='0' WHERE idInmueble ='$_REQUEST[idInmueble]'";
+    $result = mysqli_query($conexion, $query);
+    if (mysqli_affected_rows($conexion)>0){ 	?>
+		<script>
+           alert("Inmueble Activado correctamente");
+		   location.replace("../inmuebles.php"); 
+        </script>
+    <?PHP } else { ?>
+		<script>
+            alert("Ocurrio un Error!!");
+			location.replace("../inmuebles.php");
+        </script>
+	<?PHP }; ?>    
+<?PHP }; ?>

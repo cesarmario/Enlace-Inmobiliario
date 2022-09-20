@@ -1,7 +1,7 @@
 <?PHP
     include('conexion.php');
-    if ($_SESSION['rolUsu']!='1') { $filtro = " AND idUsuario =" . $_SESSION['idUsu']; }else{ $filtro = ""; };
-    $queryinmuebles = "SELECT * FROM vista_inmuebles WHERE baja = 0 $filtro ORDER BY fecha DESC";
+    if ($_SESSION['rolUsu']!='1') { $filtro = " AND idUsuario =" . $_SESSION['idUsu']; } else { $filtro = ""; };
+    $queryinmuebles = "SELECT * FROM vista_inmuebles ORDER BY fecha DESC";
     $rtsinmuebles = mysqli_query($conexion, $queryinmuebles);
     $listado = "<table class='table table-striped' id='table1'>";
     $listado .= "<thead>";
@@ -15,10 +15,19 @@
     $listado .= "<th>Valor</th>";
     $listado .= "<th>Corredor</th>";
     $listado .= "<th></th>";
+    $listado .= "<th></th>";
+    $listado .= "<th></th>";
     $listado .= "</tr>";
     $listado .= "</thead>";
     $listado .= "<tbody>";
     while($inmuebles=mysqli_fetch_assoc($rtsinmuebles)){
+        if($inmuebles["baja"]==0){
+            $estado="Activo";
+            $btn="success";
+        }else{
+            $estado="Baja";
+            $btn="danger";
+        }
 
         $domicilio = "";
         if(!empty($inmuebles['domicilioNumeroInmueble'])){$domicilio .= " " . $inmuebles['domicilioNumeroInmueble'];}
@@ -107,6 +116,19 @@
         $listado .= "<td><b>". $inmuebles['monedaInmueble'] . "</b>&nbsp;". $inmuebles['valorInmueble'] . "</td>";
         $listado .= "<td><b>". $inmuebles['nombreAgente'] . "</td>";
         $listado .= "<td><a href='inmueble_abm.php?idInmueble=". $inmuebles['idInmueble'] . "&abm=m' class='btn btn-info me-1 mb-1'>Editar</a></td>";
+        $listado .= "<td><span class='badge bg-light-" . $btn ."'>" . $estado . "</span></td>";
+        if ($inmuebles['idUsuario'] == $_SESSION['idUsu'] or $_SESSION['rolUsu'] =='1') { 
+        
+            if($inmuebles['baja']==0){       
+                $listado .= "<td><a href='fn/abm_inmuebles.php?idInmueble=". $inmuebles['idInmueble'] . "&abm=b' class='btn btn-danger me-1 mb-1'>Eliminar</a></td>"; 
+            } else { 
+                $listado .= "<td><a href='fn/abm_inmuebles.php?idInmueble=". $inmuebles['idInmueble'] . "&abm=r' class='btn btn-success me-1 mb-1'>Activar</a></td>";
+            }
+        } else {  
+            $listado .= "<td></td>";
+        };
+        
+
         $listado .= "</tr>";
     }
     $listado .= "</tbody>";

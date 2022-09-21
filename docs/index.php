@@ -260,7 +260,7 @@
                                 </div>
                             </!--div-->
                         </div>
-                        <div class="row">
+                        <!--div-- class="row">
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-header">
@@ -271,7 +271,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </!--div-->
                         
                     </div>
                     <div class="col-12 col-lg-3">
@@ -287,14 +287,14 @@
                             </div>
                         </div>
                         
-                        <div class="card">
+                        <!--div-- class="card">
                             <div class="card-header">
                                 <h4>Operaciones</h4>
                             </div>
                             <div class="card-body">
                                 <div id="chart-visitors-profile"></div>
                             </div>
-                        </div>
+                        </!--div-->
                     </div>
                 </section>
             </div>

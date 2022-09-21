@@ -125,8 +125,26 @@ if ($_REQUEST['abm']=='bm' or $_REQUEST['abm']=='ba'){
 	<?PHP }; ?>    
 <?PHP }; ?>
 
+
+<!-- Modificar de Imagen -->
 <?PHP
-if ($_REQUEST['abm']=='a' or $_REQUEST['abm'] == 'ba'){ ?>
+if ($_REQUEST['abm']=='mm' or $_REQUEST['abm']=='ma'){ 
+	$query="UPDATE imagen SET
+	ordenImagen='$_REQUEST[ordenImagen]',
+	detalleImagen= '$_REQUEST[detalleImagen]'
+	WHERE idImagen='$_REQUEST[idImagen]'";
+    $result = mysqli_query($conexion, $query);
+    if (mysqli_affected_rows($conexion)>0){
+	?>
+    <?PHP } else {?>
+		<script>
+            alert("Ocurrio un Error!!");
+        </script>
+	<?PHP }; ?>    
+<?PHP }; ?>
+
+<?PHP
+if ($_REQUEST['abm']=='a' or $_REQUEST['abm'] == 'ba' or $_REQUEST['abm']=='ma'){ ?>
 
 	<script>	
 		location.replace("../inmueble_abm_img.php?idImagen=<?PHP echo $_REQUEST['idInmueble'];?>&idInmueble=<?PHP echo $_REQUEST['idInmueble'];?>&abm=a");
@@ -139,3 +157,7 @@ if ($_REQUEST['abm']=='a' or $_REQUEST['abm'] == 'ba'){ ?>
 	</script>
 
 <?PHP }; ?>
+
+
+
+

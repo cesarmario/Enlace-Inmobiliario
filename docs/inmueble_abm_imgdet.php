@@ -209,11 +209,12 @@
                                     <div class="card-body">                                        
                                         <img class="img-fluid w-100" src="<?PHP echo $imagen; ?>" alt="<?PHP echo $nomimagen; ?>">
                                         <form role="form" action="fn/abm_img.php" method="POST" enctype="multipart/form-data">
-                                            <div class="form-group">
+                                            <div class="form-group col-md-2">
                                                 <label for="basicInput"><b>Orden</b></label>
-                                                <input type="number" class="form-control" id='ordenImagen' name='ordenImagen'
+                                                <input type="number" class="form-control" id='ordenImagen' name='ordenImagen'  min="1"
                                                     placeholder="Orden" value='<?PHP echo $ordenImagen; ?>'>
                                             </div>
+                                            (Coloque 1 para que sea la portada)
                                             <div class="form-group">                                                    
                                                 <label for="basicInput"><b>Detalle</b></label>
                                                 <textarea rows="2" class="form-control" placeholder="Detalle de la Imagen"

@@ -128,6 +128,7 @@ if ($_REQUEST['abm']=='bm' or $_REQUEST['abm']=='ba'){
 <!-- Modificar de Imagen -->
 <?PHP
 if ($_REQUEST['abm']=='mm' or $_REQUEST['abm']=='ma'){ 
+
 	$query="UPDATE imagen SET
 	ordenImagen='$_REQUEST[ordenImagen]',
 	detalleImagen= '$_REQUEST[detalleImagen]'

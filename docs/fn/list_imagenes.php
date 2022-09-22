@@ -44,6 +44,7 @@
         $imagen = "assets/images/inmuebles/" . str_pad($imagenes['idImagen'], 8, "0", STR_PAD_LEFT) . "." . $imagenes['tipoImagen'];
         
         $listado .= "<tr>";
+        //$listado .= "<td>". $imagenes['posicion'] . "</td>";
         $listado .= "<td>". $imagenes['ordenImagen'] . "</td>";
         $listado .= "<td><a href='". $imagen . "' target='_blank'><img src='". $imagen . "' height='60px'></a></td>";
         $listado .= "<td>". $imagenes['detalleImagen'] . "</td>";

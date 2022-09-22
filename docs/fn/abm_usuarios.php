@@ -8,7 +8,7 @@ $fecha = date("Y-m-d H:i:s");
 
 if ($_SESSION['rolUsu'] =='1'){$return="usuarios.php";}else{$return="index.php";}
 
-	if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
+	if ($_REQUEST['abm']=='a') { //Funcion Alta Usuario
 		$query="INSERT INTO usuario (
 		`uidUsuario`,
 		`pswUsuario`,
@@ -43,7 +43,7 @@ if ($_SESSION['rolUsu'] =='1'){$return="usuarios.php";}else{$return="index.php";
 	<?PHP } 
 } ?>
 
-<?php 
+<?PHP 
 if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
 
 	$query="UPDATE usuario SET
@@ -87,6 +87,32 @@ if ($_REQUEST['abm']=='p') { //Funcion Modificar Usuario
 		</div>
 	<?PHP } 
 } ?>
+
+<?PHP 
+if ($_REQUEST['abm']=='x') { //Funcion Eliminar Imagen
+	
+	$query="UPDATE usuario SET logoUsuario = '' WHERE idUsuario = '$_REQUEST[idUsuario]' ";
+	$result = mysqli_query($conexion, $query);
+    if (mysqli_affected_rows($conexion)>0){ 
+		//$directorio = "/gestion/assets/images/usuarios/";
+		$nombre = $_REQUEST['logoUsuario'];
+		$directorio = $_SERVER['DOCUMENT_ROOT'].$_SESSION['sesionc_Path'].'/gestion/assets/images/usuarios/';    
+    	$imagen=$directorio.$nombre;
+		unlink($imagen);
+		?>
+		<script>
+       		location.replace("../<?PHP echo $return;?>");
+        </script>		
+	<?PHP } else { 	?>
+		<script>
+			alert("Ocurrio un Error al guardar en los Datos!!");
+		</script>
+		<div class="form-group">
+			<a href="../<?PHP echo $return;?>&abm=p" class="btn btn-info me-1 mb-1">Volver</a>
+		</div>
+	<?PHP } 
+} ?>
+
 
 <!-- Cargar Imagen -->
 <?PHP

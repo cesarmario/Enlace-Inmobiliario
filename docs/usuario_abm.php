@@ -273,11 +273,14 @@
                             <?PHP if ($_REQUEST['abm']=='m') { ?>
                             <div class="col-12 col-md-6">                                
                                 <div class="card">
+                                    <div class="card-header">
+                                        <h4>Logo del Corredor</h4>
+                                    </div>
                                     <div class="card-body">
                                         <div class="row">
                                         <img class="img-fluid w-100" src="<?PHP echo $imagen; ?>" alt="<?PHP echo $nombre; ?>">
-                                        <?PHP if(is_dir($imagen)){ ?>
-
+                                        <?PHP if(!file_exists($nomimg)){ ?>
+                                            <a href='fn/abm_usuarios.php?abm=x&idUsuario=<?PHP echo $_REQUEST['idUsuario']; ?>&logoUsuario=<?PHP echo $nombre; ?>' class='btn btn-danger me-1 mb-1'><i class='fa-solid fa-trash-can'></i></i> Eliminar</a>
                                         <?PHP }else{ ?>        
                                             <form role="form" action="fn/abm_usuarios.php" method="POST" enctype="multipart/form-data">    
                                                 <div class="form-group">

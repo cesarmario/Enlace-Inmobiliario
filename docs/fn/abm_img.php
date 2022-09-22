@@ -113,8 +113,7 @@ if ($_REQUEST['abm']=='a' or $_REQUEST['abm']=='m'){
 if ($_REQUEST['abm']=='bm' or $_REQUEST['abm']=='ba'){ 
 	$query="UPDATE imagen SET baja='1' WHERE idImagen='$_REQUEST[idImagen]'";
     $result = mysqli_query($conexion, $query);
-    if (mysqli_affected_rows($conexion)>0){
-	?>
+    if (mysqli_affected_rows($conexion)>0){ ?>
 		<script>
            // alert("Imagen Eliminada correctamente"); 
         </script>
@@ -134,8 +133,10 @@ if ($_REQUEST['abm']=='mm' or $_REQUEST['abm']=='ma'){
 	detalleImagen= '$_REQUEST[detalleImagen]'
 	WHERE idImagen='$_REQUEST[idImagen]'";
     $result = mysqli_query($conexion, $query);
-    if (mysqli_affected_rows($conexion)>0){
-	?>
+    if (mysqli_affected_rows($conexion)>0){ ?>
+		<script>
+            alert("Imagen Editada correctamente"); 
+        </script>
     <?PHP } else {?>
 		<script>
             alert("Ocurrio un Error!!");

@@ -1,6 +1,8 @@
 <?PHP
     session_start();
     include('fn/login_ctrl.php');
+    include('fn/datos_inmueble.php');
+    include('fn/datos_imagen.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -197,17 +199,16 @@
                             <div class="col-12 col-md-6">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>Editar datos de Imag&eacute;n</h4>
+                                        <h4>Editar datos de Imagen</h4>
                                     </div>   
                                     <div class="card-header">
-                                        <h4><?PHP echo $inmuebles['tituloInmueble']; ?></h4>
-                                        <span class="badge bg-success"><?PHP echo $inmuebles['nombrePropiedad']; ?></span>
-                                        <span class="badge bg-info"><?PHP echo $inmuebles['nombreOperacion']; ?></span>
+                                        <h4><?PHP echo $tituloInmueble; ?></h4>
+                                        <span class="badge bg-success"><?PHP echo $nombrePropiedad; ?></span>
+                                        <span class="badge bg-info"><?PHP echo $nombreOperacion; ?></span>
                                     </div>
                                     <div class="card-body">                                        
-                                        <!--form action="fn/abm_img.php" method="GET"-->
-                                        <form role="form" action="fn/abm_img.php" method="POST" enctype="multipart/form-data">    
-                                            
+                                        <img class="img-fluid w-100" src="<?PHP echo $imagen; ?>" alt="<?PHP echo $nomimagen; ?>">
+                                        <form role="form" action="fn/abm_img.php" method="POST" enctype="multipart/form-data">
                                             <div class="form-group">
                                                 <label for="basicInput"><b>Orden</b></label>
                                                 <input type="number" class="form-control" id='ordenImagen' name='ordenImagen'
@@ -224,7 +225,7 @@
                                                 <input type="hidden" id="idImagen" name="idImagen" value="<?PHP echo $_REQUEST['idImagen']; ?>"/>
                                                 <input type="hidden" id="abm" name="abm" value="<?PHP echo $_REQUEST['abm']; ?>"/>
                                                 <button type="submit" class="btn btn-primary me-1 mb-1">Guardar</button>
-                                                <a href="inmuebles.php" class="btn btn-warning me-1 mb-1">Finalizar</a>
+                                                <a href="javascript: history.go(-1)" class="btn btn-warning me-1 mb-1">Finalizar</a>
                                             </div> 
                                         </form>                                  
                                     </div>

@@ -2,7 +2,7 @@
 
     include('conexion.php');
     $set = mysqli_query($conexion, "SET @i=0;");
-    $queryimagenes = "SELECT @i:=@i+1 AS posicion, imagen.* FROM imagen WHERE idInmueble = '$_REQUEST[idInmueble]' AND baja != '1' ORDER BY idImagen ASC";
+    $queryimagenes = "SELECT @i:=@i+1 AS posicion, imagen.* FROM imagen WHERE idInmueble = '$_REQUEST[idInmueble]' AND baja != '1' ORDER BY ordenImagen ASC";
     $rtsimagenes = mysqli_query($conexion, $queryimagenes);
 
     $caurosel  = "<div id='carouselExampleControls' class='carousel slide' data-bs-ride='carousel'>";
@@ -44,11 +44,11 @@
         $imagen = "assets/images/inmuebles/" . str_pad($imagenes['idImagen'], 8, "0", STR_PAD_LEFT) . "." . $imagenes['tipoImagen'];
         
         $listado .= "<tr>";
-        $listado .= "<td>". $imagenes['posicion'] . "</td>";
+        $listado .= "<td>". $imagenes['ordenImagen'] . "</td>";
         $listado .= "<td><a href='". $imagen . "' target='_blank'><img src='". $imagen . "' height='60px'></a></td>";
         $listado .= "<td>". $imagenes['detalleImagen'] . "</td>";
         $listado .= "<td><a href='fn/abm_img.php?idImagen=". $imagenes['idImagen'] . "&idInmueble=". $_REQUEST['idInmueble'] ."&abm=b" . $_REQUEST['abm'] ."' class='btn btn-danger me-1 mb-1'><i class='fa-solid fa-trash-can'></i></i></a></td>";
-        //$listado .= "<td><a href='inmueble_abm_imgdet.php?idImagen=". $imagenes['idImagen'] . "&idInmueble=". $_REQUEST['idInmueble'] ."&abm=m" . $_REQUEST['abm'] ."' class='btn btn-info me-1 mb-1'><i class='fa-solid fa-pencil'></i></i></a></td>";
+        $listado .= "<td><a href='inmueble_abm_imgdet.php?idImagen=". $imagenes['idImagen'] . "&idInmueble=". $_REQUEST['idInmueble'] ."&abm=m" . $_REQUEST['abm'] ."' class='btn btn-info me-1 mb-1'><i class='fa-solid fa-pencil'></i></i></a></td>";
         $listado .= "</tr>";
 
 //        $imgmodal  = "<div id='myModal' class='modal'>";

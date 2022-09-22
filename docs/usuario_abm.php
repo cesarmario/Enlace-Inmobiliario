@@ -278,8 +278,8 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
-                                        <img class="img-fluid w-100" src="<?PHP echo $imagen; ?>" alt="<?PHP echo $nombre; ?>">
-                                        <?PHP if(!file_exists($nomimg)){ ?>
+                                        <img class="img-fluid w-100" src="<?PHP echo $imagen; ?>" alt="<?PHP echo $nombre; ?>">                                        
+                                        <?PHP if(file_exists($imagen)){ ?>
                                             <a href='fn/abm_usuarios.php?abm=x&idUsuario=<?PHP echo $_REQUEST['idUsuario']; ?>&logoUsuario=<?PHP echo $nombre; ?>' class='btn btn-danger me-1 mb-1'><i class='fa-solid fa-trash-can'></i></i> Eliminar</a>
                                         <?PHP }else{ ?>        
                                             <form role="form" action="fn/abm_usuarios.php" method="POST" enctype="multipart/form-data">    

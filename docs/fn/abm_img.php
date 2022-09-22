@@ -60,7 +60,7 @@ if ($_REQUEST['abm']=='a' or $_REQUEST['abm']=='m'){
 			'$qtipo',	
 			'$_REQUEST[idInmueble]',
 			'$_REQUEST[detalleImagen]',
-			'0',
+			'2',
 			'0')";
 
 			$result = mysqli_query($conexion, $query);

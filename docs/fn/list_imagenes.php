@@ -35,7 +35,7 @@
     $listado .= "<th>Imagen</th>";
     $listado .= "<th>Descripci&oacute;n</th>";
     $listado .= "<th></th>";
-   // $listado .= "<th></th>";
+    $listado .= "<th></th>";
     $listado .= "</tr>";
     $listado .= "</thead>";
     $listado .= "<tbody>";
@@ -47,8 +47,8 @@
         $listado .= "<td>". $imagenes['ordenImagen'] . "</td>";
         $listado .= "<td><a href='". $imagen . "' target='_blank'><img src='". $imagen . "' height='60px'></a></td>";
         $listado .= "<td>". $imagenes['detalleImagen'] . "</td>";
-        $listado .= "<td><a href='fn/abm_img.php?idImagen=". $imagenes['idImagen'] . "&idInmueble=". $_REQUEST['idInmueble'] ."&abm=b" . $_REQUEST['abm'] ."' class='btn btn-danger me-1 mb-1'><i class='fa-solid fa-trash-can'></i></i></a></td>";
         $listado .= "<td><a href='inmueble_abm_imgdet.php?idImagen=". $imagenes['idImagen'] . "&idInmueble=". $_REQUEST['idInmueble'] ."&abm=m" . $_REQUEST['abm'] ."' class='btn btn-info me-1 mb-1'><i class='fa-solid fa-pencil'></i></i></a></td>";
+        $listado .= "<td><a href='fn/abm_img.php?idImagen=". $imagenes['idImagen'] . "&idInmueble=". $_REQUEST['idInmueble'] ."&abm=b" . $_REQUEST['abm'] ."' class='btn btn-danger me-1 mb-1'><i class='fa-solid fa-trash-can'></i></i></a></td>";
         $listado .= "</tr>";
 
 //        $imgmodal  = "<div id='myModal' class='modal'>";

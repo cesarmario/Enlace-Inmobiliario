@@ -16,6 +16,7 @@ if ($_SESSION['rolUsu'] =='1'){$return="usuarios.php";}else{$return="index.php";
 		`matriculaUsuario`,
 		`mailUsuario`,
 		`telefonoUsuario`,
+		`domicilioUsuario`,
 		`rolUsuario`,
 		`baja`
 		)VALUES(
@@ -25,6 +26,7 @@ if ($_SESSION['rolUsu'] =='1'){$return="usuarios.php";}else{$return="index.php";
 		'$_REQUEST[matriculaUsuario]',
 		'$_REQUEST[mailUsuario]',
 		'$_REQUEST[telefonoUsuario]',
+		'$_REQUEST[domicilioUsuario]',
 		'2',
 		'0')";
 		$result = mysqli_query($conexion, $query);
@@ -49,7 +51,9 @@ if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
 	nombreUsuario='$_REQUEST[nombreUsuario]',
 	matriculaUsuario='$_REQUEST[matriculaUsuario]',
 	mailUsuario='$_REQUEST[mailUsuario]',
-	telefonoUsuario='$_REQUEST[telefonoUsuario]'WHERE idUsuario = '$_REQUEST[idUsuario]' ";
+	telefonoUsuario='$_REQUEST[telefonoUsuario]',
+	domicilioUsuario='$_REQUEST[domicilioUsuario]'
+	WHERE idUsuario = '$_REQUEST[idUsuario]' ";
 	$result = mysqli_query($conexion, $query);
     if (mysqli_affected_rows($conexion)>0){ ?>
 		<script>
@@ -66,7 +70,7 @@ if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
 } ?>
 
 <?PHP 
-if ($_REQUEST['abm']=='p') { //Funcion Modificar Inmueble
+if ($_REQUEST['abm']=='p') { //Funcion Modificar Usuario
 
 	$query="UPDATE usuario SET pswUsuario = md5('$_REQUEST[pswUsuario]') WHERE idUsuario = '$_REQUEST[idUsuario]' ";
 	$result = mysqli_query($conexion, $query);
@@ -83,6 +87,73 @@ if ($_REQUEST['abm']=='p') { //Funcion Modificar Inmueble
 		</div>
 	<?PHP } 
 } ?>
+
+<!-- Cargar Imagen -->
+<?PHP
+if ($_REQUEST['abm']=='i'){
+
+	if (!isset($_FILES['imagen'])){ ?>
+
+		<script>
+            alert("Debe seleccionar una imagen!");
+			window.history.back();
+        </script>
+
+	<?PHP } else {	
+		
+		// Recibo los datos de la imagen 
+		$inombre = $_FILES['imagen']['name'];
+		$tipo    = $_FILES['imagen']['type'];
+		$tamano  = $_FILES['imagen']['size'];
+		$tmp_nn  = $_FILES['imagen']['tmp_name'];
+		$error   = $_FILES['imagen']['error'];
+
+			switch ($tipo) 
+			{ case 'application/pdf':
+				$qtipo = "pdf";
+				break;
+			  case 'image/jpeg':
+				$qtipo = "jpeg";
+				break;
+			  case 'image/jpg':
+				$qtipo = "jpg";
+				break;
+			  case 'image/png':
+				$qtipo = "png";
+				break;
+			  case 'image/gif':
+				$qtipo = "gif";
+				break; };
+
+			$id_img=$_REQUEST['idUsuario'];
+			$nombre=str_pad($id_img, 6, "0", STR_PAD_LEFT) . "." . $qtipo;
+			$directorio = $_SERVER['DOCUMENT_ROOT'].$_SESSION['sesionc_Path'].'/gestion/assets/images/usuarios/';			
+			$fullpath=$directorio.$nombre;
+	
+			if (move_uploaded_file($_FILES['imagen']['tmp_name'],$fullpath)) { 
+				$query="UPDATE usuario SET logoUsuario='$nombre' WHERE idUsuario = '$_REQUEST[idUsuario]' ";
+				$result = mysqli_query($conexion, $query);
+				if (mysqli_affected_rows($conexion)>0){ ?>
+					<script>
+						location.replace("../usuario_abm.php?abm=m&idUsuario=<?PHP echo $_REQUEST['idUsuario'];?>"); 
+					</script>		
+				<?PHP } else { 	?>
+					<script>
+						alert("Ocurrio un Error al guardar en los Datos!!");
+					</script>
+					<div class="form-group">
+						<a href="../<?PHP echo $return;?>&abm=p" class="btn btn-info me-1 mb-1">Volver</a>
+					</div>
+				<?PHP } ?>
+			<?PHP } else {
+			echo "<BR>Error en la subida de ficheros!\n"; ?>
+			<script>
+					alert("Ocurrio un Error!!");
+			</script>		
+			<?PHP }	
+	} ?>
+		
+<?PHP } ?>
 
 
 <!-- Baja de Usuarios -->

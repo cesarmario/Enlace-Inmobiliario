@@ -11,6 +11,12 @@ if($_REQUEST['abm']!='a'){
     $matriculaUsuario = $usuario['matriculaUsuario'];
     $mailUsuario = $usuario['mailUsuario'];
     $telefonoUsuario = $usuario['telefonoUsuario'];
+    $domicilioUsuario = $usuario['domicilioUsuario'];
+    $nombre = $usuario['logoUsuario'];
+    $directorio = $_SERVER['DOCUMENT_ROOT'].$_SESSION['sesionc_Path'].'/gestion/assets/images/usuarios/';    
+    $imagen=$directorio.$nombre;
+
+
 } else {
     //En caso de que la Operacin sea "a" inicializo todos los campos.    
     $uidUsuario = "";
@@ -19,5 +25,8 @@ if($_REQUEST['abm']!='a'){
     $matriculaUsuario = "";
     $mailUsuario = "";
     $telefonoUsuario = "";
+    $domicilioUsuario = "";
+    $nombre = "";
+    $imagen="";
 }
 ?>

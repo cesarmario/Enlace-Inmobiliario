@@ -198,7 +198,23 @@
                                         <?PHP if ($_REQUEST['abm']=='b') { ?>
                                             <div class="alert alert-danger"><i class="bi bi-exclamation-triangle"></i> Baja Usuario</div>
                                         <?PHP } ?>
+                                        <img class="img-fluid w-100" src="<?PHP echo $imagen; ?>" alt="<?PHP echo $nombre; ?>">
+                                        <?PHP echo $imagen; ?>
+                                        <?PHP echo $nombre; ?>"
                                         <div class="row">
+                                            <?PHP if ($_REQUEST['abm']=='m') { ?>
+                                            <form role="form" action="fn/abm_usuarios.php" method="POST" enctype="multipart/form-data">    
+                                                <div class="form-group">
+                                                    <label>Subir Im&aacute;gen</label><br>
+                                                    <input type="file" name="imagen" id="imagen">
+                                                </div>
+                                                <div class="buttons">
+                                                    <input type="hidden" id="idUsuario" name="idUsuario" value="<?PHP echo $_REQUEST['idUsuario']; ?>"/>
+                                                    <input type="hidden" id="abm" name="abm" value="i"/>
+                                                    <button type="submit" class="btn btn-primary me-1 mb-1">Subir</button>
+                                                </div> 
+                                            </form>
+                                            <?PHP } ?>    
                                             <form action="fn/abm_usuarios.php" method="GET">
                                                 <div class="col-md-8">
                                                     
@@ -237,9 +253,16 @@
                                                     <div class="form-group">
                                                         <label for="basicInput"><b>Teléfono</b></label>
                                                         <input type="number" class="form-control" id='telefonoUsuario' name='telefonoUsuario' <?PHP echo $disabled; ?>
-                                                            placeholder="teléfono" value='<?PHP echo $telefonoUsuario; ?>'>
+                                                            placeholder="Teléfono" value='<?PHP echo $telefonoUsuario; ?>'>
                                                     </div>
                                                      
+                                                    <div class="form-group">
+                                                        <label for="basicInput"><b>Domicilio</b></label>
+                                                        <input type="number" class="form-control" id='telefonoUsuario' name='domicilioUsuario' <?PHP echo $disabled; ?>
+                                                            placeholder="Domicilio" value='<?PHP echo $domicilioUsuario; ?>'>
+                                                    </div>
+                                                     
+
                                                     <?PHP if ($_REQUEST['abm']=='m') { ?>
                                                     <div class="form-group">
                                                         <a href="usuario_psw.php?idUsuario=<?PHP echo $_REQUEST['idUsuario']; ?>&abm=p" class="btn btn-info me-1 mb-1">Cambiar Contraseña</a>

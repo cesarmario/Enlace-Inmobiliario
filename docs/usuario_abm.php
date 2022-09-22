@@ -187,9 +187,9 @@
 
             <div class="page-content">
                 <section class="row">
-                    <div class="col-12 col-lg-9">                        
+                    <div class="col-12 col-lg-12">                        
                         <div class="row">
-                            <div class="col-9">
+                            <div class="col-12 col-md-6">
                                 <div class="card">
                                     <div class="card-header">
                                         <h4><?PHP if ($_SESSION['rolUsu'] =='1') {echo "Datos del Usuario"; }else{echo "Mis Datos";}?></h4>
@@ -198,23 +198,7 @@
                                         <?PHP if ($_REQUEST['abm']=='b') { ?>
                                             <div class="alert alert-danger"><i class="bi bi-exclamation-triangle"></i> Baja Usuario</div>
                                         <?PHP } ?>
-                                        <img class="img-fluid w-100" src="<?PHP echo $imagen; ?>" alt="<?PHP echo $nombre; ?>">
-                                        <?PHP echo $imagen; ?>
-                                        <?PHP echo $nombre; ?>"
-                                        <div class="row">
-                                            <?PHP if ($_REQUEST['abm']=='m') { ?>
-                                            <form role="form" action="fn/abm_usuarios.php" method="POST" enctype="multipart/form-data">    
-                                                <div class="form-group">
-                                                    <label>Subir Im&aacute;gen</label><br>
-                                                    <input type="file" name="imagen" id="imagen">
-                                                </div>
-                                                <div class="buttons">
-                                                    <input type="hidden" id="idUsuario" name="idUsuario" value="<?PHP echo $_REQUEST['idUsuario']; ?>"/>
-                                                    <input type="hidden" id="abm" name="abm" value="i"/>
-                                                    <button type="submit" class="btn btn-primary me-1 mb-1">Subir</button>
-                                                </div> 
-                                            </form>
-                                            <?PHP } ?>    
+                                        <div class="row">                                          
                                             <form action="fn/abm_usuarios.php" method="GET">
                                                 <div class="col-md-8">
                                                     
@@ -286,6 +270,28 @@
                                     </div>
                                 </div>
                             </div>
+                            <?PHP if ($_REQUEST['abm']=='m') { ?>
+                            <div class="col-12 col-md-6">                                
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                        <img class="img-fluid w-100" src="<?PHP echo $imagen; ?>" alt="<?PHP echo $nombre; ?>">
+                                        <form role="form" action="fn/abm_usuarios.php" method="POST" enctype="multipart/form-data">    
+                                            <div class="form-group">
+                                                <label>Subir Im&aacute;gen</label><br>
+                                                <input type="file" name="imagen" id="imagen">
+                                            </div>
+                                            <div class="buttons">
+                                                <input type="hidden" id="idUsuario" name="idUsuario" value="<?PHP echo $_REQUEST['idUsuario']; ?>"/>
+                                                <input type="hidden" id="abm" name="abm" value="i"/>
+                                                <button type="submit" class="btn btn-primary me-1 mb-1">Subir</button>
+                                            </div> 
+                                        </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?PHP } ?> 
                         </div>                        
                     </div>                    
                 </section>

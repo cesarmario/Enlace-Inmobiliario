@@ -134,9 +134,7 @@ if ($_REQUEST['abm']=='mm' or $_REQUEST['abm']=='ma'){
 	WHERE idImagen='$_REQUEST[idImagen]'";
     $result = mysqli_query($conexion, $query);
     if (mysqli_affected_rows($conexion)>0){ ?>
-		<script>
-            alert("Imagen Editada correctamente"); 
-        </script>
+
     <?PHP } else {?>
 		<script>
             alert("Ocurrio un Error!!");

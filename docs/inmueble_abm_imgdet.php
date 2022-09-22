@@ -217,7 +217,7 @@
                                             <div class="form-group">                                                    
                                                 <label for="basicInput"><b>Detalle</b></label>
                                                 <textarea rows="2" class="form-control" placeholder="Detalle de la Imagen"
-                                                name="detalleImagen" id="detalleImagen"></textarea>
+                                                name="detalleImagen" id="detalleImagen"><?PHP echo $detalleImagen; ?></textarea>
                                             </div>
                                             <div class="buttons">
                                                 <input type="hidden" id="idInmueble" name="idInmueble" value="<?PHP echo $_REQUEST['idInmueble']; ?>"/>

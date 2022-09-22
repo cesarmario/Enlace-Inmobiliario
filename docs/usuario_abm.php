@@ -276,17 +276,21 @@
                                     <div class="card-body">
                                         <div class="row">
                                         <img class="img-fluid w-100" src="<?PHP echo $imagen; ?>" alt="<?PHP echo $nombre; ?>">
-                                        <form role="form" action="fn/abm_usuarios.php" method="POST" enctype="multipart/form-data">    
-                                            <div class="form-group">
-                                                <label>Subir Im&aacute;gen</label><br>
-                                                <input type="file" name="imagen" id="imagen">
-                                            </div>
-                                            <div class="buttons">
-                                                <input type="hidden" id="idUsuario" name="idUsuario" value="<?PHP echo $_REQUEST['idUsuario']; ?>"/>
-                                                <input type="hidden" id="abm" name="abm" value="i"/>
-                                                <button type="submit" class="btn btn-primary me-1 mb-1">Subir</button>
-                                            </div> 
-                                        </form>
+                                        <?PHP if(is_dir($imagen)){ ?>
+
+                                        <?PHP }else{ ?>        
+                                            <form role="form" action="fn/abm_usuarios.php" method="POST" enctype="multipart/form-data">    
+                                                <div class="form-group">
+                                                    <label>Subir Im&aacute;gen</label><br>
+                                                    <input type="file" name="imagen" id="imagen">
+                                                </div>
+                                                <div class="buttons">
+                                                    <input type="hidden" id="idUsuario" name="idUsuario" value="<?PHP echo $_REQUEST['idUsuario']; ?>"/>
+                                                    <input type="hidden" id="abm" name="abm" value="i"/>
+                                                    <button type="submit" class="btn btn-primary me-1 mb-1">Subir</button>
+                                                </div> 
+                                            </form>
+                                        <?PHP } ?>
                                         </div>
                                     </div>
                                 </div>

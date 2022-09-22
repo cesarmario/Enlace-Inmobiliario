@@ -15,7 +15,11 @@ if($_REQUEST['abm']!='a'){
     $nombre = $usuario['logoUsuario'];
     $directorio = "/gestion/assets/images/usuarios/";    
     $imagen=$directorio.$nombre;
-    if (is_dir($imagen)){}
+
+    if (is_dir($imagen)){
+        
+    }
+
 } else {
     //En caso de que la Operacin sea "a" inicializo todos los campos.    
     $uidUsuario = "";

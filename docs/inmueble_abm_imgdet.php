@@ -218,7 +218,6 @@
                                                 <label for="basicInput"><b>Detalle</b></label>
                                                 <textarea rows="2" class="form-control" placeholder="Detalle de la Imagen"
                                                 name="detalleImagen" id="detalleImagen"></textarea>
-                                                <input type="hidden" id="detalleImagen" name="detalleImagen" value=""/>
                                             </div>
                                             <div class="buttons">
                                                 <input type="hidden" id="idInmueble" name="idInmueble" value="<?PHP echo $_REQUEST['idInmueble']; ?>"/>

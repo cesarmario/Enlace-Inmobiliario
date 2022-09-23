@@ -101,7 +101,7 @@ if ($_REQUEST['abm']=='x') { //Funcion Eliminar Imagen
 		unlink($imagen);
 		?>
 		<script>
-       		location.replace("../<?PHP echo $return;?>");
+			location.replace("../usuario_abm.php?abm=m&idUsuario=<?PHP echo $_REQUEST['idUsuario'];?>"); 
         </script>		
 	<?PHP } else { 	?>
 		<script>
@@ -189,7 +189,8 @@ if ($_REQUEST['abm']=='b'){
     $result = mysqli_query($conexion, $query);
     if (mysqli_affected_rows($conexion)>0){ 	?>
 		<script>
-           alert("Usuario Eliminado correctamente"); 
+           alert("Usuario Eliminado correctamente");
+		   location.replace("../usuarios.php"); 
         </script>
     <?PHP } else { ?>
 		<script>
@@ -199,14 +200,15 @@ if ($_REQUEST['abm']=='b'){
 <?PHP }; ?>
 
 
-<!-- Actiivar de Usuario -->
+<!-- Activar de Usuario -->
 <?PHP
 if ($_REQUEST['abm']=='r'){ 
 	$query="UPDATE usuario SET baja='0' WHERE idUsuario='$_REQUEST[idUsuario]'";
     $result = mysqli_query($conexion, $query);
     if (mysqli_affected_rows($conexion)>0){ 	?>
 		<script>
-           alert("Usuario Activado correctamente"); 
+           alert("Usuario Activado correctamente");
+		   location.replace("../usuarios.php");
         </script>
     <?PHP } else { ?>
 		<script>
@@ -214,7 +216,3 @@ if ($_REQUEST['abm']=='r'){
         </script>
 	<?PHP }; ?>    
 <?PHP }; ?>
-
-<script>
-    location.replace("../usuarios.php");
-</script>

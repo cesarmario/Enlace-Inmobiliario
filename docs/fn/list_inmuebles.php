@@ -9,11 +9,11 @@
     $listado .= "<th></th>";
     $listado .= "<th>Operacion</th>";
     $listado .= "<th>Propiedad</th>";
-    $listado .= "<th>Titulo</th>";
-    $listado .= "<th>Domicilio</th>";
     $listado .= "<th>Localidad</th>";
+    $listado .= "<th>Titulo</th>";
     $listado .= "<th>Valor</th>";
     $listado .= "<th>Corredor</th>";
+    $listado .= "<th>Fecha</th>";
     $listado .= "<th>Estado</th>";
     if ($inmuebles['idUsuario'] == $_SESSION['idUsu'] or $_SESSION['rolUsu'] =='1') { 
         $listado .= "<th></th><th></th>";
@@ -111,11 +111,11 @@
         $listado .= "<td>". $datosmodal . "</td>";
         $listado .= "<td>". $inmuebles['nombreOperacion'] . "</td>";
         $listado .= "<td>". $inmuebles['nombrePropiedad'] . "</td>";
-        $listado .= "<td>". $inmuebles['tituloInmueble'] . "</td>";
-        $listado .= "<td>". $inmuebles['domicilioCalleInmueble'] . $domicilio . "</td>";
         $listado .= "<td>". $inmuebles['nombreLocalidad'] . "</td>";
+        $listado .= "<td>". $inmuebles['tituloInmueble'] . "</td>";
         $listado .= "<td><b>". $inmuebles['monedaInmueble'] . "</b>&nbsp;". $inmuebles['valorInmueble'] . "</td>";
-        $listado .= "<td><b>". $inmuebles['nombreAgente'] . "</td>";       
+        $listado .= "<td><b>". $inmuebles['nombreAgente'] . "</td>";
+        $listado .= "<td>". $inmuebles['fecha'] ."</td>";       
         $listado .= "<td><span class='badge bg-light-" . $btn ."'>" . $estado . "</span></td>";
         if ($inmuebles['idUsuario'] == $_SESSION['idUsu'] or $_SESSION['rolUsu'] =='1') { 
             $listado .= "<td><a href='inmueble_abm.php?idInmueble=". $inmuebles['idInmueble'] . "&abm=m' class='btn btn-info me-1 mb-1'>Editar</a></td>";

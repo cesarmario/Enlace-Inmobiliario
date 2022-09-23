@@ -242,7 +242,7 @@
                                                      
                                                     <div class="form-group">
                                                         <label for="basicInput"><b>Domicilio</b></label>
-                                                        <input type="number" class="form-control" id='telefonoUsuario' name='domicilioUsuario' <?PHP echo $disabled; ?>
+                                                        <input type="text" class="form-control" id='telefonoUsuario' name='domicilioUsuario' <?PHP echo $disabled; ?>
                                                             placeholder="Domicilio" value='<?PHP echo $domicilioUsuario; ?>'>
                                                     </div>
                                                      
@@ -279,9 +279,12 @@
                                     <div class="card-body">
                                         <div class="row">
                                         <img class="img-fluid w-100" src="<?PHP echo $imagen; ?>" alt="<?PHP echo $nombre; ?>">                                        
-                                        <?PHP if(file_exists($imagen)){ ?>
-                                            <a href='fn/abm_usuarios.php?abm=x&idUsuario=<?PHP echo $_REQUEST['idUsuario']; ?>&logoUsuario=<?PHP echo $nombre; ?>' class='btn btn-danger me-1 mb-1'><i class='fa-solid fa-trash-can'></i></i> Eliminar</a>
-                                        <?PHP }else{ ?>        
+                                        <?PHP if(!empty($nombre)){ ?>
+                                            <div class="form-group">
+                                                <br>
+                                                <a href='fn/abm_usuarios.php?abm=x&idUsuario=<?PHP echo $_REQUEST['idUsuario']; ?>&logoUsuario=<?PHP echo $nombre; ?>' class='btn btn-danger me-1 mb-1'><i class='fa-solid fa-trash-can'></i></i> Eliminar</a>
+                                            </div>
+                                            <?PHP }else{ ?>        
                                             <form role="form" action="fn/abm_usuarios.php" method="POST" enctype="multipart/form-data">    
                                                 <div class="form-group">
                                                     <label>Subir Im&aacute;gen</label><br>
@@ -290,7 +293,7 @@
                                                 <div class="buttons">
                                                     <input type="hidden" id="idUsuario" name="idUsuario" value="<?PHP echo $_REQUEST['idUsuario']; ?>"/>
                                                     <input type="hidden" id="abm" name="abm" value="i"/>
-                                                    <button type="submit" class="btn btn-primary me-1 mb-1">Subir</button>
+                                                    <button type="submit" class="btn btn-primary me-1 mb-1">Guardar Imagen</button>
                                                 </div> 
                                             </form>
                                         <?PHP } ?>

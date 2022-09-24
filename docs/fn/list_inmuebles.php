@@ -7,6 +7,7 @@
     $listado .= "<thead>";
     $listado .= "<tr>";
     $listado .= "<th></th>";
+    $listado .= "<th></th>";
     $listado .= "<th>Operacion</th>";
     $listado .= "<th>Propiedad</th>";
     $listado .= "<th>Localidad</th>";
@@ -94,7 +95,6 @@
         $datosmodal .= "<br><i class='bi bi-card-text'></i>&nbsp;<b>Descripci&oacute;n:</b>&nbsp;" .  $inmuebles['descripcionInmueble'];        
         $datosmodal .= "<br><i class='bi bi-card-text'></i>&nbsp;<b>Informacion Adicional:</b>&nbsp;" .  $inmuebles['informacionAdicionalInmueble'];
         $datosmodal .= "<br><i class='bi bi-info-square-fill'></i>&nbsp;<b>Informacion Extra:</b>&nbsp;" .  $inmuebles['informacionPrivadaInmueble'];
-        $datosmodal .= "<a target='_blank' class='btn btn-whatsapp' href='https://api.whatsapp.com/send?text=Visita https://www.enlaceinmobiliario.com.ar/inmueble.php?idInmueble=" . $inmuebles['idInmueble'] . "' ><span class='icon-whatsapp'></span>&nbsp;Compartir en WhatsApp</a>";       
         $datosmodal .= "</p>";
         $datosmodal .= "</div>";
         $datosmodal .= "<div class='modal-footer'>";
@@ -107,16 +107,17 @@
         $datosmodal .= "</div>";
         $datosmodal .= "</div>";
         $datosmodal .= "</div>";
-
+        $btncompartir = "<a target='_blank' class='btn btn-success block' href='https://api.whatsapp.com/send?text=Visita https://www.enlaceinmobiliario.com.ar/inmueble.php?idInmueble=" . $inmuebles['idInmueble'] . "' ><i class='bi bi-share'></i></a>";
         $listado .= "<tr>";        
         $listado .= "<td>". $datosmodal . "</td>";
+        $listado .= "<td>". $btncompartir . "</td>";
         $listado .= "<td>". $inmuebles['nombreOperacion'] . "</td>";
         $listado .= "<td>". $inmuebles['nombrePropiedad'] . "</td>";
         $listado .= "<td>". $inmuebles['nombreLocalidad'] . "</td>";
         $listado .= "<td>". $inmuebles['tituloInmueble'] . "</td>";
         $listado .= "<td><b>". $inmuebles['monedaInmueble'] . "</b>&nbsp;". $inmuebles['valorInmueble'] . "</td>";
         $listado .= "<td><b>". $inmuebles['nombreAgente'] . "</td>";
-        $listado .= "<td>". $inmuebles['fecha'] ."</td>";       
+        $listado .= "<td>". date('d/m/Y',strtotime($inmuebles['fecha'])) ."</td>";       
         $listado .= "<td><span class='badge bg-light-" . $btn ."'>" . $estado . "</span></td>";
         if ($inmuebles['idUsuario'] == $_SESSION['idUsu'] or $_SESSION['rolUsu'] =='1') { 
             $listado .= "<td><a href='inmueble_abm.php?idInmueble=". $inmuebles['idInmueble'] . "&abm=m' class='btn btn-info me-1 mb-1'>Editar</a></td>";

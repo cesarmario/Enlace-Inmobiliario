@@ -98,6 +98,8 @@
         $datosmodal .= "</p>";
         $datosmodal .= "</div>";
         $datosmodal .= "<div class='modal-footer'>";
+        $datosmodal .= "<button type='button' class='btn btn-primary ml-1' ><i class='bx bx-check d-block d-sm-none'></i><span class='d-none d-sm-block'>";
+        $datosmodal .= "<a target='_blank' href='../inmueble.php?idInmueble=" . $inmuebles['idInmueble'] . "' style='text-decoration:none;color:#FFFFFF;' >Imprimir</a></span></button>";
         $datosmodal .= "<button type='button' class='btn btn-light-secondary'";
         $datosmodal .= "data-bs-dismiss='modal'>";
         $datosmodal .= "<i class='bx bx-x d-block d-sm-none'></i>";

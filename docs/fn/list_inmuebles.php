@@ -93,7 +93,8 @@
         $datosmodal .= "<br><i class='bi bi-bookmark-check'></i>&nbsp;<b>Superficie Total:</b>&nbsp;" .  $superficieTotalInmueble;
         $datosmodal .= "<br><i class='bi bi-card-text'></i>&nbsp;<b>Descripci&oacute;n:</b>&nbsp;" .  $inmuebles['descripcionInmueble'];        
         $datosmodal .= "<br><i class='bi bi-card-text'></i>&nbsp;<b>Informacion Adicional:</b>&nbsp;" .  $inmuebles['informacionAdicionalInmueble'];
-        $datosmodal .= "<br><i class='bi bi-info-square-fill'></i>&nbsp;<b>Informacion Extra:</b>&nbsp;" .  $inmuebles['informacionPrivadaInmueble'];       
+        $datosmodal .= "<br><i class='bi bi-info-square-fill'></i>&nbsp;<b>Informacion Extra:</b>&nbsp;" .  $inmuebles['informacionPrivadaInmueble'];
+        $datosmodal .= "<a target='_blank' class='btn btn-whatsapp' href='https://api.whatsapp.com/send?text=Visita https://www.enlaceinmobiliario.com.ar/inmueble.php?idInmueble=" . $inmuebles['idInmueble'] . "' ><span class='icon-whatsapp'></span>&nbsp;Compartir en WhatsApp</a>";       
         $datosmodal .= "</p>";
         $datosmodal .= "</div>";
         $datosmodal .= "<div class='modal-footer'>";

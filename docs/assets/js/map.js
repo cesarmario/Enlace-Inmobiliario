@@ -16,6 +16,10 @@ myMap.on('dblclick', e => {
     L.marker([latLng.lat, latLng.lng]).addTo(myMap)
 })
 
+window.onload = function(){
+    document.getElementById('latLng').value=localStorage.getItem("latLng");
+}
+
 /*
 navigator.geolocation.getCurrentPosition(
     (pos) => {

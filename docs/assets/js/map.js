@@ -8,7 +8,7 @@ L.tileLayer(tilesProvider, {
  maxZoom: 18,   
 }).addTo(myMap)
 
-let marker = L.marker([-31.5373, -68.5251]).addTo(myMap)
+//let marker = L.marker([-31.5373, -68.5251]).addTo(myMap)
 
 myMap.doubleClickZoom.disable()
 

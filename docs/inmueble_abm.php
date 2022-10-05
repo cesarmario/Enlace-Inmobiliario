@@ -442,8 +442,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="buttons">
-                                                    <a href="inmueble_abm_mapa.php?idInmueble=<?PHP echo $_REQUEST['idInmueble']; ?>&abm=m" class="btn btn-default me-1 mb-1">Mapa</a>
+                                                <div class="buttons">                                                    
                                                     <input type="hidden" id="idInmueble" name="idInmueble" value="<?PHP echo $_REQUEST['idInmueble']; ?>"/>
                                                     <input type="hidden" id="abm" name="abm" value="<?PHP echo $_REQUEST['abm']; ?>"/>
                                                     <button type="submit" class="btn btn-success me-1 mb-1">Guardar</button>
@@ -490,8 +489,12 @@
                                                 <?PHP echo $listado; ?>                                     
                                             </div>
                                         </div>
+                                        <div class="card-body">
+                                        <a href="inmueble_abm_mapa.php?idInmueble=<?PHP echo $_REQUEST['idInmueble']; ?>&abm=m" class="btn btn-outline-secondary me-1 mb-1">Ubicaci&oacute;n</a>
+                                        </div>    
                                     </div>
                                 </div>
+                                
                             </div>
                             <?PHP } ?>    
                         </div>                        

@@ -26,8 +26,13 @@
         $listadoConsultas .= "<td>". $consultas['comentarioConsulta'] . "</td>";
         $listadoConsultas .= "<td>". $consultas['respuestaConsulta'] . "</td>";
         $listadoConsultas .= "<td>". $consultas['fechaRespuestaConsulta'] . "</td>";
-        $listadoConsultas .= "<td><a href='consulta_abm.php?idConsulta=". $consultas['idConsulta'] ."' class='btn btn-info me-1 mb-1'>Responder</a></td>";
-        $listadoConsultas .= "</tr>";
+        if ($consultas['idUsuario']==$_SESSION['idUsu']) {
+            $listadoConsultas .= "<td><a href='consulta_abm.php?idConsulta=". $consultas['idConsulta'] ."' class='btn btn-info me-1 mb-1'>Responder</a></td>";
+        }else{ $filtro = ""; 
+            $listadoConsultas .= "<td></td>";
+        };
+
+    $listadoConsultas .= "</tr>";
     }
     $listadoConsultas .= "</tbody>";
     $listadoConsultas .= "</table>";

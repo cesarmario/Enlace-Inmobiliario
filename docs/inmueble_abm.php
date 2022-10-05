@@ -443,6 +443,7 @@
                                                 </div>
 
                                                 <div class="buttons">
+                                                    <a href="inmueble_abm_mapa.php?idInmueble=<?PHP echo $_REQUEST['idInmueble']; ?>&abm=m" class="btn btn-default me-1 mb-1">Mapa</a>
                                                     <input type="hidden" id="idInmueble" name="idInmueble" value="<?PHP echo $_REQUEST['idInmueble']; ?>"/>
                                                     <input type="hidden" id="abm" name="abm" value="<?PHP echo $_REQUEST['abm']; ?>"/>
                                                     <button type="submit" class="btn btn-success me-1 mb-1">Guardar</button>

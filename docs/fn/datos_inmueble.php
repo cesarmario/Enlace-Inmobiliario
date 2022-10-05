@@ -42,7 +42,10 @@
         $mejorasInmueble = $inmueble['mejorasInmueble'];
         $cocheraInmueble = $inmueble['cocheraInmueble'];
         $tipoCocheraInmueble = $inmueble['tipoCocheraInmueble'];
-        $vehiculosCocheraInmueble = $inmueble['vehiculosCocheraInmueble'];    
+        $vehiculosCocheraInmueble = $inmueble['vehiculosCocheraInmueble'];
+        $domicilio = $inmueble['domicilioCalleInmueble'];
+        if(!empty($inmueble['domicilioNumeroInmueble'])){$domicilio .= " " . $inmueble['domicilioNumeroInmueble'];}
+        if(!empty($inmueble['domicilioOrientacionInmueble'])){$domicilio .= " " . $inmueble['domicilioOrientacionInmueble'];}
     } else {
         //En caso de que la Operacin sea "a" inicializo todos los campos.    
         $idPropiedad = '';
@@ -78,6 +81,7 @@
         $cocheraInmueble = ''; 
         $tipoCocheraInmueble = ''; 
         $vehiculosCocheraInmueble = ''; 
+        $domicilio = "";
     }
 
 ?>

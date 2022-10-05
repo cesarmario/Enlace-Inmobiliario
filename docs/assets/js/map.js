@@ -8,7 +8,7 @@ L.tileLayer(tilesProvider, {
  maxZoom: 18,   
 }).addTo(myMap)
 
-//let marker = L.marker([-31.5373, -68.5251]).addTo(myMap)
+let marker = L.marker([-31.5373, -68.5251]).addTo(myMap)
 
 myMap.doubleClickZoom.disable()
 
@@ -20,7 +20,7 @@ myMap.on('dblclick', e => {
 })
 
 /*
-navigator.geolocation.getCurrentPosition(
+    navigator.geolocation.getCurrentPosition(
     (pos) => {
         const {coords} = pos
         console.log(coords)
@@ -33,6 +33,5 @@ navigator.geolocation.getCurrentPosition(
         enableHighAccuracy: true,
         timeout: 5000,
         maximumAge: 0
-    }
-    
+    }    
 ) */

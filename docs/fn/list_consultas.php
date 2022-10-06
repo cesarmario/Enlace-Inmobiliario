@@ -26,8 +26,9 @@
         $listadoConsultas .= "<td>". $consultas['comentarioConsulta'] . "</td>";
         $listadoConsultas .= "<td>". $consultas['respuestaConsulta'] . "</td>";
         $listadoConsultas .= "<td>". $consultas['fechaRespuestaConsulta'] . "</td>";
-        if ($consultas['idUsuario']==$_SESSION['idUsu']) {
-            $listadoConsultas .= "<td><a href='consulta_abm.php?idConsulta=". $consultas['idConsulta'] ."' class='btn btn-info me-1 mb-1'>Responder</a></td>";
+        if ($consultas['idUsuario']==$_SESSION['idUsu'] or $_SESSION['rolUsu']=='1') {
+            if(!empty($consultas['respuestaConsulta'])){$btn="outline-primary";$btnlabel="Detalles";}else{$btn="info";$btnlabel="Responder";}
+            $listadoConsultas .= "<td><a href='consulta_abm.php?idConsulta=". $consultas['idConsulta'] ."' class='btn btn-" . $btn . " me-1 mb-1'>".$btnlabel."</a></td>";
         }else{ $filtro = ""; 
             $listadoConsultas .= "<td></td>";
         };

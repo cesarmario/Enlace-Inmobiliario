@@ -215,11 +215,13 @@
                                                     <div class="form-group">
                                                         <label for="basicInput">Teléfono</label>
                                                         <input type="text" class="form-control" value="<?PHP echo $consulta['telefonoConsulta']; ?>" disabled>
+                                                        <a href="https://api.whatsapp.com/send?phone=549<?PHP echo $consulta['telefonoConsulta']; ?>" class="btn btn-outline-success me-1 mb-1">Enviar WhatsApp</a>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput">Mail</label>
                                                         <input type="text" class="form-control" value="<?PHP echo $consulta['mailConsulta']; ?>" disabled>
+                                                        <a href="mailto:<?PHP echo $consulta['mailConsulta']; ?>" class="btn btn-outline-primary me-1 mb-1">Enviar eMAIL</a>
                                                     </div>
                                                     
                                                     <div class="form-group">
@@ -229,51 +231,14 @@
                                                     
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1" class="form-label">Respuesta</label>
-                                                        <textarea class="form-control" id='respuestaConsulta' name='respuestaConsulta' rows="3"></textarea>
+                                                        <textarea class="form-control" id='respuestaConsulta' name='respuestaConsulta' rows="3" <?PHP echo $enabled; ?>><?PHP echo $consulta['respuestaConsulta']; ?></textarea>
                                                     </div>
-
-                                                <!--    <div class="form-group">
-                                                        <label for="basicInput">Fecha</label>
-                                                        <input type="text" class="form-control" id='banosInmueble' name='banosInmueble'
-                                                            placeholder="Baños">
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label for="basicInput">Superficie Cubierta</label>
-                                                        <input type="text" class="form-control" id='superficieCubiertaInmueble' name='superficieCubiertaInmueble'
-                                                            placeholder="Superficie Cubierta">
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label for="basicInput">Superficie Total</label>
-                                                        <input type="text" class="form-control" id='superficieTotalInmueble' name='superficieTotalInmueble'
-                                                            placeholder="Superficie Total">
-                                                    </div>
-
-                                                    <div class="form-group mb-3">
-                                                        <label for="exampleFormControlTextarea1" class="form-label">Informacion Adicional</label>
-                                                        <textarea class="form-control" id='InformacionAdicionalInmueble' name='InformacionAdicionalInmueble' rows="3"></textarea>
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label for="basicInput">Valor Inmueble</label>
-                                                        <input type="text" class="form-control" id='valorInmueble' name='valorInmueble'
-                                                            placeholder="Valor">
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label for="basicInput">Moneda</label>
-                                                    <select class="choices form-select" id='monedaInmueble' name='monedaInmueble'>
-                                                            <option value=""></option>
-                                                            <option value="$">Pesos</option>
-                                                            <option value="USD">Dolares</option>
-                                                        </select>                                    
-                                                    </div>
-                                                </div> -->
 
                                                 <div class="buttons">
                                                     <input type="hidden" id="idConsulta" name="idConsulta" value="<?PHP echo $_REQUEST['idConsulta']; ?>"/>
+                                                    <?PHP if(empty($consulta['respuestaConsulta'])){ ?>
                                                     <button type="submit" class="btn btn-primary me-1 mb-1">Guardar</button>
+                                                    <?PHP } ?>
                                                     <a href="consultas.php" class="btn btn-warning me-1 mb-1">Cancelar</a>
                                                 </div> 
                                             </form>

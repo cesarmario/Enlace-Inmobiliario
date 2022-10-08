@@ -209,16 +209,16 @@
                                         
                                     </div>
                                     <div class="card-body">                                        
-                                        <form role="form" action="#" method="GET" enctype="multipart/form-data">
+                                        <form role="form" action="fn/abm_map.php" method="GET" enctype="multipart/form-data">
                                             <div class="form-group">
                                                 <span></span><?PHP echo $domicilio; ?></span>  
-                                                <div id="myMap" name="myMap" style="height: 600px"></div>
-                                                <input type="text" id="coordenadas" />  
+                                                <div id="myMap" name="myMap" style="height: 600px" required></div>
+                                                <input type="text" id="coordenadas" name="coordenadas" disabled/>
                                             </div>
                                             <div class="buttons">
-                                                <input type="hidden" id="idInmueble" name="idInmueble" value="<?PHP echo $_REQUEST['idInmueble']; ?>"/>
-                                                <input type="hidden" id="abm" name="abm" value="l"/>
-                                                <!--button type="submit" class="btn btn-primary me-1 mb-1">Guardar</!--button-->
+                                                <input type="hidden" id="idInmueble" name="idInmueble" value="<?PHP echo $_REQUEST['idInmueble']; ?>"/>                                                
+                                                <input type="hidden" id="abm" name="abm" value="m"/>
+                                                <button type="submit" class="btn btn-primary me-1 mb-1">Guardar</button>
                                                 <a href="inmueble_abm.php?idInmueble=<?PHP echo $_REQUEST['idInmueble']; ?>&abm=m" class="btn btn-warning me-1 mb-1">Cancelar</a>
                                             </div> 
                                         </form>

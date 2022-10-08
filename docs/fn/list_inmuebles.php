@@ -99,7 +99,12 @@
         $datosmodal .= "</div>";
         $datosmodal .= "<div class='modal-footer'>";
         $datosmodal .= "<button type='button' class='btn btn-primary ml-1' ><i class='bx bx-check d-block d-sm-none'></i><span class='d-none d-sm-block'>";
-        $datosmodal .= "<a target='_blank' href='../inmueble.php?idInmueble=" . $inmuebles['idInmueble'] . "' style='text-decoration:none;color:#FFFFFF;' >Imprimir</a></span></button>";
+
+        $idi= str_pad($inmuebles['idInmueble'], 6, "0", STR_PAD_LEFT);
+        $idc= str_pad($_SESSION['idUsu'], 6, "0", STR_PAD_LEFT);;
+        $id= $idi . $idc;
+
+        $datosmodal .= "<a target='_blank' href='../inmueble.php?id=" . $id."' style='text-decoration:none;color:#FFFFFF;' >Imprimir</a></span></button>";
         $datosmodal .= "<button type='button' class='btn btn-light-secondary'";
         $datosmodal .= "data-bs-dismiss='modal'>";
         $datosmodal .= "<i class='bx bx-x d-block d-sm-none'></i>";
@@ -109,7 +114,8 @@
         $datosmodal .= "</div>";
         $datosmodal .= "</div>";
         $datosmodal .= "</div>";
-        $btncompartir = "<a target='_blank' class='btn btn-success block' href='https://api.whatsapp.com/send?text=Visita https://www.enlaceinmobiliario.com.ar/inmueble.php?idInmueble=" . $inmuebles['idInmueble'] . "' ><i class='bi bi-share'></i></a>";
+       
+        $btncompartir = "<a target='_blank' class='btn btn-success block' href='https://api.whatsapp.com/send?text=https://www.enlaceinmobiliario.com.ar/inmueble.php?id=".$id."' ><i class='bi bi-share'></i></a>";
         $listado .= "<tr>";        
         $listado .= "<td>". $datosmodal . "</td>";
         $listado .= "<td>". $btncompartir . "</td>";

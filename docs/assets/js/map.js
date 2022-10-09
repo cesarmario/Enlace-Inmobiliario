@@ -22,7 +22,7 @@ myMap.on('dblclick', e => {
     let latLng = myMap.mouseEventToLatLng(e.originalEvent)
     console.log(latLng)
     L.marker([latLng.lat, latLng.lng]).addTo(myMap)
-    document.getElementById("coordenadas").value = latLng;
+    document.getElementById("coordenadas").value = [latLng.lat, latLng.lng];
 })
 
 /*

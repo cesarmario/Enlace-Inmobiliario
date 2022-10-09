@@ -13,9 +13,8 @@
     <!--form action="fn/abm_img.php" method="GET"-->
     <form role="form" action="#" method="GET" enctype="multipart/form-data">  
         <div id="myMap" name="myMap" style="height: 600px"></div>
-
+        <?PHP $$_REQUEST['coord']; ?>
         <input type="text" id="coord" name="coord" value="<?PHP echo $_REQUEST['coord']; ?>" />  
-        <button type="submit" class="btn btn-primary me-1 mb-1">Guardar</button>
     </form>
    
     <!-- Make sure you put this AFTER Leaflet's CSS -->

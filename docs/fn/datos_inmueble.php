@@ -21,6 +21,7 @@
         $domicilioCalleInmueble = $inmueble['domicilioCalleInmueble'];
         $domicilioNumeroInmueble = $inmueble['domicilioNumeroInmueble'];
         $domicilioOrientacionInmueble = $inmueble['domicilioOrientacionInmueble'];
+        $ubicacionInmueble = $inmueble['ubicacionInmueble'];
         $habitacionesInmueble = $inmueble['habitacionesInmueble'];
         $banosInmueble = $inmueble['banosInmueble'];
         $superficieCubiertaInmueble = $inmueble['superficieCubiertaInmueble'];
@@ -58,7 +59,8 @@
         $descripcionInmueble = ''; 
         $domicilioCalleInmueble = ''; 
         $domicilioNumeroInmueble = ''; 
-        $domicilioOrientacionInmueble = ''; 
+        $domicilioOrientacionInmueble = '';
+        $ubicacionInmueble = ''; 
         $habitacionesInmueble = ''; 
         $banosInmueble = ''; 
         $superficieCubiertaInmueble = ''; 

@@ -211,9 +211,9 @@
                                     <div class="card-body">                                        
                                         <form role="form" action="fn/abm_map.php" method="GET" enctype="multipart/form-data">
                                             <div class="form-group">
-                                                <span></span><?PHP echo $domicilio; ?></span>  
-                                                <div id="myMap" name="myMap" style="height: 600px" required></div>
-                                                <input type="text" id="coordenadas" name="coordenadas" disabled/>
+                                                <span><?PHP echo $domicilio; ?></span>
+                                                <p><input type="text" id="coordenadas" name="coordenadas" value="<?PHP echo $ubicacionInmueble; ?>" style="border: none; color: grey;" size="50"/></p>
+                                                <div id="myMap" name="myMap" style="height: 600px" required></div>                                                
                                             </div>
                                             <div class="buttons">
                                                 <input type="hidden" id="idInmueble" name="idInmueble" value="<?PHP echo $_REQUEST['idInmueble']; ?>"/>                                                

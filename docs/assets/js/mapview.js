@@ -11,23 +11,16 @@ L.tileLayer(tilesProvider, {
 var jsvar = '<?PHP echo $latLng?>';
 console.log(jsvar); 
 
-document.getElementById('coord').addEventListener('onLoad',function(e){
-    //let coords = e.target.value.split(",");
-    L.marker([coords.lat, coords.lng]).addTo(myMap)
-    map.flyTo(coords,13);
-    console.log(latLng)
-  })
-
-//let marker = L.marker([-31.5373, -68.5251]).addTo(myMap)
+let marker = L.marker([-31.538867906347612,-68.5275510756474]).addTo(myMap)
 
 myMap.doubleClickZoom.disable()
 
-/*myMap.on('dblclick', e => {
+myMap.on('dblclick', e => {
     let latLng = myMap.mouseEventToLatLng(e.originalEvent)
     console.log(latLng)
     L.marker([latLng.lat, latLng.lng]).addTo(myMap)
     document.getElementById("coordenadas").value = latLng;
-}) */
+})
 
 /*
     navigator.geolocation.getCurrentPosition(

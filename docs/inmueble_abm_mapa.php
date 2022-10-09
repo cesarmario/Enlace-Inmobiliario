@@ -213,7 +213,7 @@
                                             <div class="form-group">
                                                 <span><?PHP echo $domicilio; ?></span>
                                                 <p><input type="text" id="coordenadas" name="coordenadas" value="<?PHP echo $ubicacionInmueble; ?>" style="border: none; color: grey;" size="50"/></p>
-                                                <div id="myMap" name="myMap" style="height: 600px" required></div>                                                
+                                                <div id="myMap" name="myMap" style="height: 400px" required></div>                                                
                                             </div>
                                             <div class="buttons">
                                                 <input type="hidden" id="idInmueble" name="idInmueble" value="<?PHP echo $_REQUEST['idInmueble']; ?>"/>                                                

@@ -117,7 +117,7 @@
         $datosmodal .= "</div>";
        
         $btncompartir = "<a target='_blank' class='btn btn-outline-success block' href='https://api.whatsapp.com/send?text=https://www.enlaceinmobiliario.com.ar/inmueble.php?id=".$id."' ><i class='bi bi-share'></i></a>";
-        $btnpdf = "<a target='_blank' class='btn btn-outline-warning block' href='../inmueble.php?id=" . $id."' ><i class='bi bi-share'></i></a>";
+        $btnpdf = "<a target='_blank' class='btn btn-outline-warning block' href='../inmueble.php?id=" . $id."' ><i class='bi bi-list-task'></i></a>";
         $listado .= "<tr>";        
         $listado .= "<td>". $datosmodal . "</td>";
         $listado .= "<td>". $btncompartir ."</td>";

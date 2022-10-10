@@ -22,9 +22,46 @@
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+         .ad2hs-prompt {
+        background-color: rgb(59, 134, 196); /* Blue */
+        border: none;
+        display: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        position: absolute;
+        margin: 0 1rem 1rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: calc(100% - 32px);
+      }
+    </style>
 </head>
 &nbsp;
 <body>
+    <button type="button" class="ad2hs-prompt">Instalar Aplicacion</button>
     <div id="app">
         <div id="sidebar" class="active">
             <div class="sidebar-wrapper active">
@@ -197,7 +234,7 @@
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="stats-icon green">
-                                                    <i class="iconly-boldHome"></i>
+                                                    <a href="inmuebles.php"><i class="iconly-boldHome"></i></a>
                                                 </div>
                                             </div>
                                             <div class="col-md-8">
@@ -214,7 +251,7 @@
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="stats-icon purple">
-                                                    <i class="iconly-boldFilter"></i>
+                                                    <a href="consultas.php"><i class="iconly-boldFilter"></i></a>
                                                 </div>
                                             </div>
                                             <div class="col-md-8">
@@ -231,7 +268,7 @@
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="stats-icon red">
-                                                    <i class="iconly-boldAdd-User"></i>
+                                                    <a href="pedidos.php"><i class="iconly-boldAdd-User"></i></a>
                                                 </div>
                                             </div>
                                             <div class="col-md-8">
@@ -319,6 +356,44 @@
     <script src="assets/js/pages/dashboard.js"></script>
     <script src="https://kit.fontawesome.com/1ffc2bde27.js" crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+		// This is the "Offline copy of assets" service worker
+
+		const CACHE = "pwabuilder-offline";
+
+		importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+
+		self.addEventListener("message", (event) => {
+		  if (event.data && event.data.type === "SKIP_WAITING") {
+			self.skipWaiting();
+		  }
+		});
+
+		workbox.routing.registerRoute(
+		  new RegExp('/*'),
+		  new workbox.strategies.StaleWhileRevalidate({
+			cacheName: CACHE
+		  })
+		);
+		
+		var deferredPrompt;
+
+		window.addEventListener('beforeinstallprompt', function (e) {
+		  // Prevent Chrome 67 and earlier from automatically showing the prompt
+		  e.preventDefault();
+		  // Stash the event so it can be triggered later.
+		  deferredPrompt = e;
+		  showAddToHomeScreen();
+		});
+        
+		function showAddToHomeScreen() {
+		  var a2hsBtn = document.querySelector(".ad2hs-prompt");
+		  a2hsBtn.style.display = "block";
+		  a2hsBtn.addEventListener("click", addToHomeScreen);
+
+		}
+		
+	</script>
 </body>
 
 </html>

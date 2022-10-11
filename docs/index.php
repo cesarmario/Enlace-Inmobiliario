@@ -37,9 +37,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="assets/images/icons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
     <link rel="manifest" href="assets/images/icons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#7CBD1E">
+    <meta name="msapplication-TileImage" content="assets/images/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#7CBD1E">
     <style>
          .ad2hs-prompt {
         background-color: rgb(59, 134, 196); /* Blue */
@@ -357,41 +357,59 @@
     <script src="https://kit.fontawesome.com/1ffc2bde27.js" crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>
     <script>
-		// This is the "Offline copy of assets" service worker
+		// This is the "Offline page" service worker
 
-		const CACHE = "pwabuilder-offline";
+        importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
-		importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+        const CACHE = "pwabuilder-page";
 
-		self.addEventListener("message", (event) => {
-		  if (event.data && event.data.type === "SKIP_WAITING") {
-			self.skipWaiting();
-		  }
-		});
+        // This is the "Offline page" service worker
 
-		workbox.routing.registerRoute(
-		  new RegExp('/*'),
-		  new workbox.strategies.StaleWhileRevalidate({
-			cacheName: CACHE
-		  })
-		);
-		
-		var deferredPrompt;
+        importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
-		window.addEventListener('beforeinstallprompt', function (e) {
-		  // Prevent Chrome 67 and earlier from automatically showing the prompt
-		  e.preventDefault();
-		  // Stash the event so it can be triggered later.
-		  deferredPrompt = e;
-		  showAddToHomeScreen();
-		});
-        
-		function showAddToHomeScreen() {
-		  var a2hsBtn = document.querySelector(".ad2hs-prompt");
-		  a2hsBtn.style.display = "block";
-		  a2hsBtn.addEventListener("click", addToHomeScreen);
+        const CACHE = "pwabuilder-page";
 
-		}
+        // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
+        const offlineFallbackPage = "index.html";
+
+        self.addEventListener("message", (event) => {
+        if (event.data && event.data.type === "SKIP_WAITING") {
+            self.skipWaiting();
+        }
+        });
+
+        self.addEventListener('install', async (event) => {
+        event.waitUntil(
+            caches.open(CACHE)
+            .then((cache) => cache.add(offlineFallbackPage))
+        );
+        });
+
+        if (workbox.navigationPreload.isSupported()) {
+        workbox.navigationPreload.enable();
+        }
+
+        self.addEventListener('fetch', (event) => {
+        if (event.request.mode === 'navigate') {
+            event.respondWith((async () => {
+            try {
+                const preloadResp = await event.preloadResponse;
+
+                if (preloadResp) {
+                return preloadResp;
+                }
+
+                const networkResp = await fetch(event.request);
+                return networkResp;
+            } catch (error) {
+
+                const cache = await caches.open(CACHE);
+                const cachedResp = await cache.match(offlineFallbackPage);
+                return cachedResp;
+            }
+            })());
+        }
+        });
 		
 	</script>
 </body>

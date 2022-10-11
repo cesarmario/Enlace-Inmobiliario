@@ -1,8 +1,8 @@
 {
  "name": "Enlace Inmobiliario",
- "short_name": "Enlace App",
+ "short_name": "Enlace APP",
  "lang": "es-ES",
- "start_url": "/gestion/index.php",
+ "start_url": "/gestion",
  "background_color": "#364E68",
  "theme_color": "#7CBD1E",
  "display": "standalone",

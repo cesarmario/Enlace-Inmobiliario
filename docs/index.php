@@ -37,9 +37,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="assets/images/icons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
     <link rel="manifest" href="assets/images/icons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#7CBD1E">
+    <meta name="msapplication-TileImage" content="assets/images/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#7CBD1E">
     <style>
          .ad2hs-prompt {
         background-color: rgb(59, 134, 196); /* Blue */

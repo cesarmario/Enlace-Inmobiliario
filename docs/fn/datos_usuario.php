@@ -13,7 +13,7 @@ if($_REQUEST['abm']!='a'){
     $telefonoUsuario = $usuario['telefonoUsuario'];
     $domicilioUsuario = $usuario['domicilioUsuario'];
     $nombre = $usuario['logoUsuario'];
-    $directorio = "/gestion/assets/images/usuarios/";    
+    $directorio = "/gestion/assets/images/usuarios/";
     $imagen=$directorio.$nombre;
 
     if (is_dir($imagen)){

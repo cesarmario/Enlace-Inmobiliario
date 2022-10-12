@@ -214,6 +214,9 @@
                                             <div class="form-group">
                                                 <span><?PHP echo $domicilio; ?></span>
                                                 <p><input type="text" id="coordenadas" name="coordenadas" value="<?PHP echo $ubicacionInmueble; ?>" style="border: none; color: grey;" size="50"/></p>
+                                                <div class="alert alert-light-success color-success"><i class="bi bi-check-circle"></i>
+                                                        Presione doble click en el mapa para seleccionar la ubicacion luego presone guardar. 
+                                                    </div>
                                                 <div id="myMap" name="myMap" style="height: 400px" required></div>                                                
                                             </div>
                                             <div class="buttons">
@@ -274,7 +277,7 @@
 <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
     integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin="">
 </script>
-<script src="assets/js/mapview.js"></script>
+<script src="assets/js/map.js"></script>
 
 <script>
     // register desired plugins...

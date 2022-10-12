@@ -2,25 +2,30 @@ const tilesProvider = "	https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 //const input = document.querySelector('input');
 //const log = document.getElementById('coordenadas');
 
-let myMap = L.map('myMap').setView([-31.5373, -68.5251], 14)
+var jsvar = "<?= $ubicacionInmueble ?>";
+console.log("Ubicacion: " + jsvar); 
+
+let myMap = L.map('myMap').setView([-31.5303161306515,-68.59410103096262], 14)
+//let myMap = L.map('myMap').setView([-31.5373, -68.5251], 14)
 
 L.tileLayer(tilesProvider, {
  maxZoom: 18,   
 }).addTo(myMap)
 
-var jsvar = '<?PHP echo $ubicacionInmueble; ?>';
-console.log("Ubicacion: ".jsvar); 
+let marker = L.marker([-31.5303161306515,-68.59410103096262]).addTo(myMap)
+//let marker = L.marker([-31.5303161306515,-68.59410103096262]).addTo(myMap)
 
-let marker = L.marker([-31.538867906347612,-68.5275510756474]).addTo(myMap)
 
-myMap.doubleClickZoom.disable()
+//myMap.doubleClickZoom.disable()
 
+/*
 myMap.on('dblclick', e => {
     let latLng = myMap.mouseEventToLatLng(e.originalEvent)
     console.log(latLng)
     L.marker([latLng.lat, latLng.lng]).addTo(myMap)
     document.getElementById("coordenadas").value = latLng;
 })
+*/
 
 /*
     navigator.geolocation.getCurrentPosition(

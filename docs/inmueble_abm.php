@@ -26,6 +26,11 @@
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="assets/css/utils.css">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+
 </head>
 
 <body>
@@ -490,8 +495,13 @@
                                             </div>
                                         </div>
                                         <div class="card-body">
+                                        <p><input type="text" id="coordenadas" name="coordenadas" value="<?PHP echo $ubicacionInmueble; ?>" style="border: none; color: grey;" size="50"/></p>    
                                         <a href="inmueble_abm_mapa.php?idInmueble=<?PHP echo $_REQUEST['idInmueble']; ?>&abm=m" class="btn btn-outline-secondary me-1 mb-1">Ubicaci&oacute;n</a>
-                                        </div>    
+                                        <?PHP if(!empty($ubicacionInmueble)){ ?>    
+                                            <div id="myMap" name="myMap" style="height: 400px" required></div>
+                                        <?PHP } ?>  
+                                    </div>
+                                        
                                     </div>
                                 </div>
                                 
@@ -536,6 +546,14 @@
 
     <!-- filepond -->
     <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin="">
+    </script>
+    <!--script src="assets/js/mapview.js"></script-->
+
+
     <script>
         // register desired plugins...
         FilePond.registerPlugin(
@@ -723,6 +741,25 @@
             })
         });
     </script>
+
+    <script>
+        const tilesProvider = "	https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+
+        var latlng = "<?= $ubicacionInmueble ?>";
+        console.log("Ubicacion: " + latlng); 
+
+        let coordenadas = latlng.split(',')
+        let myMap = L.map('myMap').setView(coordenadas,14)
+        
+        //let myMap = L.map('myMap').setView([-31.5373, -68.5251], 14)
+
+        L.tileLayer(tilesProvider, {
+        maxZoom: 18,   
+        }).addTo(myMap)
+
+        let marker = L.marker(coordenadas).addTo(myMap)
+  
+    </script>    
 
 </body>
 

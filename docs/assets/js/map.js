@@ -17,7 +17,7 @@ L.tileLayer(tilesProvider, {
 //console.log(cord)
 //let marker = L.marker(cord).addTo(myMap)
 
-let marker = L.marker([-31.5373, -68.5251]).addTo(myMap)
+//let marker = L.marker([-31.5373, -68.5251]).addTo(myMap)
 
 myMap.doubleClickZoom.disable()
 

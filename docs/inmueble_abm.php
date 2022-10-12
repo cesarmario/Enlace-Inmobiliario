@@ -467,23 +467,23 @@
                                     <div class="card-body">                                        
                                         <!--form action="fn/abm_img.php" method="GET"-->
                                         <form role="form" action="fn/abm_img.php" method="POST" enctype="multipart/form-data">    
-                                        <div class="form-group">
-                                            <label><b>Subir Im&aacute;genes</b></label><br>
-                                            <!--input type="file" class="basic-filepond" name="imagen"-->
-                                            <input type="file" name="imagen[]" id="imagen[]" multiple>
-                                            <!--input type="file" name="imagen[]" id="imagen[]" class="image-preview-filepond" multiple-->
+                                            <div class="form-group">
+                                                <label><b>Subir Im&aacute;genes</b></label><br>
+                                                <!--input type="file" class="basic-filepond" name="imagen"-->
+                                                <input type="file" name="imagen[]" id="imagen[]" multiple>
+                                                <!--input type="file" name="imagen[]" id="imagen[]" class="image-preview-filepond" multiple-->
 
-                                            <!--label-- for="basicInput">Detalle</°label-->
-                                            <!--textarea rows="2" class="form-control" placeholder="Detalle de la Imagen"
-                                            name="detalleImagen" id="detalleImagen"></textarea-->
-                                            <input type="hidden" id="detalleImagen" name="detalleImagen" value=""/>
-                                        </div>
+                                                <!--label-- for="basicInput">Detalle</°label-->
+                                                <!--textarea rows="2" class="form-control" placeholder="Detalle de la Imagen"
+                                                name="detalleImagen" id="detalleImagen"></textarea-->
+                                                <input type="hidden" id="detalleImagen" name="detalleImagen" value=""/>
+                                            </div>
 
-                                        <div class="buttons">
-                                            <input type="hidden" id="idInmueble" name="idInmueble" value="<?PHP echo $_REQUEST['idInmueble']; ?>"/>
-                                            <input type="hidden" id="abm" name="abm" value="m"/>
-                                            <button type="submit" class="btn btn-primary me-1 mb-1">Cargar</button>
-                                                                            </div> 
+                                            <div class="buttons">
+                                                <input type="hidden" id="idInmueble" name="idInmueble" value="<?PHP echo $_REQUEST['idInmueble']; ?>"/>
+                                                <input type="hidden" id="abm" name="abm" value="m"/>
+                                                <button type="submit" class="btn btn-primary me-1 mb-1">Cargar</button>
+                                            </div> 
                                             </form>                                  
                                         </div>
 
@@ -495,7 +495,7 @@
                                             </div>
                                         </div>
                                         <div class="card-body">
-                                        <p><input type="text" id="coordenadas" name="coordenadas" value="<?PHP echo $ubicacionInmueble; ?>" style="border: none; color: grey;" size="50"/></p>    
+                                        <!--p><input type="text" id="coordenadas" name="coordenadas" value="<?PHP echo $ubicacionInmueble; ?>" style="border: none; color: grey;" size="50"/></p-->    
                                         <a href="inmueble_abm_mapa.php?idInmueble=<?PHP echo $_REQUEST['idInmueble']; ?>&abm=m" class="btn btn-outline-secondary me-1 mb-1">Ubicaci&oacute;n</a>
                                         <?PHP if(!empty($ubicacionInmueble)){ ?>    
                                             <div id="myMap" name="myMap" style="height: 400px" required></div>

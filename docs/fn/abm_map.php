@@ -29,4 +29,20 @@ if ($_REQUEST['abm']=='a' or $_REQUEST['abm']=='m'){
         <?PHP }; 
     } ?>   
     <?PHP }
-?>
+
+    if ($_REQUEST['abm']=='b'){
+
+        $query="UPDATE inmueble SET ubicacionInmueble='' WHERE idInmueble='$_REQUEST[idInmueble]'";
+        $result = mysqli_query($conexion, $query);
+        if (mysqli_affected_rows($conexion)>0){ ?>
+            <script>
+            location.replace("../inmuebles.php?abm=m&idInmueble=<?PHP echo $_REQUEST['idInmueble']?>");
+            </script>
+        <?PHP } else {?>
+            <script>
+                alert("Ocurrio un Error!!");
+            </script>
+        <?PHP }; 
+    } ?>   
+
+

@@ -499,6 +499,7 @@
                                         <a href="inmueble_abm_mapa.php?idInmueble=<?PHP echo $_REQUEST['idInmueble']; ?>&abm=m" class="btn btn-outline-secondary me-1 mb-1">Ubicaci&oacute;n</a>
                                         <?PHP if(!empty($ubicacionInmueble)){ ?>    
                                             <div id="myMap" name="myMap" style="height: 400px" required></div>
+                                            <a href="https://www.google.com/maps?q=<?PHP echo $ubicacionInmueble; ?>&z=17&hl=es" target="_blank" class="btn btn-info me-1 mb-1">Ver en el Mapa</a>
                                         <?PHP } ?>  
                                     </div>
                                         

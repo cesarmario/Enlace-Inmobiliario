@@ -8,8 +8,8 @@ L.tileLayer(tilesProvider, {
  maxZoom: 18,   
 }).addTo(myMap)
 
-var jsvar = '<?PHP echo $latLng?>';
-console.log(jsvar); 
+var jsvar = '<?PHP echo $ubicacionInmueble; ?>';
+console.log("Ubicacion: ".jsvar); 
 
 let marker = L.marker([-31.538867906347612,-68.5275510756474]).addTo(myMap)
 

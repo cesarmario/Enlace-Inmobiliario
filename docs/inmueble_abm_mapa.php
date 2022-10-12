@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
     integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
     crossorigin=""/>
+    
 </head>
 
 <body>
@@ -221,12 +222,7 @@
                                                 <button type="submit" class="btn btn-primary me-1 mb-1">Guardar</button>
                                                 <a href="inmueble_abm.php?idInmueble=<?PHP echo $_REQUEST['idInmueble']; ?>&abm=m" class="btn btn-warning me-1 mb-1">Cancelar</a>
                                             </div> 
-                                        </form>
-                                    
-                                        <!-- Make sure you put this AFTER Leaflet's CSS -->
-                                        <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-                                        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
-                                        <script src="assets/js/map.js"></script>                                
+                                        </form>                                                              
                                     </div>
                                 </div>
                             </div>
@@ -273,6 +269,13 @@
 
 <!-- filepond -->
 <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin="">
+</script>
+<script src="assets/js/mapview.js"></script>
+
 <script>
     // register desired plugins...
 	FilePond.registerPlugin(

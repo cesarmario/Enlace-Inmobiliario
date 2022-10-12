@@ -84,6 +84,6 @@
         $tipoCocheraInmueble = ''; 
         $vehiculosCocheraInmueble = ''; 
         $domicilio = "";
-    }
+     }
 
 ?>

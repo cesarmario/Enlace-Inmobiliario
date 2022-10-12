@@ -253,7 +253,7 @@
 
                                                     <div class="form-group">
                                                         <label for="basicInput"><b>N&uacute;mero</b></label>
-                                                        <input type="text" class="form-control" id='domicilioNumeroInmueble' name='domicilioNumeroInmueble'
+                                                        <input type="number" class="form-control" id='domicilioNumeroInmueble' name='domicilioNumeroInmueble'
                                                             placeholder="N&uacute;mero" value='<?PHP echo $domicilioNumeroInmueble; ?>'>
                                                     </div>
 
@@ -280,19 +280,19 @@
                                                     
                                                     <div class="form-group">
                                                         <label for="basicInput"><b>Habitaciones</b></label>
-                                                        <input type="text" class="form-control" id='habitacionesInmueble' name='habitacionesInmueble'
+                                                        <input type="number" class="form-control" id='habitacionesInmueble' name='habitacionesInmueble'
                                                             placeholder="Habitaciones" value='<?PHP echo $habitacionesInmueble; ?>'>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput"><b>Baños</b></label>
-                                                        <input type="text" class="form-control" id='banosInmueble' name='banosInmueble'
+                                                        <input type="number" class="form-control" id='banosInmueble' name='banosInmueble'
                                                             placeholder="Baños" value='<?PHP echo $banosInmueble; ?>'>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="basicInput"><b>Plantas</b></label>
-                                                        <input type="text" class="form-control" id='plantasInmueble' name='plantasInmueble'
+                                                        <input type="number" class="form-control" id='plantasInmueble' name='plantasInmueble'
                                                             placeholder="Plantas" value='<?PHP echo $plantasInmueble; ?>'>
                                                     </div>
 
@@ -349,32 +349,32 @@
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput"><b>Frente del terreno</b></label>
-                                                        <input type="text" class="form-control" id='frenteTerrenoInmueble' name='frenteTerrenoInmueble'
+                                                        <label for="basicInput"><b>Frente del terreno (m2)</b></label>
+                                                        <input type="number" class="form-control" id='frenteTerrenoInmueble' name='frenteTerrenoInmueble'
                                                             placeholder="Frente del terreno" value='<?PHP echo $frenteTerrenoInmueble; ?>'>
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput"><b>Largo del terreno</b></label>
-                                                        <input type="text" class="form-control" id='largoTerrenoInmueble' name='largoTerrenoInmueble'
+                                                        <label for="basicInput"><b>Largo del terreno (m2)</b></label>
+                                                        <input type="number" class="form-control" id='largoTerrenoInmueble' name='largoTerrenoInmueble'
                                                             placeholder="Largo del terreno" value='<?PHP echo $largoTerrenoInmueble; ?>'>
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput"><b>Superficie Cubierta</b></label>
-                                                        <input type="text" class="form-control" id='superficieCubiertaInmueble' name='superficieCubiertaInmueble'
+                                                        <label for="basicInput"><b>Superficie Cubierta (m2)</b></label>
+                                                        <input type="number" class="form-control" id='superficieCubiertaInmueble' name='superficieCubiertaInmueble'
                                                             placeholder="Superficie Cubierta" value='<?PHP echo $superficieCubiertaInmueble; ?>'>
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput"><b>Superficie Total</b></label>
-                                                        <input type="text" class="form-control" id='superficieTotalInmueble' name='superficieTotalInmueble'
+                                                        <label for="basicInput"><b>Superficie Total Terreno</b></label>
+                                                        <input type="number" class="form-control" id='superficieTotalInmueble' name='superficieTotalInmueble'
                                                             placeholder="Superficie Total" value='<?PHP echo $superficieTotalInmueble; ?>'>
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput"><b>Antigüedad del Inmueble</b></label>
-                                                        <input type="text" class="form-control" id='antiguedadInmueble' name='antiguedadInmueble'
+                                                        <label for="basicInput"><b>Antigüedad del Inmueble (Años)</b></label>
+                                                        <input type="number" class="form-control" id='antiguedadInmueble' name='antiguedadInmueble'
                                                             placeholder="Antigüedad" value='<?PHP echo $antiguedadInmueble; ?>'>
                                                     </div>
 
@@ -412,7 +412,7 @@
 
                                                     <div class="form-group">
                                                         <label for="basicInput"><b>Capacidad de vehículos</b></label>
-                                                        <input type="text" class="form-control" id='vehiculosCocheraInmueble' name='vehiculosCocheraInmueble'
+                                                        <input type="number" class="form-control" id='vehiculosCocheraInmueble' name='vehiculosCocheraInmueble'
                                                             placeholder="Capacidad de vehículos" value='<?PHP echo $vehiculosCocheraInmueble; ?>'>
                                                     </div>
 
@@ -423,7 +423,7 @@
 
                                                     <div class="form-group">
                                                         <label for="basicInput"><b>Valor Inmueble</b></label>
-                                                        <input type="text" class="form-control" id='valorInmueble' name='valorInmueble'
+                                                        <input type="number" class="form-control" id='valorInmueble' name='valorInmueble'
                                                             placeholder="Valor" value='<?PHP echo $valorInmueble; ?>'>
                                                     </div>
 

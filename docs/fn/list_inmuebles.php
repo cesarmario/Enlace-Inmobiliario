@@ -46,7 +46,7 @@
         if(!empty($inmuebles['aguaCorrienteInmueble'])){$aguaCorrienteInmueble=$inmuebles['aguaCorrienteInmueble'];}else{$aguaCorrienteInmueble="&nbsp;-&nbsp;";}
         if($inmuebles['frenteTerrenoInmueble']>0){$frenteTerrenoInmueble=$inmuebles['frenteTerrenoInmueble'] . "m2";}else{$frenteTerrenoInmueble="&nbsp;-&nbsp;";}
         if($inmuebles['largoTerrenoInmueble']>0){$largoTerrenoInmueble=$inmuebles['largoTerrenoInmueble']. "m2";}else{$largoTerrenoInmueble="&nbsp;-&nbsp;";}
-        if($inmuebles['antiguedadInmueble']>0){$antiguedadInmueble=$inmuebles['antiguedadInmueble'] . "a&ntilde;o/s";}else{$antiguedadInmueble="&nbsp;-&nbsp;";}
+        if($inmuebles['antiguedadInmueble']>0){$antiguedadInmueble=$inmuebles['antiguedadInmueble'] . " a&ntilde;o/s";}else{$antiguedadInmueble="&nbsp;-&nbsp;";}
         if(!empty($inmuebles['estadoInmueble'])){$estadoInmueble=$inmuebles['estadoInmueble'];}else{$estadoInmueble="&nbsp;-&nbsp;";}
         if(!empty($inmuebles['mejorasInmueble'])){$mejorasInmueble=$inmuebles['mejorasInmueble'];}else{$mejorasInmueble="&nbsp;-&nbsp;";}
         if(!empty($inmuebles['cocheraInmueble'])){$cocheraInmueble=$inmuebles['cocheraInmueble'];}else{$cocheraInmueble="&nbsp;-&nbsp;";}

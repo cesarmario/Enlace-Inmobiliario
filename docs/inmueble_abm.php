@@ -367,13 +367,13 @@
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput"><b>Superficie Total Terreno</b></label>
+                                                        <label for="basicInput"><b>Superficie Total Terreno (Especificar Tipo)</b></label>
                                                         <input type="number" class="form-control" id='superficieTotalInmueble' name='superficieTotalInmueble'
                                                             placeholder="Superficie Total" value='<?PHP echo $superficieTotalInmueble; ?>'>
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="basicInput"><b>Tipo Superficie</b></label>
+                                                        <label for="basicInput"><b>Tipo Superficie(m2 / ha)</b></label>
                                                         <select class="choices form-select" id='tipoSuperficieTotalInmueble' name='tipoSuperficieTotalInmueble'>
                                                             <option value='<?PHP echo $tipoSuperficieTotalInmueblee; ?>'><?PHP echo $tipoSuperficieTotalInmueble; ?></option>
                                                             <option value=""></option>

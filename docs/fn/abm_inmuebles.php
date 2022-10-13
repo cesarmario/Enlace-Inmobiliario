@@ -45,6 +45,7 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 		`banosInmueble`,
 		`superficieCubiertaInmueble`,
 		`superficieTotalInmueble`,
+		`tipoSuperficieTotalInmueble`,
 		`informacionAdicionalInmueble`,
 		`informacionPrivadaInmueble`,	
 		`valorInmueble`,
@@ -78,6 +79,7 @@ if ($_REQUEST['abm']=='a') { //Funcion Alta Inmueble
 		'$_REQUEST[banosInmueble]',
 		'$_REQUEST[superficieCubiertaInmueble]',
 		'$_REQUEST[superficieTotalInmueble]',
+		'$_REQUEST[tipoSuperficieTotalInmueble]',
 		'$_REQUEST[informacionAdicionalInmueble]',
 		'$_REQUEST[informacionPrivadaInmueble]',
 		'$_REQUEST[valorInmueble]',
@@ -135,6 +137,7 @@ if ($_REQUEST['abm']=='m') { //Funcion Modificar Inmueble
 	banosInmueble='$_REQUEST[banosInmueble]',
 	superficieCubiertaInmueble='$_REQUEST[superficieCubiertaInmueble]',
 	superficieTotalInmueble='$_REQUEST[superficieTotalInmueble]',
+	tipoSuperficieTotalInmueble='$_REQUEST[tipoSuperficieTotalInmueble]',
 	informacionAdicionalInmueble='$_REQUEST[informacionAdicionalInmueble]',
 	informacionPrivadaInmueble='$_REQUEST[informacionPrivadaInmueble]',
 	valorInmueble='$_REQUEST[valorInmueble]',
@@ -184,7 +187,6 @@ if ($_REQUEST['abm']=='b'){
         </script>
 	<?PHP }; ?>    
 <?PHP }; ?>
-
 
 <!-- Activar de Inmueble -->
 <?PHP

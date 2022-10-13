@@ -121,6 +121,8 @@
                                 </li>                                                                   
                             </ul>
                         </li>
+                        
+
                         <!-- Seccion Administrativa: Solo se habilita si el ROL del Usuario es Administrador -->
                         <?PHP if ($_SESSION['rolUsu'] =='1') { ?>
                             <li class="sidebar-item  has-sub">
@@ -148,6 +150,13 @@
                         </li>    
                         <?PHP } ?>
                         <!-- /Seccion Administrativa-->
+
+                        <li class="sidebar-item">
+                            <a href="https://ferozo.email/" target="_blank" class='sidebar-link'>
+                                <i class="bi bi-envelope"></i>
+                                <span>WebMail</span>
+                            </a>
+                        </li>
                                                 
                         <li class="sidebar-item">
                             <a href="fn/logout.php" class='sidebar-link'>

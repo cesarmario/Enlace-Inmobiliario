@@ -373,6 +373,16 @@
                                                     </div>
 
                                                     <div class="form-group">
+                                                        <label for="basicInput"><b>Tipo Superficie</b></label>
+                                                        <select class="choices form-select" id='tipoSuperficieTotalInmueble' name='tipoSuperficieTotalInmueble'>
+                                                            <option value='<?PHP echo $tipoSuperficieTotalInmueblee; ?>'><?PHP echo $tipoSuperficieTotalInmueble; ?></option>
+                                                            <option value=""></option>
+                                                            <option value="m2">m2</option>
+                                                            <option value="Ha">Ha</option>
+                                                        </select>                                    
+                                                    </div>
+
+                                                    <div class="form-group">
                                                         <label for="basicInput"><b>Antigüedad del Inmueble (Años)</b></label>
                                                         <input type="number" class="form-control" id='antiguedadInmueble' name='antiguedadInmueble'
                                                             placeholder="Antigüedad" value='<?PHP echo $antiguedadInmueble; ?>'>
@@ -386,7 +396,7 @@
 
                                                     <div class="form-group">
                                                         <label for="basicInput"><b>Mejoras</b></label>
-                                                    <select class="choices form-select" id='mejorasInmueble' name='mejorasInmueble'>
+                                                        <select class="choices form-select" id='mejorasInmueble' name='mejorasInmueble'>
                                                             <option value='<?PHP echo $mejorasInmueble; ?>'><?PHP echo $mejorasInmueble; ?></option>
                                                             <option value="">Sin especificar</option>
                                                             <option value="Si">Si</option>

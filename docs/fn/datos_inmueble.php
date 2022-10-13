@@ -26,6 +26,7 @@
         $banosInmueble = $inmueble['banosInmueble'];
         $superficieCubiertaInmueble = $inmueble['superficieCubiertaInmueble'];
         $superficieTotalInmueble = $inmueble['superficieTotalInmueble'];
+        $tipoSuperficieTotalInmueble = $inmueble['tipoSuperficieTotalInmueble'];
         $informacionAdicionalInmueble = $inmueble['informacionAdicionalInmueble'];
         $informacionPrivadaInmueble = $inmueble['informacionPrivadaInmueble'];        
         $valorInmueble = $inmueble['valorInmueble'];

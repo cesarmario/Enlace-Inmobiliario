@@ -44,15 +44,15 @@
         if(!empty($inmuebles['pavimentoInmueble'])){$pavimentoInmueble=$inmuebles['pavimentoInmueble'];}else{$pavimentoInmueble="&nbsp;-&nbsp;";}
         if(!empty($inmuebles['tipoAguaCalienteInmueble'])){$tipoAguaCalienteInmueble=$inmuebles['tipoAguaCalienteInmueble'];}else{$tipoAguaCalienteInmueble="&nbsp;-&nbsp;";}
         if(!empty($inmuebles['aguaCorrienteInmueble'])){$aguaCorrienteInmueble=$inmuebles['aguaCorrienteInmueble'];}else{$aguaCorrienteInmueble="&nbsp;-&nbsp;";}
-        if($inmuebles['frenteTerrenoInmueble']>0){$frenteTerrenoInmueble=$inmuebles['frenteTerrenoInmueble'];}else{$frenteTerrenoInmueble="&nbsp;-&nbsp;";}
-        if($inmuebles['largoTerrenoInmueble']>0){$largoTerrenoInmueble=$inmuebles['largoTerrenoInmueble'];}else{$largoTerrenoInmueble="&nbsp;-&nbsp;";}
-        if($inmuebles['antiguedadInmueble']>0){$antiguedadInmueble=$inmuebles['antiguedadInmueble'];}else{$antiguedadInmueble="&nbsp;-&nbsp;";}
+        if($inmuebles['frenteTerrenoInmueble']>0){$frenteTerrenoInmueble=$inmuebles['frenteTerrenoInmueble'] . "m2";}else{$frenteTerrenoInmueble="&nbsp;-&nbsp;";}
+        if($inmuebles['largoTerrenoInmueble']>0){$largoTerrenoInmueble=$inmuebles['largoTerrenoInmueble']. "m2";}else{$largoTerrenoInmueble="&nbsp;-&nbsp;";}
+        if($inmuebles['antiguedadInmueble']>0){$antiguedadInmueble=$inmuebles['antiguedadInmueble'] . "a&ntilde;o/s";}else{$antiguedadInmueble="&nbsp;-&nbsp;";}
         if(!empty($inmuebles['estadoInmueble'])){$estadoInmueble=$inmuebles['estadoInmueble'];}else{$estadoInmueble="&nbsp;-&nbsp;";}
         if(!empty($inmuebles['mejorasInmueble'])){$mejorasInmueble=$inmuebles['mejorasInmueble'];}else{$mejorasInmueble="&nbsp;-&nbsp;";}
         if(!empty($inmuebles['cocheraInmueble'])){$cocheraInmueble=$inmuebles['cocheraInmueble'];}else{$cocheraInmueble="&nbsp;-&nbsp;";}
 
-        if($inmuebles['superficieCubiertaInmueble']>0){$superficieCubiertaInmueble=$inmuebles['superficieCubiertaInmueble'];}else{$superficieCubiertaInmueble="-";}
-        if($inmuebles['superficieTotalInmueble']>0){$superficieTotalInmueble=$inmuebles['superficieTotalInmueble'];}else{$superficieTotalInmueble="-";}
+        if($inmuebles['superficieCubiertaInmueble']>0){$superficieCubiertaInmueble=$inmuebles['superficieCubiertaInmueble'] . "m2";}else{$superficieCubiertaInmueble="-";}
+        if($inmuebles['superficieTotalInmueble']>0){$superficieTotalInmueble=$inmuebles['superficieTotalInmueble'] . $inmuebles['tipoSuperficieTotalInmueble'];}else{$superficieTotalInmueble="-";}
         if($inmuebles['valorInmueble']>0){$valorInmueble=$inmuebles['monedaInmueble'] . "</b>&nbsp;". $inmuebles['valorInmueble'];}else{$valorInmueble="Consultar";}
 
         $datosmodal = "<button type='button' class='btn btn-primary block' data-bs-toggle='modal' data-bs-target='#DatosModal". $inmuebles['idInmueble'] ."'><i class='bi bi-list-ul'></i></button>";

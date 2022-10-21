@@ -497,13 +497,28 @@
                                             </form>                                  
                                         </div>
 
+                                    
                                         <?PHP echo $caurosel ?>
                                                                             
-                                        <div class="card-body">
+                                        <!--div-- class="card-body">
                                             <div class="table-responsive">                                        
-                                                <?PHP echo $listado; ?>                                     
+                                                <?PHP // echo $listado; ?>                                     
+                                            </div>
+                                        </!--div-->
+
+                                        <div class="accordion" id="detalleimagenes">
+                                            <div class="card-body">
+                                                <div class="card-header" id="headingOne" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="false"
+                                                    aria-controls="collapseOne" role="button">
+                                                    <span class="collapsed collapse-title"><a href="#tobottom"> <i class="bi bi-info-circle-fill"></i> Detalle de Imagenes</a></span>
+                                                </div>
+                                                <div id="collapseOne" class="collapse pt-1" aria-labelledby="headingOne" data-parent="#cardAccordion" >                                
+                                                <?PHP  echo $listado; ?> 
+                                                </div>
                                             </div>
                                         </div>
+
                                         <div class="card-body">
                                         <!--p><input type="text" id="coordenadas" name="coordenadas" value="<?PHP echo $ubicacionInmueble; ?>" style="border: none; color: grey;" size="50"/></p-->    
                                         <a href="inmueble_abm_mapa.php?idInmueble=<?PHP echo $_REQUEST['idInmueble']; ?>&abm=m" class="btn btn-outline-secondary me-1 mb-1">Ubicaci&oacute;n</a>

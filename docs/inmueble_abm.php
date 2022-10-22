@@ -520,14 +520,28 @@
                                         </div>
 
                                         <div class="card-body">
-                                        <!--p><input type="text" id="coordenadas" name="coordenadas" value="<?PHP echo $ubicacionInmueble; ?>" style="border: none; color: grey;" size="50"/></p-->    
-                                        <a href="inmueble_abm_mapa.php?idInmueble=<?PHP echo $_REQUEST['idInmueble']; ?>&abm=m" class="btn btn-outline-secondary me-1 mb-1">Ubicaci&oacute;n</a>
-                                        <?PHP if(!empty($ubicacionInmueble)){ ?>    
-                                            <div id="myMap" name="myMap" style="height: 400px" required></div>
-                                            <a href="https://www.google.com/maps?q=<?PHP echo $ubicacionInmueble; ?>&z=17&hl=es" target="_blank" class="btn btn-info me-1 mb-1">Ver en el Mapa</a>
-                                        <?PHP } ?>  
-                                    </div>
-                                        
+                                            <!--p><input type="text" id="coordenadas" name="coordenadas" value="<?PHP echo $ubicacionInmueble; ?>" style="border: none; color: grey;" size="50"/></p-->    
+                                            <a href="inmueble_abm_mapa.php?idInmueble=<?PHP echo $_REQUEST['idInmueble']; ?>&abm=m" class="btn btn-outline-secondary me-1 mb-1">Ubicaci&oacute;n</a>
+                                            <?PHP if(!empty($ubicacionInmueble)){ ?>    
+                                                <div id="myMap" name="myMap" style="height: 400px" required></div>
+                                                <a href="https://www.google.com/maps?q=<?PHP echo $ubicacionInmueble; ?>&z=17&hl=es" target="_blank" class="btn btn-info me-1 mb-1">Ver en el Mapa</a>
+                                            <?PHP } ?>  
+                                        </div>
+
+                                        <div class="card-body">
+                                            <form role="form" action="fn/abm_video.php" method="POST" enctype="multipart/form-data">    
+                                                <div class="form-group">
+                                                    <label><b>Subir Video</b></label><br>
+                                                    <input type="file" name="video" id="video">
+                                                </div>
+
+                                                <div class="buttons">
+                                                    <input type="hidden" id="idInmueble" name="idInmueble" value="<?PHP echo $_REQUEST['idInmueble']; ?>"/>
+                                                    <input type="hidden" id="abm" name="abm" value="m"/>
+                                                    <button type="submit" class="btn btn-primary me-1 mb-1">Cargar</button>
+                                                </div> 
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                                 

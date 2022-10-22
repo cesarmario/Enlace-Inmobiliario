@@ -529,9 +529,10 @@
                                         </div>
 
                                         <div class="card-body">
+
                                             <form role="form" action="fn/abm_video.php" method="POST" enctype="multipart/form-data">    
                                                 <div class="form-group">
-                                                    <label><b>Subir Video</b></label><br>
+                                                    <label><b>Video</b></label><br>
                                                     <input type="file" name="video" id="video">
                                                 </div>
 
@@ -541,6 +542,12 @@
                                                     <button type="submit" class="btn btn-primary me-1 mb-1">Cargar</button>
                                                 </div> 
                                             </form>
+                                            <?PHP
+                                            $id_new=$_REQUEST['idInmueble'];
+                                            $nombre=str_pad($_REQUEST['idInmueble'], 8, "0", STR_PAD_LEFT); ?>
+                                            <video width="auto"  height="auto" controls poster="vistaprevia.jpg">
+                                                <source src="/gestion/assets/videos/<?PHP echo $nombre; ?>.mp4" type="video/mp4">
+                                            </video>
                                         </div>
                                     </div>
                                 </div>

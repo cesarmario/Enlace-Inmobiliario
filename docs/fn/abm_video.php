@@ -29,21 +29,21 @@ if ($_REQUEST['abm']=='a' or $_REQUEST['abm']=='m'){
         $error   = $_FILES['video']['error'];
 
         $id_new=$_REQUEST['idInmueble'];
-        $nombre=str_pad($id_new, 8, "0", STR_PAD_LEFT) . "." . $tipo;
+        $nombre=str_pad($id_new, 8, "0", STR_PAD_LEFT) . ".mp4";
         // Ruta donde se guardaran las imagenes cuando se ejecuta Local
         //$directorio = $_SERVER['DOCUMENT_ROOT'].$_SESSION['sesionc_Path'].'/enlaceinmobiliario/docs/assets/images/inmuebles/';
         // Ruta donde se guardaran las imagenes cuando se ejecuta en al web
         $directorio = $_SERVER['DOCUMENT_ROOT'].$_SESSION['sesionc_Path'].'/gestion/assets/videos/';
         
         $fullpath=$directorio.$nombre;
-        //echo "Nombre: " . $nombre;
-        //echo "<BR> tipo: " . $qtipo;
-        //echo "<BR> ID: " . $id_new;
-        //echo "<BR> URL: " . $directorio;
-        //echo "<BR> URL FULL: ". $fullpath;
-        //echo "<BR> IMAGEN: ". $inombre;
-        //echo "<BR> TMP: ". $tmp_nn;
-        //echo "<BR> Error: ". $error;	
+        echo "Nombre: " . $nombre;
+        echo "<BR> tipo: " . $qtipo;
+        echo "<BR> ID: " . $id_new;
+        echo "<BR> URL: " . $directorio;
+        echo "<BR> URL FULL: ". $fullpath;
+        echo "<BR> IMAGEN: ". $inombre;
+        echo "<BR> TMP: ". $tmp_nn;
+        echo "<BR> Error: ". $error;	
         
         if (move_uploaded_file($_FILES['video']['tmp_name'],$fullpath)) {
         //if (copy($_FILES['imagen']['tmp_name'],$fullpath)) { ?>

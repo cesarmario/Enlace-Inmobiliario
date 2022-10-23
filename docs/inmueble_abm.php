@@ -533,10 +533,17 @@
                                                     </div> 
                                                     </form>
                                                     <?PHP
-                                                    $id_new=$_REQUEST['idInmueble'];
-                                                    $nombre=str_pad($_REQUEST['idInmueble'], 8, "0", STR_PAD_LEFT); ?>
+                                                    $id_new=$_REQUEST['idInmueble'];                                                     
+                                                   // $nombre=str_pad($_REQUEST['idInmueble'], 8, "0", STR_PAD_LEFT); 
+                                                    $video="/gestion/assets/videos/" . str_pad($_REQUEST['idInmueble'], 8, "0", STR_PAD_LEFT) . ".mp4"; ?>                                                    
+                                                    <?PHP
+                                                        $directorio = opendir($_SERVER['DOCUMENT_ROOT']."/gestion/assets/videos/");
+                                                        $videoCheck= $directorio . str_pad($_REQUEST['idInmueble'], 8, "0", STR_PAD_LEFT) . ".mp4";
+                                                        
+                                                        if(file_exists($videoCheck)){ echo "No Existe"; } else { echo "Existe"; }
+                                                    ?>
                                                     <video width="auto"  height="auto" controls poster="vistaprevia.jpg">
-                                                        <source src="/gestion/assets/videos/<?PHP echo $nombre; ?>.mp4" type="video/mp4">
+                                                        <source src="<?PHP echo $video; ?>" type="video/mp4">
                                                     </video>
                                                 </div>
                                             </div>

@@ -519,32 +519,37 @@
                                             </div>
 
                                             <div id="collapseTwo" class="collapse pt-1" aria-labelledby="headingTwo" data-parent="#cardAccordion">
-                                                <div class="card-body">
-                                                    <form role="form" action="fn/abm_video.php" method="POST" enctype="multipart/form-data">    
-                                                    <div class="form-group">
-                                                        <label><b>Video</b></label><br>
-                                                        <input type="file" name="video" id="video">
-                                                    </div>
+                                                <div class="card-body">                                 
+                                                    <?PHP
+                                                        $video="/gestion/assets/videos/" . str_pad($_REQUEST['idInmueble'], 8, "0", STR_PAD_LEFT) . ".mp4"; 
+                                                        if(!file_exists($_SERVER['DOCUMENT_ROOT'].$video)){ ?>
 
-                                                    <div class="buttons">
-                                                        <input type="hidden" id="idInmueble" name="idInmueble" value="<?PHP echo $_REQUEST['idInmueble']; ?>"/>
-                                                        <input type="hidden" id="abm" name="abm" value="m"/>
-                                                        <button type="submit" class="btn btn-primary me-1 mb-1">Cargar</button>
-                                                    </div> 
-                                                    </form>
-                                                    <?PHP
-                                                    $id_new=$_REQUEST['idInmueble'];                                                     
-                                                   // $nombre=str_pad($_REQUEST['idInmueble'], 8, "0", STR_PAD_LEFT); 
-                                                    $video="/gestion/assets/videos/" . str_pad($_REQUEST['idInmueble'], 8, "0", STR_PAD_LEFT) . ".mp4"; ?>                                                    
-                                                    <?PHP
-                                                        $directorio = opendir($_SERVER['DOCUMENT_ROOT']."/gestion/assets/videos/");
-                                                        $videoCheck= $directorio . str_pad($_REQUEST['idInmueble'], 8, "0", STR_PAD_LEFT) . ".mp4";
-                                                        
-                                                        if(file_exists($videoCheck)){ echo "No Existe"; } else { echo "Existe"; }
+                                                            <form role="form" action="fn/abm_video.php" method="POST" enctype="multipart/form-data">
+                                                                <div class="alert alert-light-warning color-warning"><i class="bi bi-exclamation-triangle"></i>
+                                                                    Solo puede subir Videos en formato .mp4 <br>
+                                                                    La carga del video puede demorar varios segundos depende del tamaño del mismo.
+                                                                </div>    
+                                                                <div class="form-group">
+                                                                    <label>Subir Video</label><br>
+                                                                    <input type="file" name="video" id="video">
+                                                                </div>
+
+                                                                <div class="buttons">
+                                                                    <input type="hidden" id="idInmueble" name="idInmueble" value="<?PHP echo $_REQUEST['idInmueble']; ?>"/>
+                                                                    <input type="hidden" id="abm" name="abm" value="m"/>
+                                                                    <button type="submit" class="btn btn-primary me-1 mb-1">Cargar</button>
+                                                                </div> 
+                                                            </form>
+                                                        <?PHP } else { ?>
+                                                            <div class="form-group">
+                                                                <video width="auto"  height="auto" controls poster="vistaprevia.jpg">
+                                                                    <source src="<?PHP echo $video; ?>" type="video/mp4">
+                                                                </video>
+                                                            </div>
+                                                            <a href='fn/abm_video.php?abm=b&idInmueble=<?PHP echo $_REQUEST['idInmueble']; ?>' class='btn btn-danger me-1 mb-1'><i class='fa-solid fa-trash-can'></i></i> Eliminar</a>
+                                                        <?PHP }
                                                     ?>
-                                                    <video width="auto"  height="auto" controls poster="vistaprevia.jpg">
-                                                        <source src="<?PHP echo $video; ?>" type="video/mp4">
-                                                    </video>
+                                                    
                                                 </div>
                                             </div>
                                         </div>

@@ -11,15 +11,24 @@ error_reporting(E_ALL ^ E_NOTICE);
 <!-- Cargar Imagen -->
 <?PHP
 if ($_REQUEST['abm']=='a' or $_REQUEST['abm']=='m'){
-
-	if (!isset($_FILES['video'])){ ?>
-
+    $Upload=true;
+	if (!isset($_FILES['video'])){ $Upload=false; ?>
 		<script>
             alert("Debe seleccionar una Video!");
 			window.history.back();
         </script>
 
-	<?PHP } else {
+	<?PHP }
+    
+    if ($_FILES['video']['type']!="mp4"){ $Upload=false; ?>
+		<script>
+            alert("Formato de archivo no compatible");
+			window.history.back();
+        </script>
+
+	<?PHP } 
+
+    if ($Upload) {
 
         // Recibo los datos de la imagen 
         $inombre = $_FILES['video']['name'];
@@ -36,14 +45,14 @@ if ($_REQUEST['abm']=='a' or $_REQUEST['abm']=='m'){
         $directorio = $_SERVER['DOCUMENT_ROOT'].$_SESSION['sesionc_Path'].'/gestion/assets/videos/';
         
         $fullpath=$directorio.$nombre;
-        echo "Nombre: " . $nombre;
+       /* echo "Nombre: " . $nombre;
         echo "<BR> tipo: " . $qtipo;
         echo "<BR> ID: " . $id_new;
         echo "<BR> URL: " . $directorio;
         echo "<BR> URL FULL: ". $fullpath;
         echo "<BR> IMAGEN: ". $inombre;
         echo "<BR> TMP: ". $tmp_nn;
-        echo "<BR> Error: ". $error;	
+        echo "<BR> Error: ". $error;	*/
         
         if (move_uploaded_file($_FILES['video']['tmp_name'],$fullpath)) {
         //if (copy($_FILES['imagen']['tmp_name'],$fullpath)) { ?>
@@ -63,19 +72,20 @@ if ($_REQUEST['abm']=='a' or $_REQUEST['abm']=='m'){
 
 <!-- Baja de Imagen -->
 <?PHP
-if ($_REQUEST['abm']=='bm' or $_REQUEST['abm']=='ba'){ 
-	$query="UPDATE imagen SET baja='1' WHERE idImagen='$_REQUEST[idImagen]'";
-    $result = mysqli_query($conexion, $query);
-    if (mysqli_affected_rows($conexion)>0){ ?>
-		<script>
-           // alert("Imagen Eliminada correctamente"); 
-        </script>
-    <?PHP } else {?>
-		<script>
-            alert("Ocurrio un Error!!");
-        </script>
-	<?PHP }; ?>    
-<?PHP }; ?>
+if ($_REQUEST['abm']=='b'){
+    $id_new=$_REQUEST['idInmueble'];
+    $nombre=str_pad($id_new, 8, "0", STR_PAD_LEFT) . ".mp4";
+    $directorio = $_SERVER['DOCUMENT_ROOT'].$_SESSION['sesionc_Path'].'/gestion/assets/videos/';
+    $video=$directorio.$nombre;
+    If (unlink($video)) {
+  // file was successfully deleted
+    } else { ?>
+     <script>
+        alert("Ocurrio un Error!!");
+    </script>
+<?PHP }
+
+ } ?>
 
 <script>	
     location.replace("../inmueble_abm.php?idInmueble=<?PHP echo $_REQUEST['idInmueble'];?>&abm=m");

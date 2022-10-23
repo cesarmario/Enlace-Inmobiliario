@@ -494,64 +494,63 @@
                                                 <input type="hidden" id="abm" name="abm" value="m"/>
                                                 <button type="submit" class="btn btn-primary me-1 mb-1">Cargar</button>
                                             </div> 
-                                            </form>                                  
-                                        </div>
-
-                                    
-                                        <?PHP echo $caurosel ?>
-                                                                            
-                                        <!--div-- class="card-body">
-                                            <div class="table-responsive">                                        
-                                                <?PHP // echo $listado; ?>                                     
-                                            </div>
-                                        </!--div-->
-
-                                        <div class="accordion" id="detalleimagenes">
-                                            <div class="card-body">
-                                                <div class="card-header" id="headingOne" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseOne" aria-expanded="false"
-                                                    aria-controls="collapseOne" role="button">
-                                                    <span class="collapsed collapse-title"><a href="#tobottom"> <i class="bi bi-info-circle-fill"></i> Detalle de Imagenes</a></span>
-                                                </div>
-                                                <div id="collapseOne" class="collapse pt-1" aria-labelledby="headingOne" data-parent="#cardAccordion" >                                
-                                                <?PHP  echo $listado; ?> 
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="card-body">
-                                            <!--p><input type="text" id="coordenadas" name="coordenadas" value="<?PHP echo $ubicacionInmueble; ?>" style="border: none; color: grey;" size="50"/></p-->    
-                                            <a href="inmueble_abm_mapa.php?idInmueble=<?PHP echo $_REQUEST['idInmueble']; ?>&abm=m" class="btn btn-outline-secondary me-1 mb-1">Ubicaci&oacute;n</a>
-                                            <?PHP if(!empty($ubicacionInmueble)){ ?>    
-                                                <div id="myMap" name="myMap" style="height: 400px" required></div>
-                                                <a href="https://www.google.com/maps?q=<?PHP echo $ubicacionInmueble; ?>&z=17&hl=es" target="_blank" class="btn btn-info me-1 mb-1">Ver en el Mapa</a>
-                                            <?PHP } ?>  
-                                        </div>
-
-                                        <div class="card-body">
-
-                                            <form role="form" action="fn/abm_video.php" method="POST" enctype="multipart/form-data">    
-                                                <div class="form-group">
-                                                    <label><b>Video</b></label><br>
-                                                    <input type="file" name="video" id="video">
-                                                </div>
-
-                                                <div class="buttons">
-                                                    <input type="hidden" id="idInmueble" name="idInmueble" value="<?PHP echo $_REQUEST['idInmueble']; ?>"/>
-                                                    <input type="hidden" id="abm" name="abm" value="m"/>
-                                                    <button type="submit" class="btn btn-primary me-1 mb-1">Cargar</button>
-                                                </div> 
-                                            </form>
-                                            <?PHP
-                                            $id_new=$_REQUEST['idInmueble'];
-                                            $nombre=str_pad($_REQUEST['idInmueble'], 8, "0", STR_PAD_LEFT); ?>
-                                            <video width="auto"  height="auto" controls poster="vistaprevia.jpg">
-                                                <source src="/gestion/assets/videos/<?PHP echo $nombre; ?>.mp4" type="video/mp4">
-                                            </video>
-                                        </div>
+                                        </form>                                  
                                     </div>
-                                </div>
-                                
+
+                                    <?PHP echo $caurosel ?>
+                                                                    
+                                    <div class="accordion" id="detalleimagenes">
+                                        <div class="card-body">
+                                            <div class="card-header" id="headingOne" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="false"
+                                                aria-controls="collapseOne" role="button">
+                                                <span class="collapsed collapse-title"><a href="#tobottom"> <i class="bi bi-image"></i> Detalle de Imagenes</a></span>
+                                            </div>
+                                            <div id="collapseOne" class="collapse pt-1" aria-labelledby="headingOne" data-parent="#cardAccordion" >                                
+                                                <?PHP  echo $listado; ?> 
+                                            </div>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <div class="card-header" id="headingTwo" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseTwo" aria-expanded="false"
+                                                aria-controls="collapseTwo" role="button">
+                                                <span class="collapsed collapse-title"><a href="#tobottom"> <i class="bi bi-play-btn"></i> Video</a></span>
+                                            </div>
+
+                                            <div id="collapseTwo" class="collapse pt-1" aria-labelledby="headingTwo" data-parent="#cardAccordion">
+                                                <div class="card-body">
+                                                    <form role="form" action="fn/abm_video.php" method="POST" enctype="multipart/form-data">    
+                                                    <div class="form-group">
+                                                        <label><b>Video</b></label><br>
+                                                        <input type="file" name="video" id="video">
+                                                    </div>
+
+                                                    <div class="buttons">
+                                                        <input type="hidden" id="idInmueble" name="idInmueble" value="<?PHP echo $_REQUEST['idInmueble']; ?>"/>
+                                                        <input type="hidden" id="abm" name="abm" value="m"/>
+                                                        <button type="submit" class="btn btn-primary me-1 mb-1">Cargar</button>
+                                                    </div> 
+                                                    </form>
+                                                    <?PHP
+                                                    $id_new=$_REQUEST['idInmueble'];
+                                                    $nombre=str_pad($_REQUEST['idInmueble'], 8, "0", STR_PAD_LEFT); ?>
+                                                    <video width="auto"  height="auto" controls poster="vistaprevia.jpg">
+                                                        <source src="/gestion/assets/videos/<?PHP echo $nombre; ?>.mp4" type="video/mp4">
+                                                    </video>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+
+                                    <div class="card-body">
+                                        <a href="inmueble_abm_mapa.php?idInmueble=<?PHP echo $_REQUEST['idInmueble']; ?>&abm=m" class="btn btn-outline-secondary me-1 mb-1">Ubicaci&oacute;n</a>
+                                        <?PHP if(!empty($ubicacionInmueble)){ ?>    
+                                            <div id="myMap" name="myMap" style="height: 400px" required></div>
+                                            <a href="https://www.google.com/maps?q=<?PHP echo $ubicacionInmueble; ?>&z=17&hl=es" target="_blank" class="btn btn-info me-1 mb-1">Ver en el Mapa</a>
+                                        <?PHP } ?>  
+                                    </div>
+                                </div>                                
                             </div>
                             <?PHP } ?>    
                         </div>                        

@@ -19,14 +19,6 @@ if ($_REQUEST['abm']=='a' or $_REQUEST['abm']=='m'){
         </script>
 
 	<?PHP }
-    
-    if ($_FILES['video']['type']!="mp4"){ $Upload=false; ?>
-		<script>
-            alert("Formato de archivo no compatible");
-			window.history.back();
-        </script>
-
-	<?PHP } 
 
     if ($Upload) {
 
